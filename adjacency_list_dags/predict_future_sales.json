@@ -1,0 +1,906 @@
+{
+  "create_dir_predict-future-sales_0_local": [
+    "stage_in_local_local_4_0"
+  ],
+  "create_dir_predict-future-sales_0_condorpool": [
+    "stage_in_local_condorpool_8_0",
+    "stage_in_local_condorpool_3_0",
+    "stage_in_local_condorpool_2_0",
+    "stage_in_local_condorpool_1_0",
+    "stage_in_local_condorpool_0_0",
+    "stage_in_local_condorpool_7_0",
+    "stage_in_local_condorpool_6_0"
+  ],
+  "stage_in_local_local_4_0": [
+    "xgboost_hp_tuning_workflow_ID0000015",
+    "xgboost_hp_tuning_workflow_ID0000011",
+    "xgboost_hp_tuning_workflow_ID0000019"
+  ],
+  "stage_in_local_condorpool_8_0": [
+    "predict_merge_ID0000023"
+  ],
+  "stage_in_local_condorpool_3_0": [
+    "feature_merge_ID0000010"
+  ],
+  "stage_in_local_condorpool_2_0": [
+    "feature_eng_5_ID0000009",
+    "feature_eng_3_ID0000007",
+    "feature_eng_4_ID0000008",
+    "feature_eng_2_ID0000006"
+  ],
+  "stage_in_local_condorpool_1_0": [
+    "feature_eng_0_ID0000004",
+    "feature_eng_1_ID0000005"
+  ],
+  "stage_in_local_condorpool_0_0": [
+    "preprocess_ID0000003",
+    "feature_eng_5_ID0000009",
+    "nlp_ID0000002",
+    "model_predict_ID0000018",
+    "feature_eng_4_ID0000008",
+    "feature_merge_ID0000010",
+    "feature_eng_0_ID0000004",
+    "xgboost_model_ID0000013",
+    "feature_eng_1_ID0000005",
+    "xgboost_model_ID0000021",
+    "eda_ID0000001",
+    "feature_eng_3_ID0000007",
+    "model_predict_ID0000014",
+    "predict_merge_ID0000023",
+    "feature_eng_2_ID0000006",
+    "xgboost_model_ID0000017",
+    "model_predict_ID0000022"
+  ],
+  "stage_in_local_condorpool_7_0": [
+    "model_predict_ID0000018",
+    "model_predict_ID0000014",
+    "model_predict_ID0000022"
+  ],
+  "stage_in_local_condorpool_6_0": [
+    "xgboost_model_ID0000013",
+    "xgboost_model_ID0000021",
+    "xgboost_model_ID0000017"
+  ],
+  "preprocess_ID0000003": [
+    "feature_eng_0_ID0000004",
+    "stage_out_local_condorpool_0_0",
+    "feature_eng_1_ID0000005"
+  ],
+  "nlp_ID0000002": [
+    "stage_out_local_condorpool_0_0",
+    "feature_merge_ID0000010"
+  ],
+  "eda_ID0000001": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "feature_eng_0_ID0000004": [
+    "feature_eng_5_ID0000009",
+    "stage_out_local_condorpool_1_0",
+    "feature_eng_3_ID0000007"
+  ],
+  "feature_eng_1_ID0000005": [
+    "feature_eng_5_ID0000009",
+    "stage_out_local_condorpool_1_0",
+    "feature_eng_3_ID0000007",
+    "feature_eng_4_ID0000008",
+    "feature_eng_2_ID0000006"
+  ],
+  "stage_out_local_condorpool_0_0": [
+    "register_condorpool_0_0",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "feature_eng_5_ID0000009": [
+    "stage_out_local_condorpool_2_0",
+    "feature_merge_ID0000010"
+  ],
+  "stage_out_local_condorpool_1_0": [
+    "cleanup_predict-future-sales_0_condorpool",
+    "register_condorpool_1_0"
+  ],
+  "feature_eng_3_ID0000007": [
+    "stage_out_local_condorpool_2_0",
+    "feature_merge_ID0000010"
+  ],
+  "feature_eng_4_ID0000008": [
+    "stage_out_local_condorpool_2_0",
+    "feature_merge_ID0000010"
+  ],
+  "feature_eng_2_ID0000006": [
+    "stage_out_local_condorpool_2_0",
+    "feature_merge_ID0000010"
+  ],
+  "register_condorpool_0_0": [],
+  "register_condorpool_1_0": [],
+  "stage_out_local_condorpool_2_0": [
+    "register_condorpool_2_0",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "feature_merge_ID0000010": [
+    "stage_inter_local_xgboost_model_ID0000013_0",
+    "stage_out_local_condorpool_3_0",
+    "model_predict_ID0000018",
+    "stage_inter_local_model_predict_ID0000014_0",
+    "xgboost_hp_tuning_workflow_ID0000015",
+    "xgboost_model_ID0000013",
+    "stage_inter_local_model_predict_ID0000022_0",
+    "xgboost_hp_tuning_workflow_ID0000011",
+    "stage_inter_local_xgboost_hp_tuning_workflow_ID0000015_0",
+    "xgboost_model_ID0000021",
+    "pegasus-plan_ID0000020",
+    "model_predict_ID0000014",
+    "pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_workflow_ID0000019",
+    "stage_inter_local_xgboost_model_ID0000021_0",
+    "xgboost_model_ID0000017",
+    "pegasus-plan_ID0000016",
+    "model_predict_ID0000022",
+    "create_dir_predict-future-sales-hp-tuning_0_condorpool_pegasus-plan_ID0000016",
+    "create_dir_predict-future-sales-hp-tuning_0_condorpool_pegasus-plan_ID0000012",
+    "create_dir_predict-future-sales-hp-tuning_0_condorpool_pegasus-plan_ID0000020"
+  ],
+  "register_condorpool_2_0": [],
+  "stage_inter_local_xgboost_model_ID0000013_0": [
+    "xgboost_model_ID0000013"
+  ],
+  "stage_out_local_condorpool_3_0": [
+    "register_condorpool_3_0",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "stage_inter_local_model_predict_ID0000014_0": [
+    "model_predict_ID0000014"
+  ],
+  "stage_inter_local_model_predict_ID0000022_0": [
+    "model_predict_ID0000022"
+  ],
+  "stage_inter_local_xgboost_hp_tuning_workflow_ID0000015_0": [
+    "xgboost_hp_tuning_workflow_ID0000015",
+    "xgboost_hp_tuning_workflow_ID0000011",
+    "xgboost_hp_tuning_workflow_ID0000019"
+  ],
+  "stage_inter_local_xgboost_model_ID0000021_0": [
+    "xgboost_model_ID0000021"
+  ],
+  "register_condorpool_3_0": [],
+  "xgboost_hp_tuning_workflow_ID0000015": [
+    "stage_out_local_local_4_0",
+    "pegasus-plan_ID0000016",
+    "create_dir_predict-future-sales-hp-tuning_0_condorpool_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_workflow_ID0000011": [
+    "stage_out_local_local_4_0",
+    "pegasus-plan_ID0000012",
+    "create_dir_predict-future-sales-hp-tuning_0_condorpool_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_workflow_ID0000019": [
+    "stage_out_local_local_4_0",
+    "pegasus-plan_ID0000020",
+    "create_dir_predict-future-sales-hp-tuning_0_condorpool_pegasus-plan_ID0000020"
+  ],
+  "pegasus-plan_ID0000016": [
+    "stage_out_local_local_5_0",
+    "model_predict_ID0000018",
+    "cleanup_predict-future-sales_0_local",
+    "xgboost_model_ID0000017",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "pegasus-plan_ID0000012": [
+    "xgboost_model_ID0000013",
+    "stage_out_local_local_5_0",
+    "model_predict_ID0000014",
+    "cleanup_predict-future-sales_0_local",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "stage_out_local_local_4_0": [
+    "register_local_4_0",
+    "cleanup_predict-future-sales_0_local"
+  ],
+  "pegasus-plan_ID0000020": [
+    "stage_out_local_local_5_0",
+    "xgboost_model_ID0000021",
+    "cleanup_predict-future-sales_0_local",
+    "cleanup_predict-future-sales_0_condorpool",
+    "model_predict_ID0000022"
+  ],
+  "xgboost_model_ID0000017": [
+    "model_predict_ID0000018",
+    "stage_out_local_condorpool_6_0"
+  ],
+  "xgboost_model_ID0000013": [
+    "stage_out_local_condorpool_6_0",
+    "model_predict_ID0000014"
+  ],
+  "register_local_4_0": [],
+  "stage_out_local_local_5_0": [
+    "cleanup_predict-future-sales_0_local"
+  ],
+  "xgboost_model_ID0000021": [
+    "stage_out_local_condorpool_6_0",
+    "model_predict_ID0000022"
+  ],
+  "model_predict_ID0000018": [
+    "stage_out_local_condorpool_7_0",
+    "predict_merge_ID0000023"
+  ],
+  "model_predict_ID0000014": [
+    "stage_out_local_condorpool_7_0",
+    "predict_merge_ID0000023"
+  ],
+  "cleanup_predict-future-sales_0_local": [],
+  "stage_out_local_condorpool_6_0": [
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "model_predict_ID0000022": [
+    "stage_out_local_condorpool_7_0",
+    "predict_merge_ID0000023"
+  ],
+  "stage_out_local_condorpool_7_0": [
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "predict_merge_ID0000023": [
+    "stage_out_local_condorpool_8_0"
+  ],
+  "stage_out_local_condorpool_8_0": [
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "cleanup_predict-future-sales_0_condorpool": [],
+  "create_dir_predict-future-sales-hp-tuning_0_condorpool_pegasus-plan_ID0000016": [
+    "stage_in_local_condorpool_0_2_pegasus-plan_ID0000016",
+    "stage_in_local_condorpool_0_1_pegasus-plan_ID0000016",
+    "stage_in_local_condorpool_1_0_pegasus-plan_ID0000016",
+    "stage_in_local_condorpool_0_0_pegasus-plan_ID0000016"
+  ],
+  "stage_in_local_condorpool_0_2_pegasus-plan_ID0000016": [
+    "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000016"
+  ],
+  "stage_in_local_condorpool_0_1_pegasus-plan_ID0000016": [
+    "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000016"
+  ],
+  "stage_in_local_condorpool_1_0_pegasus-plan_ID0000016": [
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "stage_in_local_condorpool_0_0_pegasus-plan_ID0000016": [
+    "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000016",
+    "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000016",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000016"
+  ],
+  "stage_out_local_condorpool_0_2_pegasus-plan_ID0000016": [
+    "register_condorpool_0_2_pegasus-plan_ID0000016"
+  ],
+  "stage_out_local_condorpool_0_0_pegasus-plan_ID0000016": [
+    "register_condorpool_0_0_pegasus-plan_ID0000016"
+  ],
+  "stage_out_local_condorpool_0_1_pegasus-plan_ID0000016": [
+    "register_condorpool_0_1_pegasus-plan_ID0000016"
+  ],
+  "xgboost_best_params_ID0000024_pegasus-plan_ID0000016": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000016"
+  ],
+  "register_condorpool_0_2_pegasus-plan_ID0000016": [
+    "stage_out_local_local_5_0",
+    "model_predict_ID0000018",
+    "cleanup_predict-future-sales_0_local",
+    "xgboost_model_ID0000017",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "register_condorpool_0_0_pegasus-plan_ID0000016": [
+    "stage_out_local_local_5_0",
+    "model_predict_ID0000018",
+    "cleanup_predict-future-sales_0_local",
+    "xgboost_model_ID0000017",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "register_condorpool_0_1_pegasus-plan_ID0000016": [
+    "stage_out_local_local_5_0",
+    "model_predict_ID0000018",
+    "cleanup_predict-future-sales_0_local",
+    "xgboost_model_ID0000017",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "stage_out_local_condorpool_1_0_pegasus-plan_ID0000016": [
+    "register_condorpool_1_0_pegasus-plan_ID0000016"
+  ],
+  "register_condorpool_1_0_pegasus-plan_ID0000016": [
+    "stage_out_local_local_5_0",
+    "model_predict_ID0000018",
+    "cleanup_predict-future-sales_0_local",
+    "xgboost_model_ID0000017",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "create_dir_predict-future-sales-hp-tuning_0_condorpool_pegasus-plan_ID0000012": [
+    "stage_in_local_condorpool_0_2_pegasus-plan_ID0000012",
+    "stage_in_local_condorpool_0_1_pegasus-plan_ID0000012",
+    "stage_in_local_condorpool_1_0_pegasus-plan_ID0000012",
+    "stage_in_local_condorpool_0_0_pegasus-plan_ID0000012"
+  ],
+  "stage_in_local_condorpool_0_2_pegasus-plan_ID0000012": [
+    "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000012"
+  ],
+  "stage_in_local_condorpool_0_1_pegasus-plan_ID0000012": [
+    "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000012"
+  ],
+  "stage_in_local_condorpool_1_0_pegasus-plan_ID0000012": [
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "stage_in_local_condorpool_0_0_pegasus-plan_ID0000012": [
+    "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000012",
+    "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000012",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000012"
+  ],
+  "stage_out_local_condorpool_0_2_pegasus-plan_ID0000012": [
+    "register_condorpool_0_2_pegasus-plan_ID0000012"
+  ],
+  "stage_out_local_condorpool_0_0_pegasus-plan_ID0000012": [
+    "register_condorpool_0_0_pegasus-plan_ID0000012"
+  ],
+  "stage_out_local_condorpool_0_1_pegasus-plan_ID0000012": [
+    "register_condorpool_0_1_pegasus-plan_ID0000012"
+  ],
+  "xgboost_best_params_ID0000024_pegasus-plan_ID0000012": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000012"
+  ],
+  "register_condorpool_0_2_pegasus-plan_ID0000012": [
+    "xgboost_model_ID0000013",
+    "stage_out_local_local_5_0",
+    "model_predict_ID0000014",
+    "cleanup_predict-future-sales_0_local",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "register_condorpool_0_0_pegasus-plan_ID0000012": [
+    "xgboost_model_ID0000013",
+    "stage_out_local_local_5_0",
+    "model_predict_ID0000014",
+    "cleanup_predict-future-sales_0_local",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "register_condorpool_0_1_pegasus-plan_ID0000012": [
+    "xgboost_model_ID0000013",
+    "stage_out_local_local_5_0",
+    "model_predict_ID0000014",
+    "cleanup_predict-future-sales_0_local",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "stage_out_local_condorpool_1_0_pegasus-plan_ID0000012": [
+    "register_condorpool_1_0_pegasus-plan_ID0000012"
+  ],
+  "register_condorpool_1_0_pegasus-plan_ID0000012": [
+    "xgboost_model_ID0000013",
+    "stage_out_local_local_5_0",
+    "model_predict_ID0000014",
+    "cleanup_predict-future-sales_0_local",
+    "cleanup_predict-future-sales_0_condorpool"
+  ],
+  "create_dir_predict-future-sales-hp-tuning_0_condorpool_pegasus-plan_ID0000020": [
+    "stage_in_local_condorpool_0_2_pegasus-plan_ID0000020",
+    "stage_in_local_condorpool_0_1_pegasus-plan_ID0000020",
+    "stage_in_local_condorpool_1_0_pegasus-plan_ID0000020",
+    "stage_in_local_condorpool_0_0_pegasus-plan_ID0000020"
+  ],
+  "stage_in_local_condorpool_0_2_pegasus-plan_ID0000020": [
+    "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000020"
+  ],
+  "stage_in_local_condorpool_0_1_pegasus-plan_ID0000020": [
+    "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000020"
+  ],
+  "stage_in_local_condorpool_1_0_pegasus-plan_ID0000020": [
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "stage_in_local_condorpool_0_0_pegasus-plan_ID0000020": [
+    "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000020",
+    "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000009_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000011_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000022_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000010_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000021_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000020_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000008_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000019_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000007_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000018_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000006_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000017_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000005_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000016_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000004_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000015_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000003_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000014_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000002_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000013_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000001_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000012_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "xgboost_hp_tuning_ID0000023_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000020",
+    "xgboost_best_params_ID0000024_pegasus-plan_ID0000020"
+  ],
+  "stage_out_local_condorpool_0_2_pegasus-plan_ID0000020": [
+    "register_condorpool_0_2_pegasus-plan_ID0000020"
+  ],
+  "stage_out_local_condorpool_0_0_pegasus-plan_ID0000020": [
+    "register_condorpool_0_0_pegasus-plan_ID0000020"
+  ],
+  "stage_out_local_condorpool_0_1_pegasus-plan_ID0000020": [
+    "register_condorpool_0_1_pegasus-plan_ID0000020"
+  ],
+  "xgboost_best_params_ID0000024_pegasus-plan_ID0000020": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000020"
+  ],
+  "register_condorpool_0_2_pegasus-plan_ID0000020": [
+    "stage_out_local_local_5_0",
+    "xgboost_model_ID0000021",
+    "cleanup_predict-future-sales_0_local",
+    "cleanup_predict-future-sales_0_condorpool",
+    "model_predict_ID0000022"
+  ],
+  "register_condorpool_0_0_pegasus-plan_ID0000020": [
+    "stage_out_local_local_5_0",
+    "xgboost_model_ID0000021",
+    "cleanup_predict-future-sales_0_local",
+    "cleanup_predict-future-sales_0_condorpool",
+    "model_predict_ID0000022"
+  ],
+  "register_condorpool_0_1_pegasus-plan_ID0000020": [
+    "stage_out_local_local_5_0",
+    "xgboost_model_ID0000021",
+    "cleanup_predict-future-sales_0_local",
+    "cleanup_predict-future-sales_0_condorpool",
+    "model_predict_ID0000022"
+  ],
+  "stage_out_local_condorpool_1_0_pegasus-plan_ID0000020": [
+    "register_condorpool_1_0_pegasus-plan_ID0000020"
+  ],
+  "register_condorpool_1_0_pegasus-plan_ID0000020": [
+    "stage_out_local_local_5_0",
+    "xgboost_model_ID0000021",
+    "cleanup_predict-future-sales_0_local",
+    "cleanup_predict-future-sales_0_condorpool",
+    "model_predict_ID0000022"
+  ]
+}
