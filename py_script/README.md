@@ -2,6 +2,10 @@
 
 This is the python interface to read the workflow data. 
 
+## Installation
+
+* Install the required packages as `bash setup.sh`
+
 ## Instruction
 
 * load data as graphs in `pytorch_geometric` format:
@@ -45,4 +49,7 @@ This is the python interface to read the workflow data.
 
 ## Data Analytics
 
-* TBD
+* [x] Feature processing
+* [x] Data analysis
+* Data visualization
+* [x] Data cleaning
