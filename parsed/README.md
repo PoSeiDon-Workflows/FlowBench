@@ -1,3 +1,7 @@
+# Parsed Data Features
+
+We have parsed the raw logs to create a dataset with the following features for further analysis.
+
 | Field                                          | Description                                                                                       |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------- | 
 | node_id                                        | Exec. DAG Node ID                                                                                 |
