@@ -87,6 +87,42 @@
 </tbody>
 </table>
 
+## Repository Structure
+```
+.
+├── adjacency_list_dags
+│   ├── 1000genome.json
+│   ├── montage.json
+│   └── predict_future_sales.json
+├── images
+│   ├── 1000genome-workflow.png
+│   ├── chameleon_deployment.png
+│   ├── montage-workflow.png
+│   ├── predict-future-sales-workflow.png
+│   └── raw_data_to_parsed_data.png
+├── move_raw_data.sh
+├── parsed
+│   ├── cpu_2
+│   ├── cpu_3
+│   ├── cpu_4
+│   ├── hdd_10
+│   ├── hdd_5
+│   ├── normal
+│   └── README.md
+├── raw
+│   └── raw_data.xz
+├── raw-temp
+│   ├── docker-compose.yml
+│   ├── elasticsearch
+│   ├── experiments-all.csv
+│   ├── experiments.csv
+│   ├── extend-log.py
+│   ├── parse-data.py
+│   ├── workflows
+│   └── workflow-submit-dirs
+└── README.md
+```
+
 ## 1000 Genome Workflow
 ![Alt text](/images/1000genome-workflow.png "1000 Genome Workflow")
 
