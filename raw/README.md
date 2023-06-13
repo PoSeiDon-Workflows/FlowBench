@@ -8,6 +8,7 @@ To generate the raw logs, we provisioned resources at the [NSF Chameleon Cloud](
 
 In the raw data you can find:
 - *workflows.tar.xz*: the workflows and the configurations used to execute them.
+- *experiments.csv*: the log that correlates a DAG execution with the infrastructure conditions, that helps label the data.
 - *archive/workflow-submit-dirs.tar.xz.partX*: the workflow submit directories of all DAG executions, containing workflow management system logs, and provenance data.
 - *archive/elasticsearch.tar.xz.partX*: an elasticsearch with the captured workflow events, transfer events and resource utilization traces.
 
