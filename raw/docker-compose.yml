@@ -1,0 +1,28 @@
+version: "3.5"
+services:
+   elasticsearch:
+      image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.4
+      container_name: flowbench-elasticsearch
+      user: elasticsearch
+      restart: always
+      environment:
+         - discovery.type=single-node
+         - cluster.name=flowbench-cluster
+         - node.name=flowbench-1
+         - bootstrap.memory_lock=true
+         - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+      ulimits:
+         memlock:
+            soft: -1
+            hard: -1
+      volumes:
+         - ./elasticsearch/data:/usr/share/elasticsearch/data:rw
+      ports:
+         - 127.0.0.1:9218:9200
+      networks:
+         - flowbench_net
+networks:
+   flowbench_net:
+      name: flowbench_net
+      driver: bridge
+
