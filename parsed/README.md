@@ -3,7 +3,7 @@
 We have parsed the raw logs to create a dataset with the following features for further analysis.
 
 | Field                                          | Type   | Description                                                                                       |
-| ---------------------------------------------- |        | ------------------------------------------------------------------------------------------------- | 
+| ---------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------- | 
 | node_id                                        | string | Exec. DAG Node ID                                                                                 |
 | anomaly_type                                   | string | Anomaly label                                                                                     |
 | type                                           | int    | Pegasus job type                                                                                  |
