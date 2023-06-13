@@ -104,26 +104,42 @@ In this GitHub repository, apart from the logs and traces, you will find sample 
 │   ├── montage-workflow.png
 │   ├── predict-future-sales-workflow.png
 │   └── raw_data_to_parsed_data.png
-├── move_raw_data.sh
+├── LICENSE
 ├── parsed
 │   ├── cpu_2
+│   │   ├── 1000-genome-runXXXX.csv
+│   │   ├── montage-runXXXX.csv
+│   │   └── predict-future-sales-runXXXX.csv
 │   ├── cpu_3
+│   │   ├── 1000-genome-runXXXX.csv
+│   │   ├── montage-runXXXX.csv
+│   │   └── predict-future-sales-runXXXX.csv
 │   ├── cpu_4
+│   │   ├── 1000-genome-runXXXX.csv
+│   │   ├── montage-runXXXX.csv
+│   │   └── predict-future-sales-runXXXX.csv
 │   ├── hdd_10
+│   │   ├── 1000-genome-runXXXX.csv
+│   │   ├── montage-runXXXX.csv
+│   │   └── predict-future-sales-runXXXX.csv
 │   ├── hdd_5
+│   │   ├── 1000-genome-runXXXX.csv
+│   │   ├── montage-runXXXX.csv
+│   │   └── predict-future-sales-runXXXX.csv
 │   ├── normal
+│   │   ├── 1000-genome-runXXXX.csv
+│   │   ├── montage-runXXXX.csv
+│   │   └── predict-future-sales-runXXXX.csv
 │   └── README.md
 ├── raw
-│   └── raw_data.xz
-├── raw-temp
+│   ├── archive
+│   │   ├── elasticsearch.tar.xz.partXX
+│   │   └── workflow-submit-dirs.tar.xz.partXX
 │   ├── docker-compose.yml
-│   ├── elasticsearch
-│   ├── experiments-all.csv
 │   ├── experiments.csv
-│   ├── extend-log.py
 │   ├── parse-data.py
-│   ├── workflows
-│   └── workflow-submit-dirs
+│   ├── run-parser.sh
+│   └── workflows.tar.xz
 └── README.md
 ```
 
