@@ -3,9 +3,9 @@
 # input cpu
 device=${1:-"gpu"}
 
-conda create -n psd python=3.8 -y
+conda create -n flowbench python=3.8 -y
 # require 'source' instead of 'conda' in bash env.
-source activate psd
+source activate flowbench
 
 # conda install env
 if [ "$device" == "cpu" ]
@@ -28,4 +28,6 @@ else
 fi
 
 # pip install additional packages
-pip install deephyper ray pygod pyod class_resolver umap-learn
+pip install deephyper ray pygod pyod class_resolver umap-learn combo
+# problem with install pygraphviz
+python setup.py develop

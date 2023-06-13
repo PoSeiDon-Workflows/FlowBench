@@ -22,7 +22,7 @@ from pyod.models.mcd import MCD
 from pyod.models.ocsvm import OCSVM
 from pyod.models.pca import PCA
 
-from py_script.dataset import PoSeiDon
+from py_script.dataset import FlowBench
 from pygod.metrics import eval_roc_auc, eval_average_precision, eval_precision_at_k, eval_recall_at_k
 
 import os.path as osp
@@ -78,11 +78,11 @@ if __name__ == '__main__':
 
     ROOT = osp.join(osp.expanduser("~"), "tmp", "data", args.dataset)
     if args.dataset not in ["cora", "citeseer", "pubmed"]:
-        dataset = PoSeiDon(root=ROOT,
-                              name=args.dataset,
-                              node_level=True,
-                              binary_labels=True,
-                              force_reprocess=False)
+        dataset = FlowBench(root=ROOT,
+                            name=args.dataset,
+                            node_level=True,
+                            binary_labels=True,
+                            force_reprocess=False)
     else:
         # NOTE: For debug only. Take standard datasets from PyG.
         dataset = Planetoid(ROOT, args.dataset)

@@ -4,7 +4,7 @@ import os.path as osp
 
 
 def create_dir(path):
-    """ Create a dir where the processed data will be stored
+    r""" Create a dir where the processed data will be stored
 
     Args:
         path (str): Path to create the folder.
@@ -21,7 +21,7 @@ def create_dir(path):
 
 
 def parse_adj(workflow):
-    """ Processing adjacency file.
+    r""" Processing adjacency file.
 
     Args:
         workflow (str): Workflow name.
@@ -74,7 +74,7 @@ def parse_adj(workflow):
 
 
 def init_model(args):
-    """ Init model for PyGOD
+    r""" Initiate model for PyGOD
 
     Args:
         args (dict): Args from argparser.
