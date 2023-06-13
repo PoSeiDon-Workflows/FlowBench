@@ -115,8 +115,6 @@ In this GitHub repository, apart from the logs and traces, you will find sample 
 │   │   ├── montage-runXXXX.csv
 │   │   └── predict-future-sales-runXXXX.csv
 │   ├── cpu_4
-│   │   ├── 1000-genome-runXXXX.csv
-│   │   ├── montage-runXXXX.csv
 │   │   └── predict-future-sales-runXXXX.csv
 │   ├── hdd_10
 │   │   ├── 1000-genome-runXXXX.csv
@@ -131,6 +129,15 @@ In this GitHub repository, apart from the logs and traces, you will find sample 
 │   │   ├── montage-runXXXX.csv
 │   │   └── predict-future-sales-runXXXX.csv
 │   └── README.md
+├── py_script
+│   ├── benchmark
+│   │   ├── pygod.py
+│   │   ├── pyod.py
+│   │   └── supervised.py
+│   ├── cartography.py
+│   ├── dataset.py
+│   ├── README.md
+│   └── utils.py
 ├── raw
 │   ├── archive
 │   │   ├── elasticsearch.tar.xz.partXX
@@ -140,6 +147,8 @@ In this GitHub repository, apart from the logs and traces, you will find sample 
 │   ├── parse-data.py
 │   ├── run-parser.sh
 │   └── workflows.tar.xz
+├── setup.py
+├── setup.sh
 └── README.md
 ```
 
