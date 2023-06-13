@@ -132,8 +132,7 @@ In this GitHub repository, apart from the logs and traces, you will find sample 
 ├── py_script
 │   ├── benchmark
 │   │   ├── pygod.py
-│   │   ├── pyod.py
-│   │   └── supervised.py
+│   │   └── pyod.py
 │   ├── cartography.py
 │   ├── dataset.py
 │   ├── README.md
