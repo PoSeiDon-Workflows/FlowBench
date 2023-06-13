@@ -1,10 +1,10 @@
 # Raw Data
 
-<img src="../images/chameleon_deployment.png" alt="Chameleon deployment" width="500" height="auto" align="right"/>
-
 To generate the raw logs, we provisioned resources at the [NSF Chameleon Cloud](https://www.chameleoncloud.org/). We provisioned 4 Cascade Lake bare-metal nodes (48 Cores and 192GB RAM), where 1 had the role of submit node and 3 had the role of Docker container executor nodes. The container executor nodes were located within the same Chameleon region (Texas Advanced Computing Center - TACC), while the submit node was located at the University of Chicago region, and the connectivity between the two regions was established over a high-speed layer 2 VLAN (10 Gbps). 
 
-<br><br><br><br><br>
+<p align="center">
+<img src="../images/chameleon_deployment.png" alt="Chameleon deployment" width="500" height="auto"/>
+</p>
 
 In the raw data you can find:
 - *workflows.tar.xz*: the workflows and the configurations used to execute them.
