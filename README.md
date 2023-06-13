@@ -119,10 +119,12 @@ The repository is structured as follows:
 ├── adjacency_list_dags
 │   ├── 1000genome.json
 │   ├── montage.json
-│   └── predict_future_sales.json
+│   ├── predict_future_sales.json
+│   └── README.md
 ├── images
 │   ├── 1000genome-workflow.png
 │   ├── chameleon_deployment.png
+│   ├── model_comparison.png
 │   ├── montage-workflow.png
 │   ├── predict-future-sales-workflow.png
 │   └── raw_data_to_parsed_data.png
