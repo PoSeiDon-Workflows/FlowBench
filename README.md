@@ -64,7 +64,7 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
   <tr>
     <td>Montage</td>
     <td>539</td>
-    <td>2338</td>
+    <td>2838</td>
     <td>51</td>
     <td>46</td>
     <td>80</td>
