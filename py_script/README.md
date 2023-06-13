@@ -11,8 +11,8 @@ This is the python interface to read the workflow data.
 * load data as graphs in `pytorch_geometric` format:
   
   ```python
-  from py_script import PoSeiDon
-  dataset = PoSeiDon(root="./", name="1000genome")
+  from py_script.dataset import FlowBench
+  dataset = FlowBench(root="./", name="montage")
   data = dataset[0]
   ```
   
@@ -21,8 +21,8 @@ This is the python interface to read the workflow data.
 * load data as tabular data in `pytorch` format:
 
   ```python
-  from py_script import PoSeiDon
-  dataset = PoSeiDon(root="./", name="1000genome")
+  from py_script.dataset import FlowBench
+  dataset = FlowBench(root="./", name="montage")
   data = dataset[0]
   Xs = data.x
   ys = data.y
@@ -33,8 +33,8 @@ This is the python interface to read the workflow data.
 * load data as tabular data in `numpy` format:
 
   ```python
-  from py_script import PoSeiDon
-  dataset = PoSeiDon(root="./", name="1000genome")
+  from py_script.dataset import FlowBench
+  dataset = FlowBench(root="./", name="montage")
   data = dataset[0]
   Xs = data.x.numpy()
   ys = data.y.numpy()
@@ -46,10 +46,3 @@ This is the python interface to read the workflow data.
 
 * We provide benchmarks for anomaly detection based on [PyGOD](https://docs.pygod.org/en/latest/index.html) and [PyOD](https://pyod.readthedocs.io/en/latest/index.html) from graph data and tabular data, respectively.
 * Checkout the script under `./py_script/benchmark/pygod.py` and `./py_script/benchmark/pyod.py` for more details.
-
-## Data Analytics
-
-* [x] Feature processing
-* [x] Data analysis
-* Data visualization
-* [x] Data cleaning

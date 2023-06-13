@@ -1,4 +1,4 @@
-r""" PoSeiDon dataset interface for graph and tabular data."""
+r""" FlowBench dataset interface for graph and tabular data."""
 
 import glob
 import os
@@ -13,8 +13,29 @@ from torch_geometric.data import Batch, Data, InMemoryDataset
 from .utils import create_dir, parse_adj
 
 
-class PoSeiDon(InMemoryDataset):
-    r""" PoSeiDon dataset interface for graph and tabular data.
+class FlowBench(InMemoryDataset):
+    r"""FlowBench dataset interface for graph and tabular data.
+
+    Args:
+        root (str): Root for processing the dataset.
+        name (str, optional): Name of workflow.
+            Defaults to "1000genome".
+        node_level (bool, optional): Use the node_level dataset if `True`.
+            Defaults to True.
+        binary_labels (bool, optional): Specify the problem as binary classification if `True`.
+            Defaults to True.
+        feature_option (str, optional): Specify the feature options. More detailed options are available in `README.md`.
+            Defaults to "v1".
+        anomaly_cat (str, optional): Specify the anomaly category.
+            Defaults to "all".
+        force_reprocess (bool, optional): Force to reprocess the parsed data if `True`.
+            Defaults to False.
+        transform (_type_, optional): Module for transform operations.
+            Defaults to None.
+        pre_transform (_type_, optional): Module for pre_transform operations.
+            Defaults to None.
+        pre_filter (_type_, optional): Module for pre_filter operations.
+            Defaults to None.
     """
 
     def __init__(self,
@@ -41,7 +62,7 @@ class PoSeiDon(InMemoryDataset):
             if osp.exists(SAVED_FILE):
                 os.remove(SAVED_FILE)
 
-        super(PoSeiDon, self).__init__(root, transform, pre_transform, pre_filter)
+        super(FlowBench, self).__init__(root, transform, pre_transform, pre_filter)
         self.data, self.slices = torch.load(self.processed_paths[0])
 
     @property
@@ -57,8 +78,8 @@ class PoSeiDon(InMemoryDataset):
         return [f'{SAVED_PATH}/binary_{self.binary_labels}_node_{self.node_level}.pt']
 
     def process(self):
-        r"""Processes the raw data to the graphs and saves it in
-        :obj:`self.processed_dir`."""
+        r""" Processes the raw data to the graphs and saves it in :obj:`self.processed_dir`.
+        """
         data_folder = osp.join(osp.dirname(osp.abspath(__file__)), "..", "parsed")
 
         nodes, edges = parse_adj(self.name)

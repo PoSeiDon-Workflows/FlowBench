@@ -1,7 +1,5 @@
 """ Benchmarks of node-level Anomoly detection in PyGOD.
 
-* NOTE: the training with data will consume a lot memory, not suitable for a single GPU.
-* DEBUG: models () will run out of memory with local GPU.
 """
 
 
@@ -15,8 +13,8 @@ from pygod.metrics import (eval_average_precision, eval_precision_at_k,
 from torch_geometric.datasets import Planetoid
 from tqdm import tqdm
 
-from py_script.dataset import PoSeiDon
-from psd_gnn.utils import init_model
+from py_script.dataset import FlowBench
+from py_script.utils import init_model
 
 # torch.manual_seed(12345)
 # np.random.seed(12345)
@@ -37,11 +35,11 @@ if __name__ == "__main__":
 
     ROOT = osp.join(osp.expanduser("~"), "tmp", "data", args.dataset)
     if args.dataset not in ["cora", "citeseer", "pubmed"]:
-        dataset = PoSeiDon(root=ROOT,
-                              name=args.dataset,
-                              node_level=True,
-                              binary_labels=True,
-                              force_reprocess=False)
+        dataset = FlowBench(root=ROOT,
+                            name=args.dataset,
+                            node_level=True,
+                            binary_labels=True,
+                            force_reprocess=False)
     else:
         # NOTE: For debug only. Take standard datasets from PyG.
         dataset = Planetoid(ROOT, args.dataset)
@@ -71,12 +69,12 @@ if __name__ == "__main__":
             rec.append(eval_recall_at_k(y, score, k))
 
         print(f"{args.dataset}",
-            f"{model.__class__.__name__:<15}",
-            f"AUC: {np.mean(auc):.3f}±{np.std(auc):.3f} ({np.max(auc):.3f})",
-            f"AP: {np.mean(ap):.3f}±{np.std(ap):.3f} ({np.max(ap):.3f})",
-            f"Prec(K) {np.mean(prec):.3f}±{np.std(prec):.3f} ({np.max(prec):.3f})",
-            f"Recall(K): {np.mean(rec):.3f}±{np.std(rec):.3f} ({np.max(rec):.3f})")
+              f"{model.__class__.__name__:<15}",
+              f"AUC: {np.mean(auc):.3f}±{np.std(auc):.3f} ({np.max(auc):.3f})",
+              f"AP: {np.mean(ap):.3f}±{np.std(ap):.3f} ({np.max(ap):.3f})",
+              f"Prec(K) {np.mean(prec):.3f}±{np.std(prec):.3f} ({np.max(prec):.3f})",
+              f"Recall(K): {np.mean(rec):.3f}±{np.std(rec):.3f} ({np.max(rec):.3f})")
     except Exception as e:
         print(f"{args.dataset}",
-            f"{model.__class__.__name__:<15}", 
-            "ERROR:", e)
+              f"{model.__class__.__name__:<15}",
+              "ERROR:", e)
