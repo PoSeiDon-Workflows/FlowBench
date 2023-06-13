@@ -118,6 +118,12 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
 </tbody>
 </table>
 
+
+## Benchmark Performance
+
+![Alt text](/images/model_comparison.png "Comparison of models using the benchmark dataset.")
+
+
 ## Repository Structure
 
 The repository is structured as follows:
