@@ -63,7 +63,7 @@ class FlowBench(InMemoryDataset):
                 os.remove(SAVED_FILE)
 
         super(FlowBench, self).__init__(root, transform, pre_transform, pre_filter)
-        self.data, self.slices = torch.load(self.processed_paths[0])
+        self.data, self.slices, self.sizes = torch.load(self.processed_paths[0])
 
     @property
     def processed_file_names(self):
@@ -123,7 +123,8 @@ class FlowBench(InMemoryDataset):
 
         file_prefix = {"1000genome": "1000-genome",
                        "montage": "montage",
-                       "predict_future_sales": "predict-future-sales"}
+                       "predict_future_sales": "predict-future-sales",
+                       "casa-wind-full": "casa-wind-full", }
         for y_idx, y_label in enumerate(self.y_labels):
             raw_data_files = f"{data_folder}/{y_label}*/{file_prefix[self.name]}*.csv"
 
@@ -197,8 +198,8 @@ class FlowBench(InMemoryDataset):
 
                 df = df[selected_features]
 
-                x = torch.tensor(df.to_numpy(), dtype=torch.float32)
-                feat_list.append(df.to_numpy())
+                x = torch.tensor(df.to_numpy().astype(np.float32), dtype=torch.float32)
+                feat_list.append(df.to_numpy().astype(np.float32))
                 data = Data(x=x, edge_index=edge_index, y=y)
                 data_list.append(data)
 

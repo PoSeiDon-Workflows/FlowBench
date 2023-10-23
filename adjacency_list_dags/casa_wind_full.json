@@ -1,0 +1,652 @@
+{
+  "create_dir_casa-wind-full_0_condorpool": [
+    "unzip_ID0000081",
+    "unzip_ID0000041",
+    "unzip_ID0000061",
+    "unzip_ID0000001",
+    "unzip_ID0000121",
+    "unzip_ID0000066",
+    "unzip_ID0000021",
+    "unzip_ID0000086",
+    "unzip_ID0000016",
+    "unzip_ID0000036",
+    "unzip_ID0000116",
+    "unzip_ID0000091",
+    "unzip_ID0000096",
+    "unzip_ID0000051",
+    "unzip_ID0000071",
+    "unzip_ID0000111",
+    "unzip_ID0000056",
+    "unzip_ID0000011",
+    "unzip_ID0000076",
+    "unzip_ID0000031",
+    "unzip_ID0000126",
+    "unzip_ID0000026",
+    "unzip_ID0000101",
+    "unzip_ID0000046",
+    "unzip_ID0000106",
+    "unzip_ID0000006"
+  ],
+  "unzip_ID0000081": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000082"
+  ],
+  "unzip_ID0000041": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000042"
+  ],
+  "unzip_ID0000061": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000062"
+  ],
+  "unzip_ID0000001": [
+    "um_vel_ID0000002",
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2"
+  ],
+  "unzip_ID0000121": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "um_vel_ID0000122",
+    "stage_out_local_condorpool_0_2"
+  ],
+  "unzip_ID0000066": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "um_vel_ID0000067",
+    "stage_out_local_condorpool_0_2"
+  ],
+  "unzip_ID0000021": [
+    "stage_out_local_condorpool_0_0",
+    "um_vel_ID0000022",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2"
+  ],
+  "unzip_ID0000086": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000087"
+  ],
+  "unzip_ID0000016": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000017"
+  ],
+  "unzip_ID0000036": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000037"
+  ],
+  "unzip_ID0000116": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000117"
+  ],
+  "unzip_ID0000091": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000092"
+  ],
+  "unzip_ID0000096": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000097"
+  ],
+  "unzip_ID0000051": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000052"
+  ],
+  "unzip_ID0000071": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000072"
+  ],
+  "unzip_ID0000111": [
+    "um_vel_ID0000112",
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2"
+  ],
+  "unzip_ID0000056": [
+    "um_vel_ID0000057",
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2"
+  ],
+  "unzip_ID0000011": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "um_vel_ID0000012",
+    "stage_out_local_condorpool_0_2"
+  ],
+  "unzip_ID0000076": [
+    "stage_out_local_condorpool_0_0",
+    "um_vel_ID0000077",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2"
+  ],
+  "unzip_ID0000031": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000032"
+  ],
+  "unzip_ID0000126": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000127"
+  ],
+  "unzip_ID0000026": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000027"
+  ],
+  "unzip_ID0000101": [
+    "um_vel_ID0000102",
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2"
+  ],
+  "unzip_ID0000046": [
+    "um_vel_ID0000047",
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2"
+  ],
+  "unzip_ID0000106": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000107"
+  ],
+  "unzip_ID0000006": [
+    "stage_out_local_condorpool_0_0",
+    "stage_out_local_condorpool_0_1",
+    "stage_out_local_condorpool_0_2",
+    "um_vel_ID0000007"
+  ],
+  "um_vel_ID0000082": [
+    "stage_out_local_condorpool_1_1",
+    "post_vel_ID0000083",
+    "mvt_ID0000084"
+  ],
+  "um_vel_ID0000042": [
+    "mvt_ID0000044",
+    "stage_out_local_condorpool_1_0",
+    "post_vel_ID0000043"
+  ],
+  "um_vel_ID0000062": [
+    "stage_out_local_condorpool_1_2",
+    "post_vel_ID0000063",
+    "mvt_ID0000064"
+  ],
+  "um_vel_ID0000002": [
+    "post_vel_ID0000003",
+    "stage_out_local_condorpool_1_2",
+    "mvt_ID0000004"
+  ],
+  "um_vel_ID0000122": [
+    "post_vel_ID0000123",
+    "stage_out_local_condorpool_1_0",
+    "mvt_ID0000124"
+  ],
+  "um_vel_ID0000067": [
+    "post_vel_ID0000068",
+    "stage_out_local_condorpool_1_0",
+    "mvt_ID0000069"
+  ],
+  "um_vel_ID0000022": [
+    "post_vel_ID0000023",
+    "stage_out_local_condorpool_1_0",
+    "mvt_ID0000024"
+  ],
+  "um_vel_ID0000087": [
+    "post_vel_ID0000088",
+    "mvt_ID0000089",
+    "stage_out_local_condorpool_1_1"
+  ],
+  "um_vel_ID0000017": [
+    "stage_out_local_condorpool_1_1",
+    "mvt_ID0000019",
+    "post_vel_ID0000018"
+  ],
+  "um_vel_ID0000037": [
+    "stage_out_local_condorpool_1_1",
+    "mvt_ID0000039",
+    "post_vel_ID0000038"
+  ],
+  "um_vel_ID0000117": [
+    "stage_out_local_condorpool_1_2",
+    "post_vel_ID0000118",
+    "mvt_ID0000119"
+  ],
+  "um_vel_ID0000092": [
+    "stage_out_local_condorpool_1_0",
+    "post_vel_ID0000093",
+    "mvt_ID0000094"
+  ],
+  "um_vel_ID0000097": [
+    "mvt_ID0000099",
+    "stage_out_local_condorpool_1_1",
+    "post_vel_ID0000098"
+  ],
+  "um_vel_ID0000052": [
+    "mvt_ID0000054",
+    "stage_out_local_condorpool_1_2",
+    "post_vel_ID0000053"
+  ],
+  "um_vel_ID0000072": [
+    "stage_out_local_condorpool_1_1",
+    "post_vel_ID0000073",
+    "mvt_ID0000074"
+  ],
+  "um_vel_ID0000112": [
+    "post_vel_ID0000113",
+    "stage_out_local_condorpool_1_2",
+    "mvt_ID0000114"
+  ],
+  "um_vel_ID0000057": [
+    "stage_out_local_condorpool_1_0",
+    "post_vel_ID0000058",
+    "mvt_ID0000059"
+  ],
+  "um_vel_ID0000012": [
+    "post_vel_ID0000013",
+    "mvt_ID0000014",
+    "stage_out_local_condorpool_1_2"
+  ],
+  "um_vel_ID0000077": [
+    "post_vel_ID0000078",
+    "stage_out_local_condorpool_1_0",
+    "mvt_ID0000079"
+  ],
+  "um_vel_ID0000032": [
+    "post_vel_ID0000033",
+    "mvt_ID0000034",
+    "stage_out_local_condorpool_1_2"
+  ],
+  "um_vel_ID0000127": [
+    "stage_out_local_condorpool_1_0",
+    "mvt_ID0000129",
+    "post_vel_ID0000128"
+  ],
+  "um_vel_ID0000027": [
+    "stage_out_local_condorpool_1_0",
+    "mvt_ID0000029",
+    "post_vel_ID0000028"
+  ],
+  "um_vel_ID0000102": [
+    "stage_out_local_condorpool_1_1",
+    "mvt_ID0000104",
+    "post_vel_ID0000103"
+  ],
+  "um_vel_ID0000047": [
+    "stage_out_local_condorpool_1_1",
+    "mvt_ID0000049",
+    "post_vel_ID0000048"
+  ],
+  "um_vel_ID0000107": [
+    "stage_out_local_condorpool_1_2",
+    "post_vel_ID0000108",
+    "mvt_ID0000109"
+  ],
+  "stage_out_local_condorpool_0_0": [
+    "register_condorpool_0_0",
+    "cleanup_casa-wind-full_0_condorpool"
+  ],
+  "stage_out_local_condorpool_0_1": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_0_1"
+  ],
+  "stage_out_local_condorpool_0_2": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_0_2"
+  ],
+  "um_vel_ID0000007": [
+    "stage_out_local_condorpool_1_1",
+    "post_vel_ID0000008",
+    "mvt_ID0000009"
+  ],
+  "post_vel_ID0000083": [
+    "stage_out_local_condorpool_2_2"
+  ],
+  "mvt_ID0000084": [
+    "stage_out_local_condorpool_2_3",
+    "point_alert_ID0000085"
+  ],
+  "mvt_ID0000044": [
+    "stage_out_local_condorpool_2_0",
+    "point_alert_ID0000045"
+  ],
+  "post_vel_ID0000043": [
+    "stage_out_local_condorpool_2_1"
+  ],
+  "post_vel_ID0000063": [
+    "stage_out_local_condorpool_2_4"
+  ],
+  "mvt_ID0000064": [
+    "stage_out_local_condorpool_2_5",
+    "point_alert_ID0000065"
+  ],
+  "post_vel_ID0000003": [
+    "stage_out_local_condorpool_2_4"
+  ],
+  "mvt_ID0000004": [
+    "point_alert_ID0000005",
+    "stage_out_local_condorpool_2_5"
+  ],
+  "post_vel_ID0000123": [
+    "stage_out_local_condorpool_2_0"
+  ],
+  "mvt_ID0000124": [
+    "stage_out_local_condorpool_2_1",
+    "point_alert_ID0000125"
+  ],
+  "post_vel_ID0000068": [
+    "stage_out_local_condorpool_2_0"
+  ],
+  "mvt_ID0000069": [
+    "point_alert_ID0000070",
+    "stage_out_local_condorpool_2_1"
+  ],
+  "post_vel_ID0000023": [
+    "stage_out_local_condorpool_2_0"
+  ],
+  "mvt_ID0000024": [
+    "stage_out_local_condorpool_2_1",
+    "point_alert_ID0000025"
+  ],
+  "post_vel_ID0000088": [
+    "stage_out_local_condorpool_2_2"
+  ],
+  "mvt_ID0000089": [
+    "point_alert_ID0000090",
+    "stage_out_local_condorpool_2_3"
+  ],
+  "mvt_ID0000019": [
+    "stage_out_local_condorpool_2_2",
+    "point_alert_ID0000020"
+  ],
+  "post_vel_ID0000018": [
+    "stage_out_local_condorpool_2_3"
+  ],
+  "mvt_ID0000039": [
+    "stage_out_local_condorpool_2_2",
+    "point_alert_ID0000040"
+  ],
+  "post_vel_ID0000038": [
+    "stage_out_local_condorpool_2_3"
+  ],
+  "post_vel_ID0000118": [
+    "stage_out_local_condorpool_2_4"
+  ],
+  "mvt_ID0000119": [
+    "stage_out_local_condorpool_2_5",
+    "point_alert_ID0000120"
+  ],
+  "post_vel_ID0000093": [
+    "stage_out_local_condorpool_2_0"
+  ],
+  "mvt_ID0000094": [
+    "stage_out_local_condorpool_2_1",
+    "point_alert_ID0000095"
+  ],
+  "mvt_ID0000099": [
+    "stage_out_local_condorpool_2_2",
+    "point_alert_ID0000100"
+  ],
+  "post_vel_ID0000098": [
+    "stage_out_local_condorpool_2_3"
+  ],
+  "mvt_ID0000054": [
+    "stage_out_local_condorpool_2_4",
+    "point_alert_ID0000055"
+  ],
+  "post_vel_ID0000053": [
+    "stage_out_local_condorpool_2_5"
+  ],
+  "post_vel_ID0000073": [
+    "stage_out_local_condorpool_2_2"
+  ],
+  "mvt_ID0000074": [
+    "stage_out_local_condorpool_2_3",
+    "point_alert_ID0000075"
+  ],
+  "post_vel_ID0000113": [
+    "stage_out_local_condorpool_2_4"
+  ],
+  "mvt_ID0000114": [
+    "point_alert_ID0000115",
+    "stage_out_local_condorpool_2_5"
+  ],
+  "post_vel_ID0000058": [
+    "stage_out_local_condorpool_2_0"
+  ],
+  "mvt_ID0000059": [
+    "stage_out_local_condorpool_2_1",
+    "point_alert_ID0000060"
+  ],
+  "post_vel_ID0000013": [
+    "stage_out_local_condorpool_2_4"
+  ],
+  "mvt_ID0000014": [
+    "stage_out_local_condorpool_2_5",
+    "point_alert_ID0000015"
+  ],
+  "post_vel_ID0000078": [
+    "stage_out_local_condorpool_2_0"
+  ],
+  "mvt_ID0000079": [
+    "point_alert_ID0000080",
+    "stage_out_local_condorpool_2_1"
+  ],
+  "post_vel_ID0000033": [
+    "stage_out_local_condorpool_2_4"
+  ],
+  "mvt_ID0000034": [
+    "stage_out_local_condorpool_2_5",
+    "point_alert_ID0000035"
+  ],
+  "mvt_ID0000129": [
+    "stage_out_local_condorpool_2_0",
+    "point_alert_ID0000130"
+  ],
+  "post_vel_ID0000128": [
+    "stage_out_local_condorpool_2_1"
+  ],
+  "stage_out_local_condorpool_1_0": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_1_0"
+  ],
+  "mvt_ID0000029": [
+    "stage_out_local_condorpool_2_0",
+    "point_alert_ID0000030"
+  ],
+  "post_vel_ID0000028": [
+    "stage_out_local_condorpool_2_1"
+  ],
+  "mvt_ID0000104": [
+    "point_alert_ID0000105",
+    "stage_out_local_condorpool_2_2"
+  ],
+  "post_vel_ID0000103": [
+    "stage_out_local_condorpool_2_3"
+  ],
+  "mvt_ID0000049": [
+    "stage_out_local_condorpool_2_2",
+    "point_alert_ID0000050"
+  ],
+  "post_vel_ID0000048": [
+    "stage_out_local_condorpool_2_3"
+  ],
+  "stage_out_local_condorpool_1_2": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_1_2"
+  ],
+  "post_vel_ID0000108": [
+    "stage_out_local_condorpool_2_4"
+  ],
+  "mvt_ID0000109": [
+    "stage_out_local_condorpool_2_5",
+    "point_alert_ID0000110"
+  ],
+  "register_condorpool_0_0": [],
+  "register_condorpool_0_1": [],
+  "register_condorpool_0_2": [],
+  "stage_out_local_condorpool_1_1": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_1_1"
+  ],
+  "post_vel_ID0000008": [
+    "stage_out_local_condorpool_2_2"
+  ],
+  "mvt_ID0000009": [
+    "stage_out_local_condorpool_2_3",
+    "point_alert_ID0000010"
+  ],
+  "point_alert_ID0000085": [
+    "stage_out_local_condorpool_3_1"
+  ],
+  "point_alert_ID0000045": [
+    "stage_out_local_condorpool_3_0"
+  ],
+  "point_alert_ID0000065": [
+    "stage_out_local_condorpool_3_2"
+  ],
+  "point_alert_ID0000005": [
+    "stage_out_local_condorpool_3_2"
+  ],
+  "point_alert_ID0000125": [
+    "stage_out_local_condorpool_3_0"
+  ],
+  "point_alert_ID0000070": [
+    "stage_out_local_condorpool_3_0"
+  ],
+  "point_alert_ID0000025": [
+    "stage_out_local_condorpool_3_0"
+  ],
+  "point_alert_ID0000090": [
+    "stage_out_local_condorpool_3_1"
+  ],
+  "point_alert_ID0000020": [
+    "stage_out_local_condorpool_3_1"
+  ],
+  "point_alert_ID0000040": [
+    "stage_out_local_condorpool_3_1"
+  ],
+  "point_alert_ID0000120": [
+    "stage_out_local_condorpool_3_2"
+  ],
+  "point_alert_ID0000095": [
+    "stage_out_local_condorpool_3_0"
+  ],
+  "point_alert_ID0000100": [
+    "stage_out_local_condorpool_3_1"
+  ],
+  "point_alert_ID0000055": [
+    "stage_out_local_condorpool_3_2"
+  ],
+  "point_alert_ID0000075": [
+    "stage_out_local_condorpool_3_1"
+  ],
+  "point_alert_ID0000115": [
+    "stage_out_local_condorpool_3_2"
+  ],
+  "point_alert_ID0000060": [
+    "stage_out_local_condorpool_3_0"
+  ],
+  "point_alert_ID0000015": [
+    "stage_out_local_condorpool_3_2"
+  ],
+  "point_alert_ID0000080": [
+    "stage_out_local_condorpool_3_0"
+  ],
+  "point_alert_ID0000035": [
+    "stage_out_local_condorpool_3_2"
+  ],
+  "point_alert_ID0000130": [
+    "stage_out_local_condorpool_3_0"
+  ],
+  "register_condorpool_1_0": [],
+  "stage_out_local_condorpool_2_0": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_2_0"
+  ],
+  "point_alert_ID0000030": [
+    "stage_out_local_condorpool_3_0"
+  ],
+  "stage_out_local_condorpool_2_1": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_2_1"
+  ],
+  "point_alert_ID0000105": [
+    "stage_out_local_condorpool_3_1"
+  ],
+  "point_alert_ID0000050": [
+    "stage_out_local_condorpool_3_1"
+  ],
+  "register_condorpool_1_2": [],
+  "stage_out_local_condorpool_2_4": [
+    "register_condorpool_2_4",
+    "cleanup_casa-wind-full_0_condorpool"
+  ],
+  "stage_out_local_condorpool_2_5": [
+    "register_condorpool_2_5",
+    "cleanup_casa-wind-full_0_condorpool"
+  ],
+  "point_alert_ID0000110": [
+    "stage_out_local_condorpool_3_2"
+  ],
+  "register_condorpool_1_1": [],
+  "stage_out_local_condorpool_2_2": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_2_2"
+  ],
+  "stage_out_local_condorpool_2_3": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_2_3"
+  ],
+  "point_alert_ID0000010": [
+    "stage_out_local_condorpool_3_1"
+  ],
+  "register_condorpool_2_0": [],
+  "stage_out_local_condorpool_3_0": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_3_0"
+  ],
+  "register_condorpool_2_1": [],
+  "register_condorpool_2_4": [],
+  "register_condorpool_2_5": [],
+  "stage_out_local_condorpool_3_2": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_3_2"
+  ],
+  "register_condorpool_2_2": [],
+  "register_condorpool_2_3": [],
+  "stage_out_local_condorpool_3_1": [
+    "cleanup_casa-wind-full_0_condorpool",
+    "register_condorpool_3_1"
+  ],
+  "register_condorpool_3_0": [],
+  "register_condorpool_3_2": [],
+  "cleanup_casa-wind-full_0_condorpool": [],
+  "register_condorpool_3_1": []
+}
