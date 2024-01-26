@@ -1,33 +1,36 @@
 #!/usr/bin/bash
 
-# input cpu
-device=${1:-"gpu"}
-
-conda create -n flowbench python=3.8 -y
-# require 'source' instead of 'conda' in bash env.
-source activate flowbench
-
-# conda install env
-if [ "$device" == "cpu" ]
+# check cuda version
+if module spider cuda &> /dev/null 
 then
-  echo "Install the version with CPU only"
-  conda install pytorch torchvision torchaudio cpuonly pyg tensorboard \
-    matplotlib seaborn joblib networkx numba \
-    ipykernel flake8 autopep8 graphviz jupyter ipywidgets pytest \
-    -c pytorch -c pyg
-elif [ "$device" == "gpu" ]
-then
-  echo "Install the version with CUDA"
-  conda install pytorch torchvision torchaudio cudatoolkit=11.6 pyg tensorboard \
-    matplotlib seaborn joblib networkx numba \
-    ipykernel flake8 autopep8 graphviz jupyter ipywidgets pytest \
-    graphviz pygraphviz \
-    -c pytorch -c nvidia -c pyg
+    module load cuda
+    CUDA=$(nvcc --version | grep "release" | awk '{print $5}' | cut -c 1-4)
+    PYG_CUDA=$(echo $CUDA | tr -d .)
+    echo "CUDA is available, install the package with CUDA $CUDA"
+
+    conda create -n flowbench python=3.10 -y
+    source activate flowbench
+    conda install pytorch=2.0.0 torchvision torchaudio pytorch-cuda=$CUDA pyg \
+        matplotlib seaborn networkx numba \
+        ipykernel flake8 autopep8 graphviz pygraphviz jupyter ipywidgets pytest \
+        -c pytorch -c nvidia -c pyg -y
+    # pip install tensorflow[and-cuda] # install tensorflow with cuda
+    pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv \
+        -f https://data.pyg.org/whl/torch-2.0.0+cu${PYG_CUDA}.html
 else
-  echo "Please choose from 'cpu' or 'gpu'."
+    echo "CUDA is not available, install the package with CPU only"
+    conda create -n flowbench python=3.10 -y
+    source activate flowbench
+    conda install pytorch=2.0.0 torchvision torchaudio cpuonly pyg \
+        matplotlib seaborn networkx numba \
+        ipykernel flake8 autopep8 graphviz pygraphviz jupyter ipywidgets pytest \
+        -c pytorch -c pyg -y
+    # pip install tensorflow # install tensorflow without cuda
+    pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv \
+        -f https://data.pyg.org/whl/torch-2.0.0+cpu.html
 fi
-
-# pip install additional packages
-pip install deephyper ray pygod pyod class_resolver umap-learn combo
-# problem with install pygraphviz
-python setup.py develop
+# install optional packages
+pip install lightning tensorboard deepspeed deephyper ray pygod pyod class_resolver \
+    umap-learn combo scikit-learn-intelex -U -q
+# install current package in develop mode
+pip install -e .
