@@ -95,6 +95,57 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
     <td>3321</td>
     <td>3293</td>
   </tr>
+  <tr>
+    <td>Variant Calling</td>
+    <td>371</td>
+    <td>792</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>-</td>
+    <td>75</td>
+    <td>80</td>
+    <td>5317048</td>
+    <td>381202</td>
+    <td>332212</td>
+    <td>-</td>
+    <td>338790</td>
+    <td>371818</td>
+  </tr>
+  <tr>
+    <td>CASA Wind</td>
+    <td>162</td>
+    <td>342</td>
+    <td>150</td>
+    <td>200</td>
+    <td>200</td>
+    <td>-</td>
+    <td>200</td>
+    <td>160</td>
+    <td>5374456</td>
+    <td>404478</td>
+    <td>385572</td>
+    <td>-</td>
+    <td>382030</td>
+    <td>234784</td>
+  </tr>
+  <tr>
+    <td>CASA Nowcast</td>
+    <td>2081</td>
+    <td>4029</td>
+    <td>80</td>
+    <td>40</td>
+    <td>40</td>
+    <td>-</td>
+    <td>39</td>
+    <td>24</td>
+    <td>17868746</td>
+    <td>1150874</td>
+    <td>1127920</td>
+    <td>-</td>
+    <td>1035184</td>
+    <td>164174</td>
+  </tr>
 </tbody>
 </table>
 
