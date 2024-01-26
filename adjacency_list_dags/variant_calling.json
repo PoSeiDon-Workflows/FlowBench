@@ -1,0 +1,1502 @@
+{
+  "create_dir_variant-calling_0_condorpool": [
+    "bwa_ID0000111",
+    "bwa_ID0000232",
+    "bwa_ID0000210",
+    "bwa_ID0000078",
+    "bwa_ID0000199",
+    "bwa_ID0000056",
+    "bwa_ID0000177",
+    "bwa_ID0000155",
+    "bwa_ID0000133",
+    "bwa_ID0000298",
+    "bwa_ID0000276",
+    "bwa_ID0000254",
+    "bwa_ID0000034",
+    "bwa_ID0000012",
+    "bwa_ID0000122",
+    "bwa_ID0000001",
+    "bwa_ID0000243",
+    "bwa_ID0000100",
+    "bwa_ID0000221",
+    "bwa_ID0000320",
+    "bwa_ID0000265",
+    "bwa_ID0000287",
+    "bwa_ID0000089",
+    "bwa_ID0000067",
+    "bwa_ID0000045",
+    "bwa_ID0000023",
+    "bwa_ID0000188",
+    "bwa_ID0000166",
+    "bwa_ID0000144",
+    "bwa_ID0000309"
+  ],
+  "bwa_ID0000111": [
+    "register_condorpool_0_0",
+    "bwa_ID0000112",
+    "bwa_ID0000117",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000232": [
+    "register_condorpool_0_0",
+    "bwa_ID0000233",
+    "bwa_ID0000238",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000210": [
+    "register_condorpool_0_0",
+    "bwa_ID0000211",
+    "bwa_ID0000216",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000078": [
+    "register_condorpool_0_0",
+    "bwa_ID0000079",
+    "bwa_ID0000084",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000199": [
+    "register_condorpool_0_0",
+    "bwa_ID0000200",
+    "bwa_ID0000205",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000056": [
+    "register_condorpool_0_0",
+    "bwa_ID0000057",
+    "bwa_ID0000062",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000177": [
+    "register_condorpool_0_0",
+    "bwa_ID0000178",
+    "bwa_ID0000183",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000155": [
+    "register_condorpool_0_0",
+    "bwa_ID0000156",
+    "bwa_ID0000161",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000133": [
+    "register_condorpool_0_0",
+    "bwa_ID0000134",
+    "bwa_ID0000139",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000298": [
+    "register_condorpool_0_0",
+    "bwa_ID0000299",
+    "bwa_ID0000304",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000276": [
+    "register_condorpool_0_0",
+    "bwa_ID0000277",
+    "bwa_ID0000282",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000254": [
+    "register_condorpool_0_0",
+    "bwa_ID0000255",
+    "bwa_ID0000260",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000034": [
+    "register_condorpool_0_0",
+    "bwa_ID0000035",
+    "bwa_ID0000040",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000012": [
+    "register_condorpool_0_0",
+    "bwa_ID0000013",
+    "bwa_ID0000018",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000122": [
+    "register_condorpool_0_0",
+    "bwa_ID0000123",
+    "bwa_ID0000128",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000001": [
+    "register_condorpool_0_0",
+    "bwa_ID0000002",
+    "bwa_ID0000007",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000243": [
+    "register_condorpool_0_0",
+    "bwa_ID0000244",
+    "bwa_ID0000249",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000100": [
+    "register_condorpool_0_0",
+    "bwa_ID0000101",
+    "bwa_ID0000106",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000221": [
+    "register_condorpool_0_0",
+    "bwa_ID0000222",
+    "bwa_ID0000227",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000320": [
+    "register_condorpool_0_0",
+    "bwa_ID0000321",
+    "bwa_ID0000326",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000265": [
+    "register_condorpool_0_0",
+    "bwa_ID0000266",
+    "bwa_ID0000271",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000287": [
+    "register_condorpool_0_0",
+    "bwa_ID0000288",
+    "bwa_ID0000293",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000089": [
+    "register_condorpool_0_0",
+    "bwa_ID0000095",
+    "bwa_ID0000090",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000067": [
+    "register_condorpool_0_0",
+    "bwa_ID0000068",
+    "bwa_ID0000073",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000045": [
+    "register_condorpool_0_0",
+    "bwa_ID0000046",
+    "bwa_ID0000051",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000023": [
+    "register_condorpool_0_0",
+    "bwa_ID0000024",
+    "bwa_ID0000029",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000188": [
+    "register_condorpool_0_0",
+    "bwa_ID0000189",
+    "bwa_ID0000194",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000166": [
+    "register_condorpool_0_0",
+    "bwa_ID0000167",
+    "bwa_ID0000172",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000144": [
+    "register_condorpool_0_0",
+    "bwa_ID0000145",
+    "bwa_ID0000150",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000309": [
+    "register_condorpool_0_0",
+    "bwa_ID0000310",
+    "bwa_ID0000315",
+    "register_condorpool_0_2",
+    "register_condorpool_0_1"
+  ],
+  "bwa_ID0000112": [
+    "samtools_ID0000113",
+    "register_condorpool_1_0"
+  ],
+  "bwa_ID0000117": [
+    "samtools_ID0000118",
+    "register_condorpool_1_1"
+  ],
+  "bwa_ID0000233": [
+    "samtools_ID0000234",
+    "register_condorpool_1_2"
+  ],
+  "bwa_ID0000238": [
+    "samtools_ID0000239",
+    "register_condorpool_1_3"
+  ],
+  "bwa_ID0000211": [
+    "register_condorpool_1_4",
+    "samtools_ID0000212"
+  ],
+  "bwa_ID0000216": [
+    "samtools_ID0000217",
+    "register_condorpool_1_5"
+  ],
+  "bwa_ID0000079": [
+    "samtools_ID0000080",
+    "register_condorpool_1_2"
+  ],
+  "bwa_ID0000084": [
+    "samtools_ID0000085",
+    "register_condorpool_1_3"
+  ],
+  "bwa_ID0000200": [
+    "register_condorpool_1_4",
+    "samtools_ID0000201"
+  ],
+  "bwa_ID0000205": [
+    "samtools_ID0000206",
+    "register_condorpool_1_5"
+  ],
+  "bwa_ID0000057": [
+    "samtools_ID0000058",
+    "register_condorpool_1_2"
+  ],
+  "bwa_ID0000062": [
+    "samtools_ID0000063",
+    "register_condorpool_1_3"
+  ],
+  "bwa_ID0000178": [
+    "register_condorpool_1_4",
+    "samtools_ID0000179"
+  ],
+  "bwa_ID0000183": [
+    "samtools_ID0000184",
+    "register_condorpool_1_5"
+  ],
+  "bwa_ID0000156": [
+    "samtools_ID0000157",
+    "register_condorpool_1_2"
+  ],
+  "bwa_ID0000161": [
+    "samtools_ID0000162",
+    "register_condorpool_1_3"
+  ],
+  "bwa_ID0000134": [
+    "samtools_ID0000135",
+    "register_condorpool_1_2"
+  ],
+  "bwa_ID0000139": [
+    "samtools_ID0000140",
+    "register_condorpool_1_3"
+  ],
+  "bwa_ID0000299": [
+    "samtools_ID0000300",
+    "register_condorpool_1_0"
+  ],
+  "bwa_ID0000304": [
+    "samtools_ID0000305",
+    "register_condorpool_1_1"
+  ],
+  "bwa_ID0000277": [
+    "register_condorpool_1_4",
+    "samtools_ID0000278"
+  ],
+  "bwa_ID0000282": [
+    "samtools_ID0000283",
+    "register_condorpool_1_5"
+  ],
+  "bwa_ID0000255": [
+    "register_condorpool_1_4",
+    "samtools_ID0000256"
+  ],
+  "bwa_ID0000260": [
+    "samtools_ID0000261",
+    "register_condorpool_1_5"
+  ],
+  "bwa_ID0000035": [
+    "samtools_ID0000036",
+    "register_condorpool_1_0"
+  ],
+  "bwa_ID0000040": [
+    "samtools_ID0000041",
+    "register_condorpool_1_1"
+  ],
+  "bwa_ID0000013": [
+    "samtools_ID0000014",
+    "register_condorpool_1_0"
+  ],
+  "bwa_ID0000018": [
+    "samtools_ID0000019",
+    "register_condorpool_1_1"
+  ],
+  "bwa_ID0000123": [
+    "samtools_ID0000124",
+    "register_condorpool_1_0"
+  ],
+  "bwa_ID0000128": [
+    "samtools_ID0000129",
+    "register_condorpool_1_1"
+  ],
+  "bwa_ID0000002": [
+    "register_condorpool_1_4",
+    "samtools_ID0000003"
+  ],
+  "bwa_ID0000007": [
+    "samtools_ID0000008",
+    "register_condorpool_1_5"
+  ],
+  "bwa_ID0000244": [
+    "samtools_ID0000245",
+    "register_condorpool_1_2"
+  ],
+  "bwa_ID0000249": [
+    "samtools_ID0000250",
+    "register_condorpool_1_3"
+  ],
+  "bwa_ID0000101": [
+    "samtools_ID0000102",
+    "register_condorpool_1_0"
+  ],
+  "bwa_ID0000106": [
+    "samtools_ID0000107",
+    "register_condorpool_1_1"
+  ],
+  "bwa_ID0000222": [
+    "samtools_ID0000223",
+    "register_condorpool_1_2"
+  ],
+  "bwa_ID0000227": [
+    "samtools_ID0000228",
+    "register_condorpool_1_3"
+  ],
+  "bwa_ID0000321": [
+    "register_condorpool_1_4",
+    "samtools_ID0000322"
+  ],
+  "bwa_ID0000326": [
+    "samtools_ID0000327",
+    "register_condorpool_1_5"
+  ],
+  "bwa_ID0000266": [
+    "register_condorpool_1_4",
+    "samtools_ID0000267"
+  ],
+  "bwa_ID0000271": [
+    "samtools_ID0000272",
+    "register_condorpool_1_5"
+  ],
+  "bwa_ID0000288": [
+    "register_condorpool_1_4",
+    "samtools_ID0000289"
+  ],
+  "bwa_ID0000293": [
+    "samtools_ID0000294",
+    "register_condorpool_1_5"
+  ],
+  "bwa_ID0000095": [
+    "samtools_ID0000096",
+    "register_condorpool_1_0"
+  ],
+  "bwa_ID0000090": [
+    "samtools_ID0000091",
+    "register_condorpool_1_1"
+  ],
+  "bwa_ID0000068": [
+    "samtools_ID0000069",
+    "register_condorpool_1_2"
+  ],
+  "bwa_ID0000073": [
+    "samtools_ID0000074",
+    "register_condorpool_1_3"
+  ],
+  "bwa_ID0000046": [
+    "samtools_ID0000047",
+    "register_condorpool_1_0"
+  ],
+  "bwa_ID0000051": [
+    "samtools_ID0000052",
+    "register_condorpool_1_1"
+  ],
+  "bwa_ID0000024": [
+    "samtools_ID0000025",
+    "register_condorpool_1_0"
+  ],
+  "bwa_ID0000029": [
+    "samtools_ID0000030",
+    "register_condorpool_1_1"
+  ],
+  "bwa_ID0000189": [
+    "samtools_ID0000190",
+    "register_condorpool_1_4"
+  ],
+  "bwa_ID0000194": [
+    "samtools_ID0000195",
+    "register_condorpool_1_5"
+  ],
+  "bwa_ID0000167": [
+    "samtools_ID0000168",
+    "register_condorpool_1_2"
+  ],
+  "bwa_ID0000172": [
+    "samtools_ID0000173",
+    "register_condorpool_1_3"
+  ],
+  "bwa_ID0000145": [
+    "samtools_ID0000146",
+    "register_condorpool_1_2"
+  ],
+  "bwa_ID0000150": [
+    "samtools_ID0000151",
+    "register_condorpool_1_3"
+  ],
+  "register_condorpool_0_0": [],
+  "bwa_ID0000310": [
+    "samtools_ID0000311",
+    "register_condorpool_1_0"
+  ],
+  "bwa_ID0000315": [
+    "samtools_ID0000316",
+    "register_condorpool_1_1"
+  ],
+  "register_condorpool_0_2": [],
+  "register_condorpool_0_1": [],
+  "samtools_ID0000113": [
+    "register_condorpool_2_1",
+    "register_condorpool_2_0",
+    "bcftools_ID0000114"
+  ],
+  "samtools_ID0000118": [
+    "bcftools_ID0000119",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "samtools_ID0000234": [
+    "register_condorpool_2_5",
+    "register_condorpool_2_4",
+    "bcftools_ID0000235"
+  ],
+  "samtools_ID0000239": [
+    "bcftools_ID0000240",
+    "register_condorpool_2_1",
+    "register_condorpool_2_0"
+  ],
+  "samtools_ID0000212": [
+    "register_condorpool_2_3",
+    "register_condorpool_2_2",
+    "bcftools_ID0000213"
+  ],
+  "samtools_ID0000217": [
+    "register_condorpool_2_5",
+    "bcftools_ID0000218",
+    "register_condorpool_2_4"
+  ],
+  "samtools_ID0000080": [
+    "register_condorpool_2_5",
+    "bcftools_ID0000081",
+    "register_condorpool_2_4"
+  ],
+  "samtools_ID0000085": [
+    "bcftools_ID0000086",
+    "register_condorpool_2_1",
+    "register_condorpool_2_0"
+  ],
+  "samtools_ID0000201": [
+    "register_condorpool_2_3",
+    "register_condorpool_2_2",
+    "bcftools_ID0000202"
+  ],
+  "samtools_ID0000206": [
+    "register_condorpool_2_5",
+    "bcftools_ID0000207",
+    "register_condorpool_2_4"
+  ],
+  "samtools_ID0000058": [
+    "register_condorpool_2_5",
+    "register_condorpool_2_4",
+    "bcftools_ID0000059"
+  ],
+  "samtools_ID0000063": [
+    "bcftools_ID0000064",
+    "register_condorpool_2_1",
+    "register_condorpool_2_0"
+  ],
+  "samtools_ID0000179": [
+    "bcftools_ID0000180",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "samtools_ID0000184": [
+    "bcftools_ID0000185",
+    "register_condorpool_2_5",
+    "register_condorpool_2_4"
+  ],
+  "samtools_ID0000157": [
+    "register_condorpool_2_5",
+    "register_condorpool_2_4",
+    "bcftools_ID0000158"
+  ],
+  "samtools_ID0000162": [
+    "bcftools_ID0000163",
+    "register_condorpool_2_1",
+    "register_condorpool_2_0"
+  ],
+  "samtools_ID0000135": [
+    "register_condorpool_2_5",
+    "register_condorpool_2_4",
+    "bcftools_ID0000136"
+  ],
+  "samtools_ID0000140": [
+    "bcftools_ID0000141",
+    "register_condorpool_2_1",
+    "register_condorpool_2_0"
+  ],
+  "samtools_ID0000300": [
+    "register_condorpool_2_1",
+    "register_condorpool_2_0",
+    "bcftools_ID0000301"
+  ],
+  "samtools_ID0000305": [
+    "bcftools_ID0000306",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "samtools_ID0000278": [
+    "register_condorpool_2_3",
+    "register_condorpool_2_2",
+    "bcftools_ID0000279"
+  ],
+  "samtools_ID0000283": [
+    "bcftools_ID0000284",
+    "register_condorpool_2_5",
+    "register_condorpool_2_4"
+  ],
+  "samtools_ID0000256": [
+    "register_condorpool_2_3",
+    "register_condorpool_2_2",
+    "bcftools_ID0000257"
+  ],
+  "samtools_ID0000261": [
+    "bcftools_ID0000262",
+    "register_condorpool_2_5",
+    "register_condorpool_2_4"
+  ],
+  "samtools_ID0000036": [
+    "register_condorpool_2_1",
+    "register_condorpool_2_0",
+    "bcftools_ID0000037"
+  ],
+  "samtools_ID0000041": [
+    "bcftools_ID0000042",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "samtools_ID0000014": [
+    "register_condorpool_2_1",
+    "register_condorpool_2_0",
+    "bcftools_ID0000015"
+  ],
+  "samtools_ID0000019": [
+    "bcftools_ID0000020",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "samtools_ID0000124": [
+    "register_condorpool_2_1",
+    "register_condorpool_2_0",
+    "bcftools_ID0000125"
+  ],
+  "samtools_ID0000129": [
+    "bcftools_ID0000130",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "samtools_ID0000003": [
+    "register_condorpool_2_3",
+    "register_condorpool_2_2",
+    "bcftools_ID0000004"
+  ],
+  "samtools_ID0000008": [
+    "register_condorpool_2_5",
+    "bcftools_ID0000009",
+    "register_condorpool_2_4"
+  ],
+  "samtools_ID0000245": [
+    "register_condorpool_2_5",
+    "register_condorpool_2_4",
+    "bcftools_ID0000246"
+  ],
+  "samtools_ID0000250": [
+    "bcftools_ID0000251",
+    "register_condorpool_2_1",
+    "register_condorpool_2_0"
+  ],
+  "samtools_ID0000102": [
+    "register_condorpool_2_1",
+    "register_condorpool_2_0",
+    "bcftools_ID0000103"
+  ],
+  "samtools_ID0000107": [
+    "bcftools_ID0000108",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "samtools_ID0000223": [
+    "register_condorpool_2_5",
+    "register_condorpool_2_4",
+    "bcftools_ID0000224"
+  ],
+  "samtools_ID0000228": [
+    "bcftools_ID0000229",
+    "register_condorpool_2_1",
+    "register_condorpool_2_0"
+  ],
+  "samtools_ID0000322": [
+    "register_condorpool_2_3",
+    "register_condorpool_2_2",
+    "bcftools_ID0000323"
+  ],
+  "samtools_ID0000327": [
+    "register_condorpool_2_5",
+    "bcftools_ID0000328",
+    "register_condorpool_2_4"
+  ],
+  "samtools_ID0000267": [
+    "register_condorpool_2_3",
+    "register_condorpool_2_2",
+    "bcftools_ID0000268"
+  ],
+  "samtools_ID0000272": [
+    "bcftools_ID0000273",
+    "register_condorpool_2_5",
+    "register_condorpool_2_4"
+  ],
+  "samtools_ID0000289": [
+    "bcftools_ID0000290",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "samtools_ID0000294": [
+    "bcftools_ID0000295",
+    "register_condorpool_2_5",
+    "register_condorpool_2_4"
+  ],
+  "samtools_ID0000096": [
+    "bcftools_ID0000097",
+    "register_condorpool_2_1",
+    "register_condorpool_2_0"
+  ],
+  "samtools_ID0000091": [
+    "bcftools_ID0000092",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "samtools_ID0000069": [
+    "register_condorpool_2_5",
+    "bcftools_ID0000070",
+    "register_condorpool_2_4"
+  ],
+  "samtools_ID0000074": [
+    "bcftools_ID0000075",
+    "register_condorpool_2_1",
+    "register_condorpool_2_0"
+  ],
+  "samtools_ID0000047": [
+    "register_condorpool_2_1",
+    "register_condorpool_2_0",
+    "bcftools_ID0000048"
+  ],
+  "samtools_ID0000052": [
+    "bcftools_ID0000053",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "samtools_ID0000025": [
+    "register_condorpool_2_1",
+    "register_condorpool_2_0",
+    "bcftools_ID0000026"
+  ],
+  "samtools_ID0000030": [
+    "bcftools_ID0000031",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "samtools_ID0000190": [
+    "bcftools_ID0000191",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "register_condorpool_1_4": [],
+  "samtools_ID0000195": [
+    "bcftools_ID0000196",
+    "register_condorpool_2_5",
+    "register_condorpool_2_4"
+  ],
+  "register_condorpool_1_5": [],
+  "samtools_ID0000168": [
+    "register_condorpool_2_5",
+    "register_condorpool_2_4",
+    "bcftools_ID0000169"
+  ],
+  "samtools_ID0000173": [
+    "bcftools_ID0000174",
+    "register_condorpool_2_1",
+    "register_condorpool_2_0"
+  ],
+  "samtools_ID0000146": [
+    "register_condorpool_2_5",
+    "register_condorpool_2_4",
+    "bcftools_ID0000147"
+  ],
+  "register_condorpool_1_2": [],
+  "samtools_ID0000151": [
+    "bcftools_ID0000152",
+    "register_condorpool_2_1",
+    "register_condorpool_2_0"
+  ],
+  "register_condorpool_1_3": [],
+  "samtools_ID0000311": [
+    "register_condorpool_2_1",
+    "register_condorpool_2_0",
+    "bcftools_ID0000312"
+  ],
+  "register_condorpool_1_0": [],
+  "samtools_ID0000316": [
+    "bcftools_ID0000317",
+    "register_condorpool_2_3",
+    "register_condorpool_2_2"
+  ],
+  "register_condorpool_1_1": [],
+  "bcftools_ID0000114": [
+    "register_condorpool_3_0",
+    "bcftools_ID0000115"
+  ],
+  "bcftools_ID0000119": [
+    "bcftools_ID0000120",
+    "register_condorpool_3_1"
+  ],
+  "bcftools_ID0000235": [
+    "register_condorpool_3_2",
+    "bcftools_ID0000236"
+  ],
+  "bcftools_ID0000240": [
+    "bcftools_ID0000241",
+    "register_condorpool_3_3"
+  ],
+  "bcftools_ID0000213": [
+    "register_condorpool_3_4",
+    "bcftools_ID0000214"
+  ],
+  "bcftools_ID0000218": [
+    "register_condorpool_3_5",
+    "bcftools_ID0000219"
+  ],
+  "bcftools_ID0000081": [
+    "bcftools_ID0000082",
+    "register_condorpool_3_2"
+  ],
+  "bcftools_ID0000086": [
+    "bcftools_ID0000087",
+    "register_condorpool_3_3"
+  ],
+  "bcftools_ID0000202": [
+    "register_condorpool_3_4",
+    "bcftools_ID0000203"
+  ],
+  "bcftools_ID0000207": [
+    "register_condorpool_3_5",
+    "bcftools_ID0000208"
+  ],
+  "bcftools_ID0000059": [
+    "bcftools_ID0000060",
+    "register_condorpool_3_2"
+  ],
+  "bcftools_ID0000064": [
+    "bcftools_ID0000065",
+    "register_condorpool_3_3"
+  ],
+  "bcftools_ID0000180": [
+    "bcftools_ID0000181",
+    "register_condorpool_3_4"
+  ],
+  "bcftools_ID0000185": [
+    "bcftools_ID0000186",
+    "register_condorpool_3_5"
+  ],
+  "bcftools_ID0000158": [
+    "register_condorpool_3_2",
+    "bcftools_ID0000159"
+  ],
+  "bcftools_ID0000163": [
+    "bcftools_ID0000164",
+    "register_condorpool_3_3"
+  ],
+  "bcftools_ID0000136": [
+    "register_condorpool_3_2",
+    "bcftools_ID0000137"
+  ],
+  "bcftools_ID0000141": [
+    "bcftools_ID0000142",
+    "register_condorpool_3_3"
+  ],
+  "bcftools_ID0000301": [
+    "register_condorpool_3_0",
+    "bcftools_ID0000302"
+  ],
+  "bcftools_ID0000306": [
+    "bcftools_ID0000307",
+    "register_condorpool_3_1"
+  ],
+  "bcftools_ID0000279": [
+    "bcftools_ID0000280",
+    "register_condorpool_3_4"
+  ],
+  "bcftools_ID0000284": [
+    "bcftools_ID0000285",
+    "register_condorpool_3_5"
+  ],
+  "bcftools_ID0000257": [
+    "register_condorpool_3_4",
+    "bcftools_ID0000258"
+  ],
+  "bcftools_ID0000262": [
+    "bcftools_ID0000263",
+    "register_condorpool_3_5"
+  ],
+  "bcftools_ID0000037": [
+    "register_condorpool_3_0",
+    "bcftools_ID0000038"
+  ],
+  "bcftools_ID0000042": [
+    "bcftools_ID0000043",
+    "register_condorpool_3_1"
+  ],
+  "bcftools_ID0000015": [
+    "register_condorpool_3_0",
+    "bcftools_ID0000016"
+  ],
+  "bcftools_ID0000020": [
+    "bcftools_ID0000021",
+    "register_condorpool_3_1"
+  ],
+  "bcftools_ID0000125": [
+    "register_condorpool_3_0",
+    "bcftools_ID0000126"
+  ],
+  "bcftools_ID0000130": [
+    "bcftools_ID0000131",
+    "register_condorpool_3_1"
+  ],
+  "bcftools_ID0000004": [
+    "register_condorpool_3_4",
+    "bcftools_ID0000005"
+  ],
+  "bcftools_ID0000009": [
+    "bcftools_ID0000010",
+    "register_condorpool_3_5"
+  ],
+  "bcftools_ID0000246": [
+    "register_condorpool_3_2",
+    "bcftools_ID0000247"
+  ],
+  "bcftools_ID0000251": [
+    "bcftools_ID0000252",
+    "register_condorpool_3_3"
+  ],
+  "bcftools_ID0000103": [
+    "register_condorpool_3_0",
+    "bcftools_ID0000104"
+  ],
+  "bcftools_ID0000108": [
+    "bcftools_ID0000109",
+    "register_condorpool_3_1"
+  ],
+  "bcftools_ID0000224": [
+    "register_condorpool_3_2",
+    "bcftools_ID0000225"
+  ],
+  "bcftools_ID0000229": [
+    "bcftools_ID0000230",
+    "register_condorpool_3_3"
+  ],
+  "bcftools_ID0000323": [
+    "register_condorpool_3_4",
+    "bcftools_ID0000324"
+  ],
+  "bcftools_ID0000328": [
+    "register_condorpool_3_5",
+    "bcftools_ID0000329"
+  ],
+  "bcftools_ID0000268": [
+    "register_condorpool_3_4",
+    "bcftools_ID0000269"
+  ],
+  "bcftools_ID0000273": [
+    "bcftools_ID0000274",
+    "register_condorpool_3_5"
+  ],
+  "bcftools_ID0000290": [
+    "bcftools_ID0000291",
+    "register_condorpool_3_4"
+  ],
+  "bcftools_ID0000295": [
+    "bcftools_ID0000296",
+    "register_condorpool_3_5"
+  ],
+  "bcftools_ID0000097": [
+    "bcftools_ID0000098",
+    "register_condorpool_3_0"
+  ],
+  "bcftools_ID0000092": [
+    "bcftools_ID0000093",
+    "register_condorpool_3_1"
+  ],
+  "bcftools_ID0000070": [
+    "bcftools_ID0000071",
+    "register_condorpool_3_2"
+  ],
+  "bcftools_ID0000075": [
+    "bcftools_ID0000076",
+    "register_condorpool_3_3"
+  ],
+  "bcftools_ID0000048": [
+    "register_condorpool_3_0",
+    "bcftools_ID0000049"
+  ],
+  "bcftools_ID0000053": [
+    "bcftools_ID0000054",
+    "register_condorpool_3_1"
+  ],
+  "bcftools_ID0000026": [
+    "register_condorpool_3_0",
+    "bcftools_ID0000027"
+  ],
+  "bcftools_ID0000031": [
+    "bcftools_ID0000032",
+    "register_condorpool_3_1"
+  ],
+  "bcftools_ID0000191": [
+    "bcftools_ID0000192",
+    "register_condorpool_3_4"
+  ],
+  "bcftools_ID0000196": [
+    "bcftools_ID0000197",
+    "register_condorpool_3_5"
+  ],
+  "bcftools_ID0000169": [
+    "bcftools_ID0000170",
+    "register_condorpool_3_2"
+  ],
+  "bcftools_ID0000174": [
+    "bcftools_ID0000175",
+    "register_condorpool_3_3"
+  ],
+  "register_condorpool_2_5": [],
+  "register_condorpool_2_4": [],
+  "bcftools_ID0000147": [
+    "register_condorpool_3_2",
+    "bcftools_ID0000148"
+  ],
+  "bcftools_ID0000152": [
+    "bcftools_ID0000153",
+    "register_condorpool_3_3"
+  ],
+  "register_condorpool_2_1": [],
+  "register_condorpool_2_0": [],
+  "bcftools_ID0000312": [
+    "register_condorpool_3_0",
+    "bcftools_ID0000313"
+  ],
+  "bcftools_ID0000317": [
+    "bcftools_ID0000318",
+    "register_condorpool_3_1"
+  ],
+  "register_condorpool_2_3": [],
+  "register_condorpool_2_2": [],
+  "bcftools_ID0000115": [
+    "vcfutils_ID0000116",
+    "register_condorpool_4_0"
+  ],
+  "bcftools_ID0000120": [
+    "register_condorpool_4_1",
+    "vcfutils_ID0000121"
+  ],
+  "bcftools_ID0000236": [
+    "vcfutils_ID0000237",
+    "register_condorpool_4_2"
+  ],
+  "bcftools_ID0000241": [
+    "register_condorpool_4_3",
+    "vcfutils_ID0000242"
+  ],
+  "bcftools_ID0000214": [
+    "vcfutils_ID0000215",
+    "register_condorpool_4_4"
+  ],
+  "bcftools_ID0000219": [
+    "register_condorpool_4_5",
+    "vcfutils_ID0000220"
+  ],
+  "bcftools_ID0000082": [
+    "vcfutils_ID0000083",
+    "register_condorpool_4_2"
+  ],
+  "bcftools_ID0000087": [
+    "register_condorpool_4_3",
+    "vcfutils_ID0000088"
+  ],
+  "bcftools_ID0000203": [
+    "vcfutils_ID0000204",
+    "register_condorpool_4_4"
+  ],
+  "bcftools_ID0000208": [
+    "register_condorpool_4_5",
+    "vcfutils_ID0000209"
+  ],
+  "bcftools_ID0000060": [
+    "vcfutils_ID0000061",
+    "register_condorpool_4_2"
+  ],
+  "bcftools_ID0000065": [
+    "register_condorpool_4_3",
+    "vcfutils_ID0000066"
+  ],
+  "bcftools_ID0000181": [
+    "register_condorpool_4_4",
+    "vcfutils_ID0000182"
+  ],
+  "bcftools_ID0000186": [
+    "register_condorpool_4_5",
+    "vcfutils_ID0000187"
+  ],
+  "bcftools_ID0000159": [
+    "vcfutils_ID0000160",
+    "register_condorpool_4_2"
+  ],
+  "bcftools_ID0000164": [
+    "register_condorpool_4_3",
+    "vcfutils_ID0000165"
+  ],
+  "bcftools_ID0000137": [
+    "vcfutils_ID0000138",
+    "register_condorpool_4_2"
+  ],
+  "bcftools_ID0000142": [
+    "register_condorpool_4_3",
+    "vcfutils_ID0000143"
+  ],
+  "bcftools_ID0000302": [
+    "vcfutils_ID0000303",
+    "register_condorpool_4_0"
+  ],
+  "bcftools_ID0000307": [
+    "vcfutils_ID0000308",
+    "register_condorpool_4_1"
+  ],
+  "bcftools_ID0000280": [
+    "register_condorpool_4_4",
+    "vcfutils_ID0000281"
+  ],
+  "bcftools_ID0000285": [
+    "register_condorpool_4_5",
+    "vcfutils_ID0000286"
+  ],
+  "bcftools_ID0000258": [
+    "vcfutils_ID0000259",
+    "register_condorpool_4_4"
+  ],
+  "bcftools_ID0000263": [
+    "register_condorpool_4_5",
+    "vcfutils_ID0000264"
+  ],
+  "bcftools_ID0000038": [
+    "vcfutils_ID0000039",
+    "register_condorpool_4_0"
+  ],
+  "bcftools_ID0000043": [
+    "register_condorpool_4_1",
+    "vcfutils_ID0000044"
+  ],
+  "bcftools_ID0000016": [
+    "vcfutils_ID0000017",
+    "register_condorpool_4_0"
+  ],
+  "bcftools_ID0000021": [
+    "register_condorpool_4_1",
+    "vcfutils_ID0000022"
+  ],
+  "bcftools_ID0000126": [
+    "vcfutils_ID0000127",
+    "register_condorpool_4_0"
+  ],
+  "bcftools_ID0000131": [
+    "register_condorpool_4_1",
+    "vcfutils_ID0000132"
+  ],
+  "bcftools_ID0000005": [
+    "vcfutils_ID0000006",
+    "register_condorpool_4_4"
+  ],
+  "bcftools_ID0000010": [
+    "register_condorpool_4_5",
+    "vcfutils_ID0000011"
+  ],
+  "bcftools_ID0000247": [
+    "vcfutils_ID0000248",
+    "register_condorpool_4_2"
+  ],
+  "bcftools_ID0000252": [
+    "register_condorpool_4_3",
+    "vcfutils_ID0000253"
+  ],
+  "bcftools_ID0000104": [
+    "vcfutils_ID0000105",
+    "register_condorpool_4_0"
+  ],
+  "bcftools_ID0000109": [
+    "register_condorpool_4_1",
+    "vcfutils_ID0000110"
+  ],
+  "bcftools_ID0000225": [
+    "vcfutils_ID0000226",
+    "register_condorpool_4_2"
+  ],
+  "bcftools_ID0000230": [
+    "register_condorpool_4_3",
+    "vcfutils_ID0000231"
+  ],
+  "bcftools_ID0000324": [
+    "vcfutils_ID0000325",
+    "register_condorpool_4_4"
+  ],
+  "bcftools_ID0000329": [
+    "register_condorpool_4_5",
+    "vcfutils_ID0000330"
+  ],
+  "bcftools_ID0000269": [
+    "register_condorpool_4_4",
+    "vcfutils_ID0000270"
+  ],
+  "bcftools_ID0000274": [
+    "register_condorpool_4_5",
+    "vcfutils_ID0000275"
+  ],
+  "bcftools_ID0000291": [
+    "register_condorpool_4_4",
+    "vcfutils_ID0000292"
+  ],
+  "bcftools_ID0000296": [
+    "register_condorpool_4_5",
+    "vcfutils_ID0000297"
+  ],
+  "bcftools_ID0000098": [
+    "register_condorpool_4_0",
+    "vcfutils_ID0000099"
+  ],
+  "bcftools_ID0000093": [
+    "vcfutils_ID0000094",
+    "register_condorpool_4_1"
+  ],
+  "bcftools_ID0000071": [
+    "vcfutils_ID0000072",
+    "register_condorpool_4_2"
+  ],
+  "bcftools_ID0000076": [
+    "register_condorpool_4_3",
+    "vcfutils_ID0000077"
+  ],
+  "bcftools_ID0000049": [
+    "vcfutils_ID0000050",
+    "register_condorpool_4_0"
+  ],
+  "bcftools_ID0000054": [
+    "register_condorpool_4_1",
+    "vcfutils_ID0000055"
+  ],
+  "bcftools_ID0000027": [
+    "vcfutils_ID0000028",
+    "register_condorpool_4_0"
+  ],
+  "bcftools_ID0000032": [
+    "register_condorpool_4_1",
+    "vcfutils_ID0000033"
+  ],
+  "bcftools_ID0000192": [
+    "register_condorpool_4_4",
+    "vcfutils_ID0000193"
+  ],
+  "register_condorpool_3_4": [],
+  "bcftools_ID0000197": [
+    "register_condorpool_4_5",
+    "vcfutils_ID0000198"
+  ],
+  "register_condorpool_3_5": [],
+  "bcftools_ID0000170": [
+    "vcfutils_ID0000171",
+    "register_condorpool_4_2"
+  ],
+  "bcftools_ID0000175": [
+    "register_condorpool_4_3",
+    "vcfutils_ID0000176"
+  ],
+  "register_condorpool_3_2": [],
+  "bcftools_ID0000148": [
+    "vcfutils_ID0000149",
+    "register_condorpool_4_2"
+  ],
+  "bcftools_ID0000153": [
+    "register_condorpool_4_3",
+    "vcfutils_ID0000154"
+  ],
+  "register_condorpool_3_3": [],
+  "register_condorpool_3_0": [],
+  "bcftools_ID0000313": [
+    "vcfutils_ID0000314",
+    "register_condorpool_4_0"
+  ],
+  "bcftools_ID0000318": [
+    "vcfutils_ID0000319",
+    "register_condorpool_4_1"
+  ],
+  "register_condorpool_3_1": [],
+  "vcfutils_ID0000116": [
+    "stage_out_local_condorpool_5_0"
+  ],
+  "vcfutils_ID0000121": [
+    "stage_out_local_condorpool_5_1"
+  ],
+  "vcfutils_ID0000237": [
+    "stage_out_local_condorpool_5_2"
+  ],
+  "vcfutils_ID0000242": [
+    "stage_out_local_condorpool_5_3"
+  ],
+  "vcfutils_ID0000215": [
+    "stage_out_local_condorpool_5_4"
+  ],
+  "vcfutils_ID0000220": [
+    "stage_out_local_condorpool_5_5"
+  ],
+  "vcfutils_ID0000083": [
+    "stage_out_local_condorpool_5_2"
+  ],
+  "vcfutils_ID0000088": [
+    "stage_out_local_condorpool_5_3"
+  ],
+  "vcfutils_ID0000204": [
+    "stage_out_local_condorpool_5_4"
+  ],
+  "vcfutils_ID0000209": [
+    "stage_out_local_condorpool_5_5"
+  ],
+  "vcfutils_ID0000061": [
+    "stage_out_local_condorpool_5_2"
+  ],
+  "vcfutils_ID0000066": [
+    "stage_out_local_condorpool_5_3"
+  ],
+  "vcfutils_ID0000182": [
+    "stage_out_local_condorpool_5_4"
+  ],
+  "vcfutils_ID0000187": [
+    "stage_out_local_condorpool_5_5"
+  ],
+  "vcfutils_ID0000160": [
+    "stage_out_local_condorpool_5_2"
+  ],
+  "vcfutils_ID0000165": [
+    "stage_out_local_condorpool_5_3"
+  ],
+  "vcfutils_ID0000138": [
+    "stage_out_local_condorpool_5_2"
+  ],
+  "vcfutils_ID0000143": [
+    "stage_out_local_condorpool_5_3"
+  ],
+  "vcfutils_ID0000303": [
+    "stage_out_local_condorpool_5_0"
+  ],
+  "vcfutils_ID0000308": [
+    "stage_out_local_condorpool_5_1"
+  ],
+  "vcfutils_ID0000281": [
+    "stage_out_local_condorpool_5_4"
+  ],
+  "vcfutils_ID0000286": [
+    "stage_out_local_condorpool_5_5"
+  ],
+  "vcfutils_ID0000259": [
+    "stage_out_local_condorpool_5_4"
+  ],
+  "vcfutils_ID0000264": [
+    "stage_out_local_condorpool_5_5"
+  ],
+  "vcfutils_ID0000039": [
+    "stage_out_local_condorpool_5_0"
+  ],
+  "vcfutils_ID0000044": [
+    "stage_out_local_condorpool_5_1"
+  ],
+  "vcfutils_ID0000017": [
+    "stage_out_local_condorpool_5_0"
+  ],
+  "vcfutils_ID0000022": [
+    "stage_out_local_condorpool_5_1"
+  ],
+  "vcfutils_ID0000127": [
+    "stage_out_local_condorpool_5_0"
+  ],
+  "vcfutils_ID0000132": [
+    "stage_out_local_condorpool_5_1"
+  ],
+  "vcfutils_ID0000006": [
+    "stage_out_local_condorpool_5_4"
+  ],
+  "vcfutils_ID0000011": [
+    "stage_out_local_condorpool_5_5"
+  ],
+  "vcfutils_ID0000248": [
+    "stage_out_local_condorpool_5_2"
+  ],
+  "vcfutils_ID0000253": [
+    "stage_out_local_condorpool_5_3"
+  ],
+  "vcfutils_ID0000105": [
+    "stage_out_local_condorpool_5_0"
+  ],
+  "vcfutils_ID0000110": [
+    "stage_out_local_condorpool_5_1"
+  ],
+  "vcfutils_ID0000226": [
+    "stage_out_local_condorpool_5_2"
+  ],
+  "vcfutils_ID0000231": [
+    "stage_out_local_condorpool_5_3"
+  ],
+  "vcfutils_ID0000325": [
+    "stage_out_local_condorpool_5_4"
+  ],
+  "vcfutils_ID0000330": [
+    "stage_out_local_condorpool_5_5"
+  ],
+  "vcfutils_ID0000270": [
+    "stage_out_local_condorpool_5_4"
+  ],
+  "vcfutils_ID0000275": [
+    "stage_out_local_condorpool_5_5"
+  ],
+  "vcfutils_ID0000292": [
+    "stage_out_local_condorpool_5_4"
+  ],
+  "vcfutils_ID0000297": [
+    "stage_out_local_condorpool_5_5"
+  ],
+  "vcfutils_ID0000099": [
+    "stage_out_local_condorpool_5_0"
+  ],
+  "vcfutils_ID0000094": [
+    "stage_out_local_condorpool_5_1"
+  ],
+  "vcfutils_ID0000072": [
+    "stage_out_local_condorpool_5_2"
+  ],
+  "vcfutils_ID0000077": [
+    "stage_out_local_condorpool_5_3"
+  ],
+  "vcfutils_ID0000050": [
+    "stage_out_local_condorpool_5_0"
+  ],
+  "vcfutils_ID0000055": [
+    "stage_out_local_condorpool_5_1"
+  ],
+  "vcfutils_ID0000028": [
+    "stage_out_local_condorpool_5_0"
+  ],
+  "vcfutils_ID0000033": [
+    "stage_out_local_condorpool_5_1"
+  ],
+  "register_condorpool_4_4": [],
+  "vcfutils_ID0000193": [
+    "stage_out_local_condorpool_5_4"
+  ],
+  "register_condorpool_4_5": [],
+  "vcfutils_ID0000198": [
+    "stage_out_local_condorpool_5_5"
+  ],
+  "vcfutils_ID0000171": [
+    "stage_out_local_condorpool_5_2"
+  ],
+  "vcfutils_ID0000176": [
+    "stage_out_local_condorpool_5_3"
+  ],
+  "vcfutils_ID0000149": [
+    "stage_out_local_condorpool_5_2"
+  ],
+  "register_condorpool_4_2": [],
+  "register_condorpool_4_3": [],
+  "vcfutils_ID0000154": [
+    "stage_out_local_condorpool_5_3"
+  ],
+  "vcfutils_ID0000314": [
+    "stage_out_local_condorpool_5_0"
+  ],
+  "register_condorpool_4_0": [],
+  "vcfutils_ID0000319": [
+    "stage_out_local_condorpool_5_1"
+  ],
+  "register_condorpool_4_1": [],
+  "stage_out_local_condorpool_5_4": [
+    "cleanup_variant-calling_0_condorpool",
+    "register_condorpool_5_4"
+  ],
+  "stage_out_local_condorpool_5_5": [
+    "cleanup_variant-calling_0_condorpool",
+    "register_condorpool_5_5"
+  ],
+  "stage_out_local_condorpool_5_2": [
+    "cleanup_variant-calling_0_condorpool",
+    "register_condorpool_5_2"
+  ],
+  "stage_out_local_condorpool_5_3": [
+    "cleanup_variant-calling_0_condorpool",
+    "register_condorpool_5_3"
+  ],
+  "stage_out_local_condorpool_5_0": [
+    "cleanup_variant-calling_0_condorpool",
+    "register_condorpool_5_0"
+  ],
+  "stage_out_local_condorpool_5_1": [
+    "cleanup_variant-calling_0_condorpool",
+    "register_condorpool_5_1"
+  ],
+  "register_condorpool_5_4": [],
+  "register_condorpool_5_5": [],
+  "register_condorpool_5_2": [],
+  "register_condorpool_5_3": [],
+  "register_condorpool_5_0": [],
+  "cleanup_variant-calling_0_condorpool": [],
+  "register_condorpool_5_1": []
+}
