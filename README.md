@@ -113,7 +113,7 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
     <td>371818</td>
   </tr>
   <tr>
-    <td>CASA Wind</td>
+    <td>CASA Wind Speed</td>
     <td>162</td>
     <td>342</td>
     <td>150</td>
@@ -133,18 +133,18 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
     <td>CASA Nowcast</td>
     <td>2081</td>
     <td>4029</td>
+    <td>101</td>
     <td>80</td>
-    <td>40</td>
-    <td>40</td>
+    <td>78</td>
     <td>-</td>
-    <td>39</td>
-    <td>24</td>
-    <td>17868746</td>
-    <td>1150874</td>
-    <td>1127920</td>
+    <td>79</td>
+    <td>83</td>
+    <td>31512070</td>
+    <td>2298160</td>
+    <td>2146544</td>
     <td>-</td>
-    <td>1035184</td>
-    <td>164174</td>
+    <td>2120784</td>
+    <td>2223088</td>
   </tr>
 </tbody>
 </table>
