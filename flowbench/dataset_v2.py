@@ -13,6 +13,7 @@ from torch_geometric.data import (Batch, Data, InMemoryDataset, download_url,
                                   extract_zip)
 
 from .utils import parse_adj
+from flowbench import list_datasets
 
 
 class FlowBench(InMemoryDataset):
@@ -247,6 +248,7 @@ class FlowBench(InMemoryDataset):
             else:
                 _df = _df[selected_features]
             x = torch.tensor(_df.to_numpy().astype(np.float32), dtype=torch.float32)
+            # TODO: add y label to filter data based on label str
             data = Data(x=x, edge_index=edge_index, y=y)
             data_list.append(data)
 
@@ -288,3 +290,106 @@ def filter_dataset(dataset, anomaly_cat):
             anomaly_type = {"cpu": 1, "hdd": 2}
             dataset.data.y = dataset.data.y.apply(lambda x: x if x == anomaly_type[anomaly_cat] else 0)
         return dataset
+
+
+class MergeFlowBench(InMemoryDataset):
+    r""" A merged dataset of multiple FlowBench datasets.
+    # TODO: verify the MergeFlowBench class
+    """
+
+    def __init__(self, root,
+                 name="all",
+                 binary_labels=True,
+                 node_level=True,
+                 feature_option="v1",
+                 anomaly_cat="all",
+                 force_reprocess=False,
+                 transform=None,
+                 pre_transform=None,
+                 pre_filter=None,
+                 **kwargs):
+        self.root = root
+        if isinstance(name, str):
+            self.workflows = list_datasets()
+            self.name = name.lower()
+        elif isinstance(name, list):
+            self.workflows = [n.lower() for n in name if n.lower() in list_datasets()]
+            # name the merged dataset as `merge_{wf1}_{wf2}_...` with first init
+            self.name = "merge_" + "_".join([wf[0] for wf in self.workflows])
+        self.binary_labels = binary_labels
+        self.node_level = node_level
+        self.feature_option = feature_option
+        self.anomaly_cat = anomaly_cat
+        self.force_reprocess = force_reprocess
+        self.shift_ts_by_node = kwargs.get("shift_ts_by_node", True)
+        self.include_hops = kwargs.get("include_hops", True)
+
+        self.processed_fn = f'binary_{self.binary_labels}.pt'
+
+        # force to reprocess the dataset by removing the processed files
+        if self.force_reprocess:
+            if osp.exists(self.processed_dir):
+                shutil.rmtree(self.processed_dir)
+            if osp.exists(self.raw_dir):
+                shutil.rmtree(self.raw_dir)
+
+        # process the dataset on disk
+        for wf in self.workflows:
+            ds = FlowBench(self.root, wf, binary_labels, node_level,
+                           feature_option, anomaly_cat, force_reprocess, **kwargs)
+
+        super(MergeFlowBench, self).__init__(root, transform, pre_transform, pre_filter, **kwargs)
+
+        out = torch.load(self.processed_paths[0])
+        if not isinstance(out, tuple) or len(out) != 3:
+            raise RuntimeError(
+                "The 'data' object was created by an older version of PyG. "
+                "If this error occurred while loading an already existing "
+                "dataset, add 'force_reprocess=True' to the dataset "
+                "constructor.")
+        self.data, self.slices, self.sizes = out
+
+    @property
+    def processed_dir(self):
+        return osp.join(self.root, self.name, 'processed')
+
+    @property
+    def processed_file_names(self):
+        r"""The name of the files in the :obj:`self.processed_dir` folder that
+        must be present in order to skip processing.
+
+        Returns:
+            list: List of file names.
+        """
+        return [f'{self.processed_dir}/{self.processed_fn}']
+
+    def process(self):
+        data_list = []
+        sizes = {}
+        for wf in self.workflows:
+            nodes, edges = parse_adj(wf)
+            n_nodes, n_edges = len(nodes), len(edges)
+            sizes_ = {"num_nodes_per_graph": n_nodes,
+                      "num_edges_per_graph": n_edges}
+            sizes[wf] = sizes_
+
+        for wf in self.workflows:
+            wf_path = osp.join(self.root, wf, "processed")
+            wf_data = torch.load(f"{wf_path}/binary_{self.binary_labels}.pt")[0]
+            data_list.append(wf_data)
+
+        if self.node_level:
+            data_batch = Batch.from_data_list(data_list, exclude_keys=["node_index"])
+            data = Data(x=data_batch.x,
+                        # node_index=torch.concat([d.node_index for d in data_list]),
+                        edge_index=data_batch.edge_index,
+                        y=data_batch.y)
+            data = data if self.pre_transform is None else self.pre_transform(data)
+            # torch.save(self.collate([data]), self.processed_paths[0])
+            data, slices = self.collate([data])
+        else:
+            data, slices = self.collate(data_list)
+        torch.save((data, slices, sizes), self.processed_paths[0])
+
+    def __repr__(self):
+        return f'{self.name}({len(self)})'
