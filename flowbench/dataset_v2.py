@@ -39,7 +39,11 @@ class FlowBench(InMemoryDataset):
             Defaults to None.
     """
     # TODO: replace the url for the dataset
-    url = "file:///home/jinh/PoSeiDon/poseidon-data/data"
+    real_dir = os.path.realpath(os.path.dirname(__file__))
+    # Define the relative path to the data
+    relative_path = os.path.join(real_dir, '..', 'data')
+    # Use the file protocol for local file access
+    url = f"file://{relative_path}"
 
     features = ['auxiliary',
                 'compute',
