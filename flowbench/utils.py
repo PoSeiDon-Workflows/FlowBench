@@ -84,9 +84,11 @@ def init_model(args):
     """
     from random import choice
 
-    from pygod.models import (ANOMALOUS, CONAD, DOMINANT, DONE, GAAN, GCNAE,
-                              GUIDE, MLPAE, SCAN, AdONE, AnomalyDAE, Radar)
+    # TODO: update GCNAE and MLPAE with GAE
+    from pygod.detector import (ANOMALOUS, CONAD, DOMINANT, DONE, GAAN, GAE,
+                                GUIDE, SCAN, AdONE, AnomalyDAE, Radar)
     from pyod.models.lof import LOF
+    from torch_geometric.nn import MLP
     from sklearn.ensemble import IsolationForest
     if not isinstance(args, dict):
         args = vars(args)
@@ -186,14 +188,14 @@ def init_model(args):
                     batch_size=batch_size,
                     num_neigh=num_neigh)
     elif model_name == 'gcnae':
-        return GCNAE(hid_dim=choice(hid_dim),
-                     weight_decay=weight_decay,
-                     dropout=choice(dropout),
-                     lr=choice(lr),
-                     epoch=epoch,
-                     gpu=gpu,
-                     batch_size=batch_size,
-                     num_neigh=num_neigh)
+        return GAE(hid_dim=choice(hid_dim),
+                   weight_decay=weight_decay,
+                   dropout=choice(dropout),
+                   lr=choice(lr),
+                   epoch=epoch,
+                   gpu=gpu,
+                   batch_size=batch_size,
+                   num_neigh=num_neigh)
     elif model_name == 'guide':
         return GUIDE(a_hid=choice(hid_dim),
                      s_hid=choice([4, 5, 6]),
@@ -207,13 +209,14 @@ def init_model(args):
                      num_neigh=num_neigh,
                      cache_dir='./tmp')
     elif model_name == "mlpae":
-        return MLPAE(hid_dim=choice(hid_dim),
-                     weight_decay=weight_decay,
-                     dropout=choice(dropout),
-                     lr=choice(lr),
-                     epoch=epoch,
-                     gpu=gpu,
-                     batch_size=batch_size)
+        return GAE(hid_dim=choice(hid_dim),
+                   weight_decay=weight_decay,
+                   backbone=MLP,
+                   dropout=choice(dropout),
+                   lr=choice(lr),
+                   epoch=epoch,
+                   gpu=gpu,
+                   batch_size=batch_size)
     elif model_name == 'lof':
         return LOF()
     elif model_name == 'if':

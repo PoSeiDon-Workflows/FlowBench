@@ -8,13 +8,13 @@ import os.path as osp
 import warnings
 
 import numpy as np
-from pygod.metrics import (eval_average_precision, eval_precision_at_k,
-                           eval_recall_at_k, eval_roc_auc)
 from torch_geometric.datasets import Planetoid
 from tqdm import tqdm
 
-from py_script.dataset import FlowBench
-from py_script.utils import init_model
+from flowbench.dataset_v2 import FlowDataset
+from flowbench.metrics import (eval_average_precision, eval_precision_at_k,
+                               eval_recall_at_k, eval_roc_auc)
+from flowbench.utils import init_model
 
 # torch.manual_seed(12345)
 # np.random.seed(12345)
@@ -35,11 +35,11 @@ if __name__ == "__main__":
 
     ROOT = osp.join(osp.expanduser("~"), "tmp", "data", args.dataset)
     if args.dataset not in ["cora", "citeseer", "pubmed"]:
-        dataset = FlowBench(root=ROOT,
-                            name=args.dataset,
-                            node_level=True,
-                            binary_labels=True,
-                            force_reprocess=False)
+        dataset = FlowDataset(root=ROOT,
+                              name=args.dataset,
+                              node_level=True,
+                              binary_labels=True,
+                              force_reprocess=False)
     else:
         # NOTE: For debug only. Take standard datasets from PyG.
         dataset = Planetoid(ROOT, args.dataset)

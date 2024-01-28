@@ -1,10 +1,16 @@
 """ Benchmarks of node-level Anomoly detection in PyGOD. """
-import warnings
 import argparse
+import os.path as osp
+import warnings
+
 import matplotlib.font_manager
 import matplotlib.pyplot as plt
 import numpy as np
 from numpy import percentile
+# from pygod.metric import (eval_average_precision, eval_precision_at_k,
+#   eval_recall_at_k, eval_roc_auc)
+from flowbench.metrics import (eval_average_precision, eval_precision_at_k,
+                               eval_recall_at_k, eval_roc_auc)
 # Import all models
 from pyod.models.abod import ABOD
 from pyod.models.cblof import CBLOF
@@ -21,12 +27,13 @@ from pyod.models.lscp import LSCP
 from pyod.models.mcd import MCD
 from pyod.models.ocsvm import OCSVM
 from pyod.models.pca import PCA
-
-from py_script.dataset import FlowBench
-from pygod.metrics import eval_roc_auc, eval_average_precision, eval_precision_at_k, eval_recall_at_k
-
-import os.path as osp
 from torch_geometric.datasets import Planetoid
+
+from flowbench.dataset_v2 import FlowDataset
+# TODO: add sklearnex to accelerate sklearn
+# from sklearnex import patch_sklearn
+# patch_sklearn()
+
 warnings.filterwarnings("ignore")
 
 random_state = 12345
@@ -76,13 +83,14 @@ if __name__ == '__main__':
     parser.add_argument('--dataset', type=str, default='1000genome_new_2022')
     args = parser.parse_args()
 
-    ROOT = osp.join(osp.expanduser("~"), "tmp", "data", args.dataset)
+    # ROOT = osp.join(osp.expanduser("~"), "tmp", "data", args.dataset)
+    ROOT = osp.join("/tmp", "data", "poseidon")
     if args.dataset not in ["cora", "citeseer", "pubmed"]:
-        dataset = FlowBench(root=ROOT,
-                            name=args.dataset,
-                            node_level=True,
-                            binary_labels=True,
-                            force_reprocess=False)
+        dataset = FlowDataset(root=ROOT,
+                              name=args.dataset,
+                              node_level=True,
+                              binary_labels=True,
+                              force_reprocess=False)
     else:
         # NOTE: For debug only. Take standard datasets from PyG.
         dataset = Planetoid(ROOT, args.dataset)
@@ -92,7 +100,7 @@ if __name__ == '__main__':
     ys = dataset.data.y.numpy()
     print('Number of inliers: %i' % (ys == 0).sum())
     print('Number of outliers: %i' % (ys == 1).sum())
-    print('Ground truth shape is {shape}. Outlier are 1 and inliers are 0.\n'.format(shape=len(ys)))
+    print('Ground truth shape is {shape}. Outlier are1  and inliers are 0.\n'.format(shape=len(ys)))
 
     for i, (clf_name, clf) in enumerate(classifiers.items()):
         print(i + 1, clf_name, end="\t")

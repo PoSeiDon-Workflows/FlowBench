@@ -13,10 +13,10 @@ from torch_geometric.data import (Batch, Data, InMemoryDataset, download_url,
                                   extract_zip)
 
 from .utils import parse_adj
-from flowbench import list_datasets
+from flowbench import list_workflows
 
 
-class FlowBench(InMemoryDataset):
+class FlowDataset(InMemoryDataset):
     r"""FlowBench dataset interface for graph and tabular data.
 
     Args:
@@ -126,7 +126,7 @@ class FlowBench(InMemoryDataset):
             if osp.exists(self.raw_dir):
                 shutil.rmtree(self.raw_dir)
 
-        super(FlowBench, self).__init__(root, transform, pre_transform, pre_filter, **kwargs)
+        super(FlowDataset, self).__init__(root, transform, pre_transform, pre_filter, **kwargs)
 
         out = torch.load(self.processed_paths[0])
         if not isinstance(out, tuple) or len(out) != 3:
@@ -296,7 +296,7 @@ def filter_dataset(dataset, anomaly_cat):
         return dataset
 
 
-class MergeFlowBench(InMemoryDataset):
+class MergeFlowDataset(InMemoryDataset):
     r""" A merged dataset of multiple FlowBench datasets.
     # TODO: verify the MergeFlowBench class
     """
@@ -314,10 +314,10 @@ class MergeFlowBench(InMemoryDataset):
                  **kwargs):
         self.root = root
         if isinstance(name, str):
-            self.workflows = list_datasets()
+            self.workflows = list_workflows()
             self.name = name.lower()
         elif isinstance(name, list):
-            self.workflows = [n.lower() for n in name if n.lower() in list_datasets()]
+            self.workflows = [n.lower() for n in name if n.lower() in list_workflows()]
             # name the merged dataset as `merge_{wf1}_{wf2}_...` with first init
             self.name = "merge_" + "_".join([wf[0] for wf in self.workflows])
         self.binary_labels = binary_labels
@@ -339,10 +339,10 @@ class MergeFlowBench(InMemoryDataset):
 
         # process the dataset on disk
         for wf in self.workflows:
-            ds = FlowBench(self.root, wf, binary_labels, node_level,
-                           feature_option, anomaly_cat, force_reprocess, **kwargs)
+            ds = FlowDataset(self.root, wf, binary_labels, node_level,
+                             feature_option, anomaly_cat, force_reprocess, **kwargs)
 
-        super(MergeFlowBench, self).__init__(root, transform, pre_transform, pre_filter, **kwargs)
+        super(MergeFlowDataset, self).__init__(root, transform, pre_transform, pre_filter, **kwargs)
 
         out = torch.load(self.processed_paths[0])
         if not isinstance(out, tuple) or len(out) != 3:

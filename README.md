@@ -158,8 +158,8 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
 * load data as graphs in `pytorch_geometric` format:
   
   ```python
-  from py_script.dataset import FlowBench
-  dataset = FlowBench(root="./", name="montage")
+  from py_script.dataset import FlowDataset
+  dataset = FlowDataset(root="./", name="montage")
   data = dataset[0]
   ```
   
@@ -168,8 +168,8 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
 * load data as tabular data in `pytorch` format:
 
   ```python
-  from py_script.dataset import FlowBench
-  dataset = FlowBench(root="./", name="montage")
+  from py_script.dataset import FlowDataset
+  dataset = FlowDataset(root="./", name="montage")
   data = dataset[0]
   Xs = data.x
   ys = data.y
@@ -180,8 +180,8 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
 * load data as tabular data in `numpy` format:
 
   ```python
-  from py_script.dataset import FlowBench
-  dataset = FlowBench(root="./", name="montage")
+  from py_script.dataset import FlowDataset
+  dataset = FlowDataset(root="./", name="montage")
   data = dataset[0]
   Xs = data.x.numpy()
   ys = data.y.numpy()
