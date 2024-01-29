@@ -11,7 +11,7 @@ import numpy as np
 from torch_geometric.datasets import Planetoid
 from tqdm import tqdm
 
-from flowbench.dataset_v2 import FlowDataset
+from flowbench.dataset import FlowDataset
 from flowbench.metrics import (eval_average_precision, eval_precision_at_k,
                                eval_recall_at_k, eval_roc_auc)
 from flowbench.utils import init_model

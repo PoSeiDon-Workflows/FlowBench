@@ -1,5 +1,5 @@
 import os.path as osp
-from flowbench.dataset_v2 import FlowDataset, MergeFlowDataset
+from flowbench.dataset import FlowDataset, MergeFlowDataset
 
 ROOT = osp.join("/tmp", "data", "poseidon")
 

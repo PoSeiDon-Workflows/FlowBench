@@ -29,7 +29,7 @@ from pyod.models.ocsvm import OCSVM
 from pyod.models.pca import PCA
 from torch_geometric.datasets import Planetoid
 
-from flowbench.dataset_v2 import FlowDataset
+from flowbench.dataset import FlowDataset
 # TODO: add sklearnex to accelerate sklearn
 # from sklearnex import patch_sklearn
 # patch_sklearn()
