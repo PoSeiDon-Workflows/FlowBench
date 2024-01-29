@@ -1,4 +1,3 @@
-from .dataset import FlowBench
 
 
 def list_workflows():

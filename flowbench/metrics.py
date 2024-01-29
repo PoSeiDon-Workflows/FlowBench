@@ -20,6 +20,7 @@ def eval_precision_at_k(y_true, y_pred, k=None):
     """
     if k is None:
         k = sum(y_true)
+    y_true = np.asarray(y_true) if not isinstance(y_true, np.ndarray) else y_true
 
     # Get the indices that would sort the scores array in descending order
     sorted_indices = np.argsort(y_pred)[::-1]
@@ -47,6 +48,7 @@ def eval_recall_at_k(y_true, y_pred, k=None):
     """
     if k is None:
         k = sum(y_true)
+    y_true = np.asarray(y_true) if not isinstance(y_true, np.ndarray) else y_true
 
     # Get the indices that would sort the scores array in descending order
     sorted_indices = np.argsort(y_pred)[::-1]

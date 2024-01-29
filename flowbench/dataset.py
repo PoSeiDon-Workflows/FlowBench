@@ -163,6 +163,12 @@ class FlowDataset(InMemoryDataset):
 
     @property
     def raw_file_names(self):
+        r"""A list of files in the :obj:`self.raw_dir` which needs to be found
+        in order to skip the download.
+
+        Returns:
+            list: List of file names.
+        """
         return glob.glob(osp.join(self.raw_dir, "*.csv"))
 
     @property
@@ -241,7 +247,8 @@ class FlowDataset(InMemoryDataset):
             # extract based on selected features
             # TODO: review the feature options
             if self.feature_option == "v1":
-                selected_features = self.features
+                # selected_features = self.features
+                selected_features = self.delay_features
             elif self.feature_option == "v2":
                 selected_features = self.delay_features + self.bytes_features + self.kickstart_features
             elif self.feature_option == "v3":
