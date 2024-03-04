@@ -146,6 +146,23 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
     <td>2120784</td>
     <td>2223088</td>
   </tr>
+  <tr>
+    <td>CASA Nowcast Small</td>
+    <td>419</td>
+    <td>795</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>-</td>
+    <td>80</td>
+    <td>79</td>
+    <td>5913852</td>
+    <td>461426</td>
+    <td>441232</td>
+    <td>-</td>
+    <td>433642</td>
+    <td>440174</td>
+  </tr>
 </tbody>
 </table>
 
