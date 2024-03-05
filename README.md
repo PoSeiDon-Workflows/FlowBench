@@ -212,60 +212,32 @@ The repository is structured as follows:
 ```
 .
 ├── adjacency_list_dags
-│   ├── 1000genome.json
-│   ├── montage.json
-│   ├── predict_future_sales.json
-│   └── README.md
-├── images
-│   ├── 1000genome-workflow.png
-│   ├── chameleon_deployment.png
-│   ├── model_comparison.png
-│   ├── montage-workflow.png
-│   ├── predict-future-sales-workflow.png
-│   └── raw_data_to_parsed_data.png
+├── benchmark
+├── data 
+│   ├── 1000genome.zip
+│   ├── casa_nowcast_full.zip
+│   ├── casa_wind_full.zip
+│   ├── montage.zip
+│   ├── predict_future_sales.zip
+│   └── variant_calling.zip
+├── examples
+|   └── demo_xxx.py
+├── flowbench
+│   ├── nlp
+│       ├── llm.py
+│   ├── supervised
+|   |   ├── mlp.py
+|   |   ├── gnn.py
+|   |   └── xxx.py
+│   └── unsupervised
+|       ├── gmm.py
+|       ├── pca.py
+|       └── xxx.py
+├── flowbench.egg-info
+├── hps/
+├── tests/
 ├── LICENSE
-├── parsed
-│   ├── cpu_2
-│   │   ├── 1000-genome-runXXXX.csv
-│   │   ├── montage-runXXXX.csv
-│   │   └── predict-future-sales-runXXXX.csv
-│   ├── cpu_3
-│   │   ├── 1000-genome-runXXXX.csv
-│   │   ├── montage-runXXXX.csv
-│   │   └── predict-future-sales-runXXXX.csv
-│   ├── cpu_4
-│   │   └── predict-future-sales-runXXXX.csv
-│   ├── hdd_10
-│   │   ├── 1000-genome-runXXXX.csv
-│   │   ├── montage-runXXXX.csv
-│   │   └── predict-future-sales-runXXXX.csv
-│   ├── hdd_5
-│   │   ├── 1000-genome-runXXXX.csv
-│   │   ├── montage-runXXXX.csv
-│   │   └── predict-future-sales-runXXXX.csv
-│   ├── normal
-│   │   ├── 1000-genome-runXXXX.csv
-│   │   ├── montage-runXXXX.csv
-│   │   └── predict-future-sales-runXXXX.csv
-│   └── README.md
-├── py_script
-│   ├── benchmark
-│   │   ├── pygod.py
-│   │   └── pyod.py
-│   ├── cartography.py
-│   ├── dataset.py
-│   ├── README.md
-│   └── utils.py
-├── raw
-│   ├── archive
-│   │   ├── elasticsearch.tar.xz.partXX
-│   │   └── workflow-submit-dirs.tar.xz.partXX
-│   ├── docker-compose.yml
-│   ├── experiments.csv
-│   ├── parse-data.py
-│   ├── run-parser.sh
-│   └── workflows.tar.xz
+├── README.md
+├── requirements.txt
 ├── setup.py
-├── setup.sh
-└── README.md
 ```
