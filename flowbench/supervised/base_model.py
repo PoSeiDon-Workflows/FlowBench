@@ -1,14 +1,33 @@
-""" Base model for supervised learning. """
+""" Base model for supervised learning.
+
+Author: PoSeiDon Team
+License: MIT
+"""
 import lightning as L
-from lightning.pytorch.utilities.types import OptimizerLRScheduler
-import torchmetrics
 import torch.nn.functional as F
+import torchmetrics
 from torch.optim import Adam
 
 
 class BaseModel(L.LightningModule):
+    r""" Base model for supervised learning.
+
+    Attributes:
+        in_channels (int): Input channels.
+        out_channels (int): Output channels.
+        lr (float): Learning rate.
+        acc (torchmetrics.Accuracy): Accuracy metric.
+        auroc (torchmetrics.AUROC): AUROC metric.
+        loss_fn (torch.nn.CrossEntropyLoss): Loss function.
+    """
 
     def __init__(self, in_channels, out_channels, **kwargs):
+        r""" Initialize the base model.
+
+        Args:
+            in_channels (int): Input channels.
+            out_channels (int): Output channels.
+        """
         self.in_channels = in_channels
         self.out_channels = out_channels
         self.lr = kwargs.get('lr', 1e-4)
@@ -26,4 +45,9 @@ class BaseModel(L.LightningModule):
                 layer.reset_parameters()
 
     def configure_optimizers(self):
+        r""" Configure the optimizer.
+
+        Returns:
+            torch.optim.Optimizer: Adam optimizer.
+        """
         return Adam(self.parameters(), lr=self.lr)

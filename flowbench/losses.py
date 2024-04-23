@@ -20,7 +20,7 @@ class FocalLoss(nn.Module):
         super(FocalLoss, self).__init__()
         self.gamma = gamma
         self.alpha = alpha
-        if isinstance(alpha, (float, int, long)):
+        if isinstance(alpha, (float, int)):
             self.alpha = torch.Tensor([alpha, 1 - alpha])
         if isinstance(alpha, list):
             self.alpha = torch.Tensor(alpha)
