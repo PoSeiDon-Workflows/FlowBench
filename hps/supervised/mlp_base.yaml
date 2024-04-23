@@ -1,0 +1,14 @@
+---
+data:
+  train:
+    batch_size: 64
+  val:
+    batch_size: 64
+  test:
+    batch_size: 64
+
+model:
+  hidden_channles: 128
+  num_layers: 3
+  lr: 0.001
+  dropout: 0.1
