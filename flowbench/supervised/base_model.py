@@ -34,8 +34,14 @@ class BaseModel(L.LightningModule):
 
         super(BaseModel, self).__init__()
 
-        self.acc = torchmetrics.Accuracy(task='binary')
-        self.auroc = torchmetrics.AUROC(task='binary')
+        if self.out_channels == 2:
+            self.acc = torchmetrics.Accuracy(task='binary')
+            self.auroc = torchmetrics.AUROC(task='binary')
+            self.conf_mat = torchmetrics.ConfusionMatrix(task='binary', num_classes=2)
+        else:
+            self.acc = torchmetrics.Accuracy(task='multiclass')
+            self.auroc = torchmetrics.AUROC(task='multiclass')
+            self.conf_mat = torchmetrics.ConfusionMatrix(task='multiclass', num_classes=out_channels)
         self.loss_fn = F.cross_entropy
 
     def reset_parameters(self):
