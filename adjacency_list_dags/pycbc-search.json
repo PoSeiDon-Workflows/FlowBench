@@ -1,0 +1,1122 @@
+{
+  "create_dir_pycbc-search_0_condorpool": [
+    "calculate_psd_ID38_ID0000041",
+    "calculate_psd_ID38_ID0000040",
+    "page_segtable_ID45_ID0000046",
+    "page_segtable_ID45_ID0000048",
+    "plot_segments_ID43_ID0000044",
+    "injections_ID123_ID0000132",
+    "page_versioning_ID174_ID0000184",
+    "calculate_psd_ID38_ID0000039",
+    "page_segplot_ID46_ID0000047",
+    "bank2hdf_ID0_ID0000001"
+  ],
+  "create_dir_pycbc-search_0_local": [
+    "pegasus-plan_ID0000070",
+    "pegasus-plan_ID0000082",
+    "pegasus-plan_ID0000072",
+    "pegasus-plan_ID0000084",
+    "pegasus-plan_ID0000074",
+    "pegasus-plan_ID0000174",
+    "pegasus-plan_ID0000076",
+    "pegasus-plan_ID0000066",
+    "pegasus-plan_ID0000068"
+  ],
+  "calculate_psd_ID38_ID0000041": [
+    "register_condorpool_0_0",
+    "optimal_snr_ID125_ID0000134",
+    "optimal_snr_ID125_ID0000135",
+    "plot_range_ID42_ID0000043",
+    "plot_spectrum_ID41_ID0000042"
+  ],
+  "calculate_psd_ID38_ID0000040": [
+    "register_condorpool_0_0",
+    "optimal_snr_ID125_ID0000134",
+    "optimal_snr_ID125_ID0000135",
+    "plot_range_ID42_ID0000043",
+    "plot_spectrum_ID41_ID0000042"
+  ],
+  "page_segtable_ID45_ID0000046": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "page_segtable_ID45_ID0000048": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "plot_segments_ID43_ID0000044": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "injections_ID123_ID0000132": [
+    "inj2hdf_ID124_ID0000133",
+    "stage_out_local_condorpool_0_0"
+  ],
+  "page_versioning_ID174_ID0000184": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "calculate_psd_ID38_ID0000039": [
+    "register_condorpool_0_0",
+    "optimal_snr_ID125_ID0000134",
+    "optimal_snr_ID125_ID0000135",
+    "plot_range_ID42_ID0000043",
+    "plot_spectrum_ID41_ID0000042"
+  ],
+  "page_segplot_ID46_ID0000047": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "bank2hdf_ID0_ID0000001": [
+    "page_foreground_ID71_ID0000105",
+    "splitbank_ID1_ID0000002",
+    "sngls_ID23_ID0000024",
+    "plot_binnedhist_ID54_ID0000059",
+    "sngls_ID23_ID0000026",
+    "sngls_ID23_ID0000028",
+    "plot_binnedhist_ID54_ID0000055",
+    "sngls_ID23_ID0000151",
+    "sngls_ID23_ID0000153",
+    "sngls_ID23_ID0000155",
+    "pegasus-plan_ID0000174",
+    "fit_over_param_ID10_ID0000011",
+    "plot_binnedhist_ID54_ID0000063",
+    "splitbank_ID1_ID0000131",
+    "fit_over_param_ID10_ID0000015",
+    "fit_over_param_ID10_ID0000013",
+    "plot_singles_ID51_ID0000052",
+    "page_foreground_ID71_ID0000098",
+    "page_foreground_ID71_ID0000130",
+    "hdf_trigger_merge_ID6_ID0000141",
+    "page_foreground_ID71_ID0000091",
+    "hdf_trigger_merge_ID6_ID0000142",
+    "hdf_trigger_merge_ID6_ID0000140",
+    "fit_by_template_ID9_ID0000014",
+    "pegasus-plan_ID0000066",
+    "pegasus-plan_ID0000068",
+    "fit_by_template_ID9_ID0000010",
+    "fit_by_template_ID9_ID0000012",
+    "coinc_ID15_ID0000147",
+    "stage_out_local_condorpool_0_0",
+    "plot_singles_ID51_ID0000060",
+    "coinc_ID15_ID0000145",
+    "page_foreground_ID71_ID0000124",
+    "coinc_ID15_ID0000143",
+    "coinc_ID15_ID0000022",
+    "coinc_ID15_ID0000020",
+    "plot_bank_ID2_ID0000003",
+    "coinc_ID15_ID0000149",
+    "page_foreground_ID71_ID0000080",
+    "pegasus-plan_ID0000070",
+    "pegasus-plan_ID0000072",
+    "pegasus-plan_ID0000074",
+    "pegasus-plan_ID0000076",
+    "plot_singles_ID51_ID0000056",
+    "coinc_ID15_ID0000016",
+    "page_foreground_ID71_ID0000118",
+    "page_foreground_ID71_ID0000078",
+    "page_foreground_ID71_ID0000079",
+    "page_foreground_ID71_ID0000112",
+    "hdf_trigger_merge_ID6_ID0000007",
+    "hdf_trigger_merge_ID6_ID0000008",
+    "hdf_trigger_merge_ID6_ID0000009",
+    "coinc_ID15_ID0000018",
+    "pegasus-plan_ID0000082",
+    "pegasus-plan_ID0000084"
+  ],
+  "inj2hdf_ID124_ID0000133": [
+    "optimal_snr_ID125_ID0000134",
+    "stage_out_local_condorpool_1_0",
+    "optimal_snr_ID125_ID0000135",
+    "inspiral-BBH_INJECTIONS-H1_ID128_ID0000137",
+    "inspiral-BBH_INJECTIONS-V1_ID130_ID0000139",
+    "pegasus-plan_ID0000174",
+    "inspiral-BBH_INJECTIONS-L1_ID129_ID0000138"
+  ],
+  "plot_range_ID42_ID0000043": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "plot_spectrum_ID41_ID0000042": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "splitbank_ID1_ID0000002": [
+    "inspiral-FULL_DATA-H1_ID3_ID0000004",
+    "inspiral-FULL_DATA-V1_ID5_ID0000006",
+    "inspiral-FULL_DATA-L1_ID4_ID0000005",
+    "register_condorpool_1_0"
+  ],
+  "splitbank_ID1_ID0000131": [
+    "inspiral-BBH_INJECTIONS-H1_ID128_ID0000137",
+    "inspiral-BBH_INJECTIONS-V1_ID130_ID0000139",
+    "inspiral-BBH_INJECTIONS-L1_ID129_ID0000138",
+    "register_condorpool_1_0"
+  ],
+  "stage_out_local_condorpool_0_0": [
+    "register_condorpool_0_0",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "plot_bank_ID2_ID0000003": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "optimal_snr_ID125_ID0000134": [
+    "optimal_snr_merge_ID127_ID0000136",
+    "register_condorpool_2_0"
+  ],
+  "optimal_snr_ID125_ID0000135": [
+    "optimal_snr_merge_ID127_ID0000136",
+    "register_condorpool_2_0"
+  ],
+  "inspiral-FULL_DATA-H1_ID3_ID0000004": [
+    "hdf_trigger_merge_ID6_ID0000007",
+    "register_condorpool_2_0"
+  ],
+  "inspiral-FULL_DATA-V1_ID5_ID0000006": [
+    "hdf_trigger_merge_ID6_ID0000009",
+    "register_condorpool_2_0"
+  ],
+  "inspiral-FULL_DATA-L1_ID4_ID0000005": [
+    "hdf_trigger_merge_ID6_ID0000008",
+    "register_condorpool_2_0"
+  ],
+  "inspiral-BBH_INJECTIONS-H1_ID128_ID0000137": [
+    "hdf_trigger_merge_ID6_ID0000140",
+    "register_condorpool_2_0"
+  ],
+  "inspiral-BBH_INJECTIONS-V1_ID130_ID0000139": [
+    "hdf_trigger_merge_ID6_ID0000142",
+    "register_condorpool_2_0"
+  ],
+  "inspiral-BBH_INJECTIONS-L1_ID129_ID0000138": [
+    "hdf_trigger_merge_ID6_ID0000141",
+    "register_condorpool_2_0"
+  ],
+  "register_condorpool_0_0": [],
+  "stage_out_local_condorpool_1_0": [
+    "cleanup_pycbc-search_0_condorpool",
+    "register_condorpool_1_0"
+  ],
+  "optimal_snr_merge_ID127_ID0000136": [
+    "stage_out_local_condorpool_3_0",
+    "hdfinjfind_ID149_ID0000158",
+    "hdfinjfind_ID149_ID0000159"
+  ],
+  "hdf_trigger_merge_ID6_ID0000007": [
+    "page_foreground_ID71_ID0000105",
+    "page_foreground_ID71_ID0000124",
+    "stage_out_local_condorpool_3_0",
+    "coinc_ID15_ID0000022",
+    "coinc_ID15_ID0000020",
+    "sngls_ID23_ID0000028",
+    "plot_binnedhist_ID54_ID0000055",
+    "page_foreground_ID71_ID0000080",
+    "plot_coinc_snrchi_ID155_ID0000172",
+    "plot_hist_ID52_ID0000054",
+    "plot_hist_ID52_ID0000053",
+    "page_foreground_ID71_ID0000118",
+    "page_foreground_ID71_ID0000078",
+    "page_foreground_ID71_ID0000079",
+    "plot_singles_ID51_ID0000052",
+    "page_foreground_ID71_ID0000112",
+    "page_foreground_ID71_ID0000098",
+    "plot_throughput_ID63_ID0000064",
+    "page_foreground_ID71_ID0000130",
+    "coinc_ID15_ID0000018",
+    "plot_coinc_snrchi_ID155_ID0000167",
+    "page_foreground_ID71_ID0000091",
+    "pegasus-plan_ID0000082",
+    "pegasus-plan_ID0000084",
+    "pegasus-plan_ID0000066",
+    "plot_snrchi_ID48_ID0000049",
+    "fit_by_template_ID9_ID0000010",
+    "pegasus-plan_ID0000068",
+    "plot_coinc_snrchi_ID155_ID0000169",
+    "plot_gating_ID44_ID0000045"
+  ],
+  "hdf_trigger_merge_ID6_ID0000009": [
+    "plot_singles_ID51_ID0000060",
+    "page_foreground_ID71_ID0000105",
+    "page_foreground_ID71_ID0000124",
+    "stage_out_local_condorpool_3_0",
+    "coinc_ID15_ID0000022",
+    "sngls_ID23_ID0000024",
+    "page_foreground_ID71_ID0000080",
+    "plot_snrchi_ID48_ID0000051",
+    "pegasus-plan_ID0000074",
+    "pegasus-plan_ID0000076",
+    "plot_binnedhist_ID54_ID0000063",
+    "coinc_ID15_ID0000016",
+    "page_foreground_ID71_ID0000118",
+    "page_foreground_ID71_ID0000078",
+    "page_foreground_ID71_ID0000079",
+    "page_foreground_ID71_ID0000112",
+    "plot_coinc_snrchi_ID155_ID0000170",
+    "page_foreground_ID71_ID0000098",
+    "plot_throughput_ID63_ID0000064",
+    "page_foreground_ID71_ID0000130",
+    "coinc_ID15_ID0000018",
+    "plot_coinc_snrchi_ID155_ID0000166",
+    "page_foreground_ID71_ID0000091",
+    "plot_coinc_snrchi_ID155_ID0000164",
+    "pegasus-plan_ID0000082",
+    "pegasus-plan_ID0000084",
+    "fit_by_template_ID9_ID0000014",
+    "plot_hist_ID52_ID0000062",
+    "plot_gating_ID44_ID0000045",
+    "plot_hist_ID52_ID0000061"
+  ],
+  "hdf_trigger_merge_ID6_ID0000008": [
+    "page_foreground_ID71_ID0000105",
+    "page_foreground_ID71_ID0000124",
+    "stage_out_local_condorpool_3_0",
+    "coinc_ID15_ID0000022",
+    "coinc_ID15_ID0000020",
+    "plot_hist_ID52_ID0000058",
+    "plot_binnedhist_ID54_ID0000059",
+    "sngls_ID23_ID0000026",
+    "plot_snrchi_ID48_ID0000050",
+    "page_foreground_ID71_ID0000080",
+    "pegasus-plan_ID0000070",
+    "pegasus-plan_ID0000072",
+    "plot_coinc_snrchi_ID155_ID0000171",
+    "plot_hist_ID52_ID0000057",
+    "plot_singles_ID51_ID0000056",
+    "coinc_ID15_ID0000016",
+    "page_foreground_ID71_ID0000118",
+    "page_foreground_ID71_ID0000078",
+    "page_foreground_ID71_ID0000079",
+    "page_foreground_ID71_ID0000112",
+    "page_foreground_ID71_ID0000098",
+    "plot_throughput_ID63_ID0000064",
+    "page_foreground_ID71_ID0000130",
+    "page_foreground_ID71_ID0000091",
+    "plot_coinc_snrchi_ID155_ID0000165",
+    "pegasus-plan_ID0000082",
+    "pegasus-plan_ID0000084",
+    "fit_by_template_ID9_ID0000012",
+    "plot_gating_ID44_ID0000045",
+    "plot_coinc_snrchi_ID155_ID0000168"
+  ],
+  "hdf_trigger_merge_ID6_ID0000140": [
+    "plot_coinc_snrchi_ID155_ID0000167",
+    "coinc_ID15_ID0000147",
+    "coinc_ID15_ID0000145",
+    "stage_out_local_condorpool_3_0",
+    "page_injections_ID153_ID0000162",
+    "sngls_ID23_ID0000155",
+    "plot_coinc_snrchi_ID155_ID0000172",
+    "pegasus-plan_ID0000174",
+    "plot_throughput_ID63_ID0000175",
+    "plot_coinc_snrchi_ID155_ID0000169",
+    "coinc_ID15_ID0000149"
+  ],
+  "hdf_trigger_merge_ID6_ID0000142": [
+    "plot_coinc_snrchi_ID155_ID0000166",
+    "sngls_ID23_ID0000151",
+    "plot_coinc_snrchi_ID155_ID0000164",
+    "coinc_ID15_ID0000145",
+    "stage_out_local_condorpool_3_0",
+    "coinc_ID15_ID0000143",
+    "page_injections_ID153_ID0000162",
+    "plot_coinc_snrchi_ID155_ID0000170",
+    "pegasus-plan_ID0000174",
+    "plot_throughput_ID63_ID0000175",
+    "coinc_ID15_ID0000149"
+  ],
+  "hdf_trigger_merge_ID6_ID0000141": [
+    "coinc_ID15_ID0000147",
+    "plot_coinc_snrchi_ID155_ID0000165",
+    "sngls_ID23_ID0000153",
+    "stage_out_local_condorpool_3_0",
+    "coinc_ID15_ID0000143",
+    "page_injections_ID153_ID0000162",
+    "plot_coinc_snrchi_ID155_ID0000171",
+    "pegasus-plan_ID0000174",
+    "plot_throughput_ID63_ID0000175",
+    "coinc_ID15_ID0000149",
+    "plot_coinc_snrchi_ID155_ID0000168"
+  ],
+  "register_condorpool_2_0": [],
+  "register_condorpool_1_0": [],
+  "fit_by_template_ID9_ID0000010": [
+    "stage_out_local_condorpool_4_0",
+    "fit_over_param_ID10_ID0000011"
+  ],
+  "fit_by_template_ID9_ID0000014": [
+    "fit_over_param_ID10_ID0000015",
+    "stage_out_local_condorpool_4_0"
+  ],
+  "plot_throughput_ID63_ID0000064": [
+    "stage_out_local_condorpool_4_0"
+  ],
+  "fit_by_template_ID9_ID0000012": [
+    "stage_out_local_condorpool_4_0",
+    "fit_over_param_ID10_ID0000013"
+  ],
+  "plot_gating_ID44_ID0000045": [
+    "stage_out_local_condorpool_4_0"
+  ],
+  "stage_out_local_condorpool_3_0": [
+    "cleanup_pycbc-search_0_condorpool",
+    "register_condorpool_3_0"
+  ],
+  "plot_throughput_ID63_ID0000175": [
+    "stage_out_local_condorpool_4_0"
+  ],
+  "fit_over_param_ID10_ID0000011": [
+    "coinc_ID15_ID0000016",
+    "coinc_ID15_ID0000147",
+    "coinc_ID15_ID0000145",
+    "coinc_ID15_ID0000143",
+    "coinc_ID15_ID0000022",
+    "stage_out_local_condorpool_5_0",
+    "coinc_ID15_ID0000020",
+    "sngls_ID23_ID0000024",
+    "sngls_ID23_ID0000026",
+    "sngls_ID23_ID0000028",
+    "coinc_ID15_ID0000018",
+    "coinc_ID15_ID0000149",
+    "sngls_ID23_ID0000151",
+    "pegasus-plan_ID0000070",
+    "sngls_ID23_ID0000153",
+    "pegasus-plan_ID0000072",
+    "sngls_ID23_ID0000155",
+    "pegasus-plan_ID0000074",
+    "pegasus-plan_ID0000076",
+    "pegasus-plan_ID0000066",
+    "pegasus-plan_ID0000068"
+  ],
+  "fit_over_param_ID10_ID0000015": [
+    "coinc_ID15_ID0000016",
+    "coinc_ID15_ID0000147",
+    "coinc_ID15_ID0000145",
+    "coinc_ID15_ID0000143",
+    "coinc_ID15_ID0000022",
+    "stage_out_local_condorpool_5_0",
+    "coinc_ID15_ID0000020",
+    "sngls_ID23_ID0000024",
+    "sngls_ID23_ID0000026",
+    "sngls_ID23_ID0000028",
+    "coinc_ID15_ID0000018",
+    "coinc_ID15_ID0000149",
+    "sngls_ID23_ID0000151",
+    "pegasus-plan_ID0000070",
+    "sngls_ID23_ID0000153",
+    "pegasus-plan_ID0000072",
+    "sngls_ID23_ID0000155",
+    "pegasus-plan_ID0000074",
+    "pegasus-plan_ID0000076",
+    "pegasus-plan_ID0000066",
+    "pegasus-plan_ID0000068"
+  ],
+  "fit_over_param_ID10_ID0000013": [
+    "coinc_ID15_ID0000016",
+    "coinc_ID15_ID0000147",
+    "coinc_ID15_ID0000145",
+    "coinc_ID15_ID0000143",
+    "coinc_ID15_ID0000022",
+    "stage_out_local_condorpool_5_0",
+    "coinc_ID15_ID0000020",
+    "sngls_ID23_ID0000024",
+    "sngls_ID23_ID0000026",
+    "sngls_ID23_ID0000028",
+    "coinc_ID15_ID0000018",
+    "coinc_ID15_ID0000149",
+    "sngls_ID23_ID0000151",
+    "pegasus-plan_ID0000070",
+    "sngls_ID23_ID0000153",
+    "pegasus-plan_ID0000072",
+    "sngls_ID23_ID0000155",
+    "pegasus-plan_ID0000074",
+    "pegasus-plan_ID0000076",
+    "pegasus-plan_ID0000066",
+    "pegasus-plan_ID0000068"
+  ],
+  "register_condorpool_3_0": [],
+  "stage_out_local_condorpool_4_0": [
+    "cleanup_pycbc-search_0_condorpool",
+    "register_condorpool_4_0"
+  ],
+  "coinc_ID15_ID0000016": [
+    "register_condorpool_6_0",
+    "statmap_ID16_ID0000017"
+  ],
+  "coinc_ID15_ID0000147": [
+    "statmap_inj_ID135_ID0000148",
+    "register_condorpool_6_1"
+  ],
+  "coinc_ID15_ID0000145": [
+    "statmap_inj_ID135_ID0000146",
+    "register_condorpool_6_0"
+  ],
+  "coinc_ID15_ID0000143": [
+    "register_condorpool_6_1",
+    "statmap_inj_ID135_ID0000144"
+  ],
+  "coinc_ID15_ID0000022": [
+    "statmap_ID16_ID0000023",
+    "register_condorpool_6_0"
+  ],
+  "stage_out_local_condorpool_5_0": [
+    "register_condorpool_5_0",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "coinc_ID15_ID0000020": [
+    "statmap_ID16_ID0000021",
+    "register_condorpool_6_1"
+  ],
+  "sngls_ID23_ID0000024": [
+    "sngls_statmap_ID24_ID0000025",
+    "register_condorpool_6_0"
+  ],
+  "sngls_ID23_ID0000026": [
+    "sngls_statmap_ID24_ID0000027",
+    "register_condorpool_6_1"
+  ],
+  "sngls_ID23_ID0000028": [
+    "sngls_statmap_ID24_ID0000029",
+    "register_condorpool_6_0"
+  ],
+  "coinc_ID15_ID0000018": [
+    "register_condorpool_6_1",
+    "statmap_ID16_ID0000019"
+  ],
+  "coinc_ID15_ID0000149": [
+    "statmap_inj_ID135_ID0000150",
+    "register_condorpool_6_0"
+  ],
+  "sngls_ID23_ID0000151": [
+    "sngls_statmap_inj_ID143_ID0000152",
+    "register_condorpool_6_1"
+  ],
+  "pegasus-plan_ID0000070": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "sngls_ID23_ID0000153": [
+    "register_condorpool_6_0",
+    "sngls_statmap_inj_ID143_ID0000154"
+  ],
+  "pegasus-plan_ID0000072": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "sngls_ID23_ID0000155": [
+    "sngls_statmap_inj_ID143_ID0000156",
+    "register_condorpool_6_1"
+  ],
+  "pegasus-plan_ID0000074": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "pegasus-plan_ID0000076": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "pegasus-plan_ID0000066": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "pegasus-plan_ID0000068": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_4_0": [],
+  "statmap_ID16_ID0000017": [
+    "exclude_zerolag_ID29_ID0000030",
+    "exclude_zerolag_ID29_ID0000033",
+    "stage_out_local_condorpool_7_0",
+    "exclude_zerolag_ID29_ID0000034",
+    "exclude_zerolag_ID29_ID0000031",
+    "exclude_zerolag_ID29_ID0000032",
+    "exclude_zerolag_ID29_ID0000035",
+    "exclude_zerolag_ID29_ID0000036"
+  ],
+  "statmap_ID16_ID0000023": [
+    "exclude_zerolag_ID29_ID0000030",
+    "exclude_zerolag_ID29_ID0000033",
+    "stage_out_local_condorpool_7_0",
+    "exclude_zerolag_ID29_ID0000034",
+    "exclude_zerolag_ID29_ID0000031",
+    "exclude_zerolag_ID29_ID0000032",
+    "exclude_zerolag_ID29_ID0000035",
+    "exclude_zerolag_ID29_ID0000036"
+  ],
+  "register_condorpool_5_0": [],
+  "statmap_ID16_ID0000021": [
+    "exclude_zerolag_ID29_ID0000030",
+    "exclude_zerolag_ID29_ID0000033",
+    "stage_out_local_condorpool_7_0",
+    "exclude_zerolag_ID29_ID0000034",
+    "exclude_zerolag_ID29_ID0000031",
+    "exclude_zerolag_ID29_ID0000032",
+    "exclude_zerolag_ID29_ID0000035",
+    "exclude_zerolag_ID29_ID0000036"
+  ],
+  "sngls_statmap_ID24_ID0000025": [
+    "exclude_zerolag_ID29_ID0000030",
+    "exclude_zerolag_ID29_ID0000033",
+    "stage_out_local_condorpool_7_0",
+    "exclude_zerolag_ID29_ID0000034",
+    "exclude_zerolag_ID29_ID0000031",
+    "exclude_zerolag_ID29_ID0000032",
+    "exclude_zerolag_ID29_ID0000035",
+    "exclude_zerolag_ID29_ID0000036"
+  ],
+  "sngls_statmap_ID24_ID0000027": [
+    "exclude_zerolag_ID29_ID0000030",
+    "exclude_zerolag_ID29_ID0000033",
+    "stage_out_local_condorpool_7_0",
+    "exclude_zerolag_ID29_ID0000034",
+    "exclude_zerolag_ID29_ID0000031",
+    "exclude_zerolag_ID29_ID0000032",
+    "exclude_zerolag_ID29_ID0000035",
+    "exclude_zerolag_ID29_ID0000036"
+  ],
+  "sngls_statmap_ID24_ID0000029": [
+    "exclude_zerolag_ID29_ID0000030",
+    "exclude_zerolag_ID29_ID0000033",
+    "stage_out_local_condorpool_7_0",
+    "exclude_zerolag_ID29_ID0000034",
+    "exclude_zerolag_ID29_ID0000031",
+    "exclude_zerolag_ID29_ID0000032",
+    "exclude_zerolag_ID29_ID0000035",
+    "exclude_zerolag_ID29_ID0000036"
+  ],
+  "statmap_ID16_ID0000019": [
+    "exclude_zerolag_ID29_ID0000030",
+    "exclude_zerolag_ID29_ID0000033",
+    "stage_out_local_condorpool_7_0",
+    "exclude_zerolag_ID29_ID0000034",
+    "exclude_zerolag_ID29_ID0000031",
+    "exclude_zerolag_ID29_ID0000032",
+    "exclude_zerolag_ID29_ID0000035",
+    "exclude_zerolag_ID29_ID0000036"
+  ],
+  "register_condorpool_6_0": [],
+  "register_condorpool_6_1": [],
+  "exclude_zerolag_ID29_ID0000030": [
+    "combine_statmap_ID36_ID0000157",
+    "combine_statmap_ID36_ID0000037",
+    "plot_snrifar_ID76_ID0000088",
+    "plot_snrifar_ID76_ID0000086",
+    "plot_snrifar_ID76_ID0000085",
+    "page_foreground_ID71_ID0000091",
+    "plot_coinc_snrchi_ID155_ID0000165",
+    "plot_coinc_snrchi_ID155_ID0000164",
+    "plot_snrratehist_ID78_ID0000087",
+    "page_ifar_ID80_ID0000089",
+    "stage_out_local_condorpool_8_0",
+    "page_ifar_ID80_ID0000090",
+    "statmap_inj_ID135_ID0000144"
+  ],
+  "exclude_zerolag_ID29_ID0000033": [
+    "combine_statmap_ID36_ID0000157",
+    "combine_statmap_ID36_ID0000037",
+    "plot_snrifar_ID76_ID0000106",
+    "page_foreground_ID71_ID0000112",
+    "plot_coinc_snrchi_ID155_ID0000170",
+    "page_ifar_ID80_ID0000110",
+    "plot_coinc_snrchi_ID155_ID0000172",
+    "plot_coinc_snrchi_ID155_ID0000171",
+    "page_ifar_ID80_ID0000111",
+    "plot_snrifar_ID76_ID0000109",
+    "statmap_inj_ID135_ID0000150",
+    "stage_out_local_condorpool_8_0",
+    "plot_snrifar_ID76_ID0000107",
+    "plot_snrratehist_ID78_ID0000108"
+  ],
+  "stage_out_local_condorpool_7_0": [
+    "register_condorpool_7_0",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "exclude_zerolag_ID29_ID0000034": [
+    "combine_statmap_ID36_ID0000157",
+    "combine_statmap_ID36_ID0000037",
+    "page_foreground_ID71_ID0000118",
+    "plot_snrifar_ID76_ID0000113",
+    "plot_snrifar_ID76_ID0000116",
+    "plot_snrifar_ID76_ID0000114",
+    "sngls_statmap_inj_ID143_ID0000152",
+    "stage_out_local_condorpool_8_0",
+    "plot_snrratehist_ID78_ID0000115",
+    "page_ifar_ID80_ID0000117"
+  ],
+  "exclude_zerolag_ID29_ID0000031": [
+    "combine_statmap_ID36_ID0000157",
+    "combine_statmap_ID36_ID0000037",
+    "statmap_inj_ID135_ID0000146",
+    "plot_snrifar_ID76_ID0000093",
+    "page_foreground_ID71_ID0000098",
+    "plot_snrifar_ID76_ID0000092",
+    "plot_snrifar_ID76_ID0000095",
+    "plot_coinc_snrchi_ID155_ID0000167",
+    "plot_coinc_snrchi_ID155_ID0000166",
+    "plot_snrratehist_ID78_ID0000094",
+    "page_ifar_ID80_ID0000097",
+    "stage_out_local_condorpool_8_0",
+    "page_ifar_ID80_ID0000096"
+  ],
+  "exclude_zerolag_ID29_ID0000032": [
+    "combine_statmap_ID36_ID0000157",
+    "combine_statmap_ID36_ID0000037",
+    "plot_snrifar_ID76_ID0000102",
+    "plot_snrifar_ID76_ID0000099",
+    "page_foreground_ID71_ID0000105",
+    "statmap_inj_ID135_ID0000148",
+    "plot_snrifar_ID76_ID0000100",
+    "page_ifar_ID80_ID0000103",
+    "page_ifar_ID80_ID0000104",
+    "plot_snrratehist_ID78_ID0000101",
+    "stage_out_local_condorpool_8_0",
+    "plot_coinc_snrchi_ID155_ID0000169",
+    "plot_coinc_snrchi_ID155_ID0000168"
+  ],
+  "exclude_zerolag_ID29_ID0000035": [
+    "page_ifar_ID80_ID0000123",
+    "combine_statmap_ID36_ID0000157",
+    "combine_statmap_ID36_ID0000037",
+    "plot_snrifar_ID76_ID0000122",
+    "page_foreground_ID71_ID0000124",
+    "plot_snrratehist_ID78_ID0000121",
+    "stage_out_local_condorpool_8_0",
+    "plot_snrifar_ID76_ID0000119",
+    "sngls_statmap_inj_ID143_ID0000154",
+    "plot_snrifar_ID76_ID0000120"
+  ],
+  "exclude_zerolag_ID29_ID0000036": [
+    "combine_statmap_ID36_ID0000157",
+    "combine_statmap_ID36_ID0000037",
+    "plot_snrifar_ID76_ID0000128",
+    "sngls_statmap_inj_ID143_ID0000156",
+    "plot_snrifar_ID76_ID0000125",
+    "plot_snrifar_ID76_ID0000126",
+    "stage_out_local_condorpool_8_0",
+    "page_foreground_ID71_ID0000130",
+    "plot_snrratehist_ID78_ID0000127",
+    "page_ifar_ID80_ID0000129"
+  ],
+  "plot_snrifar_ID76_ID0000088": [
+    "stage_out_local_condorpool_9_1"
+  ],
+  "plot_snrifar_ID76_ID0000086": [
+    "stage_out_local_condorpool_9_4"
+  ],
+  "plot_snrifar_ID76_ID0000085": [
+    "stage_out_local_condorpool_9_1"
+  ],
+  "page_foreground_ID71_ID0000091": [
+    "stage_out_local_condorpool_9_0"
+  ],
+  "plot_snrratehist_ID78_ID0000087": [
+    "stage_out_local_condorpool_9_2"
+  ],
+  "page_ifar_ID80_ID0000089": [
+    "stage_out_local_condorpool_9_3"
+  ],
+  "page_ifar_ID80_ID0000090": [
+    "stage_out_local_condorpool_9_5"
+  ],
+  "statmap_inj_ID135_ID0000144": [
+    "combine_statmap_ID36_ID0000157",
+    "stage_out_local_condorpool_9_0"
+  ],
+  "plot_snrifar_ID76_ID0000106": [
+    "stage_out_local_condorpool_9_2"
+  ],
+  "page_foreground_ID71_ID0000112": [
+    "stage_out_local_condorpool_9_3"
+  ],
+  "page_ifar_ID80_ID0000110": [
+    "stage_out_local_condorpool_9_4"
+  ],
+  "page_ifar_ID80_ID0000111": [
+    "stage_out_local_condorpool_9_5"
+  ],
+  "plot_snrifar_ID76_ID0000109": [
+    "stage_out_local_condorpool_9_0"
+  ],
+  "statmap_inj_ID135_ID0000150": [
+    "combine_statmap_ID36_ID0000157",
+    "stage_out_local_condorpool_9_1"
+  ],
+  "plot_snrifar_ID76_ID0000107": [
+    "stage_out_local_condorpool_9_2"
+  ],
+  "plot_snrratehist_ID78_ID0000108": [
+    "stage_out_local_condorpool_9_3"
+  ],
+  "register_condorpool_7_0": [],
+  "page_foreground_ID71_ID0000118": [
+    "stage_out_local_condorpool_9_4"
+  ],
+  "plot_snrifar_ID76_ID0000113": [
+    "stage_out_local_condorpool_9_5"
+  ],
+  "plot_snrifar_ID76_ID0000116": [
+    "stage_out_local_condorpool_9_0"
+  ],
+  "plot_snrifar_ID76_ID0000114": [
+    "stage_out_local_condorpool_9_1"
+  ],
+  "sngls_statmap_inj_ID143_ID0000152": [
+    "combine_statmap_ID36_ID0000157",
+    "stage_out_local_condorpool_9_2"
+  ],
+  "plot_snrratehist_ID78_ID0000115": [
+    "stage_out_local_condorpool_9_3"
+  ],
+  "page_ifar_ID80_ID0000117": [
+    "stage_out_local_condorpool_9_4"
+  ],
+  "statmap_inj_ID135_ID0000146": [
+    "combine_statmap_ID36_ID0000157",
+    "stage_out_local_condorpool_9_0"
+  ],
+  "plot_snrifar_ID76_ID0000093": [
+    "stage_out_local_condorpool_9_2"
+  ],
+  "page_foreground_ID71_ID0000098": [
+    "stage_out_local_condorpool_9_3"
+  ],
+  "plot_snrifar_ID76_ID0000092": [
+    "stage_out_local_condorpool_9_4"
+  ],
+  "plot_snrifar_ID76_ID0000095": [
+    "stage_out_local_condorpool_9_0"
+  ],
+  "plot_snrratehist_ID78_ID0000094": [
+    "stage_out_local_condorpool_9_5"
+  ],
+  "page_ifar_ID80_ID0000097": [
+    "stage_out_local_condorpool_9_1"
+  ],
+  "page_ifar_ID80_ID0000096": [
+    "stage_out_local_condorpool_9_5"
+  ],
+  "plot_snrifar_ID76_ID0000102": [
+    "stage_out_local_condorpool_9_1"
+  ],
+  "plot_snrifar_ID76_ID0000099": [
+    "stage_out_local_condorpool_9_2"
+  ],
+  "page_foreground_ID71_ID0000105": [
+    "stage_out_local_condorpool_9_5"
+  ],
+  "statmap_inj_ID135_ID0000148": [
+    "combine_statmap_ID36_ID0000157",
+    "stage_out_local_condorpool_9_0"
+  ],
+  "plot_snrifar_ID76_ID0000100": [
+    "stage_out_local_condorpool_9_1"
+  ],
+  "page_ifar_ID80_ID0000103": [
+    "stage_out_local_condorpool_9_3"
+  ],
+  "page_ifar_ID80_ID0000104": [
+    "stage_out_local_condorpool_9_4"
+  ],
+  "plot_snrratehist_ID78_ID0000101": [
+    "stage_out_local_condorpool_9_2"
+  ],
+  "page_ifar_ID80_ID0000123": [
+    "stage_out_local_condorpool_9_3"
+  ],
+  "plot_snrifar_ID76_ID0000122": [
+    "stage_out_local_condorpool_9_4"
+  ],
+  "page_foreground_ID71_ID0000124": [
+    "stage_out_local_condorpool_9_5"
+  ],
+  "plot_snrratehist_ID78_ID0000121": [
+    "stage_out_local_condorpool_9_0"
+  ],
+  "plot_snrifar_ID76_ID0000119": [
+    "stage_out_local_condorpool_9_1"
+  ],
+  "sngls_statmap_inj_ID143_ID0000154": [
+    "combine_statmap_ID36_ID0000157",
+    "stage_out_local_condorpool_9_2"
+  ],
+  "plot_snrifar_ID76_ID0000120": [
+    "stage_out_local_condorpool_9_3"
+  ],
+  "combine_statmap_ID36_ID0000037": [
+    "page_foreground_ID71_ID0000080",
+    "pegasus-plan_ID0000082",
+    "pegasus-plan_ID0000084",
+    "page_foreground_ID71_ID0000078",
+    "page_foreground_ID71_ID0000079",
+    "page_ifar_catalog_ID70_ID0000077",
+    "foreground_censor_ID37_ID0000038",
+    "stage_out_local_condorpool_9_4"
+  ],
+  "plot_snrifar_ID76_ID0000128": [
+    "stage_out_local_condorpool_9_5"
+  ],
+  "sngls_statmap_inj_ID143_ID0000156": [
+    "combine_statmap_ID36_ID0000157",
+    "stage_out_local_condorpool_9_0"
+  ],
+  "plot_snrifar_ID76_ID0000125": [
+    "stage_out_local_condorpool_9_1"
+  ],
+  "plot_snrifar_ID76_ID0000126": [
+    "stage_out_local_condorpool_9_2"
+  ],
+  "stage_out_local_condorpool_8_0": [
+    "register_condorpool_8_0",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "page_foreground_ID71_ID0000130": [
+    "stage_out_local_condorpool_9_3"
+  ],
+  "plot_snrratehist_ID78_ID0000127": [
+    "stage_out_local_condorpool_9_4"
+  ],
+  "page_ifar_ID80_ID0000129": [
+    "stage_out_local_condorpool_9_5"
+  ],
+  "page_foreground_ID71_ID0000080": [
+    "stage_out_local_condorpool_10_0"
+  ],
+  "pegasus-plan_ID0000082": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "pegasus-plan_ID0000084": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "page_foreground_ID71_ID0000078": [
+    "stage_out_local_condorpool_10_0"
+  ],
+  "page_foreground_ID71_ID0000079": [
+    "stage_out_local_condorpool_10_0"
+  ],
+  "page_ifar_catalog_ID70_ID0000077": [
+    "stage_out_local_condorpool_10_0"
+  ],
+  "foreground_censor_ID37_ID0000038": [
+    "plot_binnedhist_ID54_ID0000063",
+    "plot_singles_ID51_ID0000060",
+    "plot_singles_ID51_ID0000052",
+    "plot_hist_ID52_ID0000058",
+    "plot_binnedhist_ID54_ID0000059",
+    "hdfinjfind_ID149_ID0000158",
+    "hdfinjfind_ID149_ID0000159",
+    "plot_binnedhist_ID54_ID0000055",
+    "plot_snrchi_ID48_ID0000050",
+    "plot_snrchi_ID48_ID0000051",
+    "plot_hist_ID52_ID0000057",
+    "plot_snrchi_ID48_ID0000049",
+    "stage_out_local_condorpool_10_0",
+    "plot_singles_ID51_ID0000056",
+    "plot_hist_ID52_ID0000054",
+    "plot_hist_ID52_ID0000053",
+    "plot_hist_ID52_ID0000062",
+    "plot_hist_ID52_ID0000061"
+  ],
+  "combine_statmap_ID36_ID0000157": [
+    "stage_out_local_condorpool_10_0",
+    "hdfinjfind_ID149_ID0000158",
+    "hdfinjfind_ID149_ID0000159"
+  ],
+  "stage_out_local_condorpool_9_0": [
+    "register_condorpool_9_0",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "stage_out_local_condorpool_9_1": [
+    "register_condorpool_9_1",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "stage_out_local_condorpool_9_2": [
+    "register_condorpool_9_2",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "register_condorpool_8_0": [],
+  "stage_out_local_condorpool_9_3": [
+    "register_condorpool_9_3",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "stage_out_local_condorpool_9_4": [
+    "register_condorpool_9_4",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "stage_out_local_condorpool_9_5": [
+    "register_condorpool_9_5",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "plot_binnedhist_ID54_ID0000063": [
+    "stage_out_local_condorpool_11_0"
+  ],
+  "plot_singles_ID51_ID0000060": [
+    "stage_out_local_condorpool_11_1"
+  ],
+  "plot_singles_ID51_ID0000052": [
+    "stage_out_local_condorpool_11_0"
+  ],
+  "plot_hist_ID52_ID0000058": [
+    "stage_out_local_condorpool_11_1"
+  ],
+  "plot_binnedhist_ID54_ID0000059": [
+    "stage_out_local_condorpool_11_0"
+  ],
+  "plot_binnedhist_ID54_ID0000055": [
+    "stage_out_local_condorpool_11_1"
+  ],
+  "plot_snrchi_ID48_ID0000050": [
+    "stage_out_local_condorpool_11_0"
+  ],
+  "plot_snrchi_ID48_ID0000051": [
+    "stage_out_local_condorpool_11_1"
+  ],
+  "plot_hist_ID52_ID0000057": [
+    "stage_out_local_condorpool_11_0"
+  ],
+  "plot_snrchi_ID48_ID0000049": [
+    "stage_out_local_condorpool_11_1"
+  ],
+  "plot_singles_ID51_ID0000056": [
+    "stage_out_local_condorpool_11_0"
+  ],
+  "plot_hist_ID52_ID0000054": [
+    "stage_out_local_condorpool_11_1"
+  ],
+  "plot_hist_ID52_ID0000053": [
+    "stage_out_local_condorpool_11_0"
+  ],
+  "plot_hist_ID52_ID0000062": [
+    "stage_out_local_condorpool_11_1"
+  ],
+  "plot_hist_ID52_ID0000061": [
+    "stage_out_local_condorpool_11_0"
+  ],
+  "stage_out_local_condorpool_10_0": [
+    "register_condorpool_10_0",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "hdfinjfind_ID149_ID0000158": [
+    "plot_coinc_snrchi_ID155_ID0000170",
+    "plot_foundmissed_ID151_ID0000161",
+    "plot_foundmissed_ID151_ID0000160",
+    "plot_coinc_snrchi_ID155_ID0000167",
+    "plot_coinc_snrchi_ID155_ID0000166",
+    "plot_coinc_snrchi_ID155_ID0000165",
+    "plot_coinc_snrchi_ID155_ID0000164",
+    "page_injections_ID153_ID0000163",
+    "page_injections_ID153_ID0000162",
+    "plot_coinc_snrchi_ID155_ID0000172",
+    "plot_coinc_snrchi_ID155_ID0000171",
+    "pegasus-plan_ID0000174",
+    "stage_out_local_condorpool_11_1",
+    "plot_coinc_snrchi_ID155_ID0000169",
+    "plot_coinc_snrchi_ID155_ID0000168"
+  ],
+  "hdfinjfind_ID149_ID0000159": [
+    "plot_sensitivity_ID166_ID0000180",
+    "plot_foundmissed_ID151_ID0000178",
+    "plot_foundmissed_ID151_ID0000179",
+    "plot_sensitivity_ID166_ID0000177",
+    "plot_sensitivity_ID166_ID0000176",
+    "plot_foundmissed_ID151_ID0000183",
+    "stage_out_local_condorpool_11_0",
+    "plot_foundmissed_ID151_ID0000182",
+    "plot_sensitivity_ID166_ID0000181"
+  ],
+  "register_condorpool_9_0": [],
+  "register_condorpool_9_1": [],
+  "register_condorpool_9_2": [],
+  "register_condorpool_9_3": [],
+  "register_condorpool_9_4": [],
+  "register_condorpool_9_5": [],
+  "register_condorpool_10_0": [],
+  "plot_coinc_snrchi_ID155_ID0000170": [
+    "stage_out_local_condorpool_12_0"
+  ],
+  "plot_foundmissed_ID151_ID0000161": [
+    "stage_out_local_condorpool_12_1"
+  ],
+  "plot_foundmissed_ID151_ID0000160": [
+    "stage_out_local_condorpool_12_2"
+  ],
+  "plot_coinc_snrchi_ID155_ID0000167": [
+    "stage_out_local_condorpool_12_0"
+  ],
+  "plot_coinc_snrchi_ID155_ID0000166": [
+    "stage_out_local_condorpool_12_1"
+  ],
+  "plot_coinc_snrchi_ID155_ID0000165": [
+    "stage_out_local_condorpool_12_2"
+  ],
+  "plot_coinc_snrchi_ID155_ID0000164": [
+    "stage_out_local_condorpool_12_0"
+  ],
+  "page_injections_ID153_ID0000163": [
+    "stage_out_local_condorpool_12_1"
+  ],
+  "page_injections_ID153_ID0000162": [
+    "stage_out_local_condorpool_12_2"
+  ],
+  "plot_coinc_snrchi_ID155_ID0000172": [
+    "stage_out_local_condorpool_12_0"
+  ],
+  "plot_coinc_snrchi_ID155_ID0000171": [
+    "stage_out_local_condorpool_12_1"
+  ],
+  "pegasus-plan_ID0000174": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "stage_out_local_condorpool_11_1": [
+    "register_condorpool_11_1",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "plot_coinc_snrchi_ID155_ID0000169": [
+    "stage_out_local_condorpool_12_2"
+  ],
+  "plot_coinc_snrchi_ID155_ID0000168": [
+    "stage_out_local_condorpool_12_0"
+  ],
+  "plot_sensitivity_ID166_ID0000180": [
+    "stage_out_local_condorpool_12_1"
+  ],
+  "plot_foundmissed_ID151_ID0000178": [
+    "stage_out_local_condorpool_12_2"
+  ],
+  "plot_foundmissed_ID151_ID0000179": [
+    "stage_out_local_condorpool_12_0"
+  ],
+  "plot_sensitivity_ID166_ID0000177": [
+    "stage_out_local_condorpool_12_1"
+  ],
+  "plot_sensitivity_ID166_ID0000176": [
+    "stage_out_local_condorpool_12_2"
+  ],
+  "plot_foundmissed_ID151_ID0000183": [
+    "stage_out_local_condorpool_12_0"
+  ],
+  "stage_out_local_condorpool_11_0": [
+    "register_condorpool_11_0",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "plot_foundmissed_ID151_ID0000182": [
+    "stage_out_local_condorpool_12_1"
+  ],
+  "plot_sensitivity_ID166_ID0000181": [
+    "stage_out_local_condorpool_12_2"
+  ],
+  "cleanup_pycbc-search_0_local": [],
+  "register_condorpool_11_1": [],
+  "stage_out_local_condorpool_12_0": [
+    "register_condorpool_12_0",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "register_condorpool_11_0": [],
+  "stage_out_local_condorpool_12_1": [
+    "register_condorpool_12_1",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "stage_out_local_condorpool_12_2": [
+    "register_condorpool_12_2",
+    "cleanup_pycbc-search_0_condorpool"
+  ],
+  "register_condorpool_12_0": [],
+  "register_condorpool_12_1": [],
+  "register_condorpool_12_2": [],
+  "cleanup_pycbc-search_0_condorpool": []
+}

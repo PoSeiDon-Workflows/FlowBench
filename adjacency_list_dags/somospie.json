@@ -1,0 +1,298 @@
+{
+  "create_dir_somospie_0_condorpool": [
+    "get_sm_ID0000020",
+    "get_sm_ID0000021",
+    "get_sm_ID0000022",
+    "get_sm_ID0000023",
+    "get_sm_ID0000024",
+    "get_sm_ID0000025",
+    "get_sm_ID0000015",
+    "get_sm_ID0000026",
+    "get_sm_ID0000016",
+    "get_sm_ID0000017",
+    "get_sm_ID0000018",
+    "get_sm_ID0000019",
+    "merge_ID0000001"
+  ],
+  "get_sm_ID0000020": [
+    "stage_out_local_condorpool_0_1",
+    "generate_train_ID0000032"
+  ],
+  "get_sm_ID0000021": [
+    "stage_out_local_condorpool_0_0",
+    "generate_train_ID0000033"
+  ],
+  "get_sm_ID0000022": [
+    "stage_out_local_condorpool_0_1",
+    "generate_train_ID0000034"
+  ],
+  "get_sm_ID0000023": [
+    "stage_out_local_condorpool_0_0",
+    "generate_train_ID0000035"
+  ],
+  "get_sm_ID0000024": [
+    "stage_out_local_condorpool_0_1",
+    "generate_train_ID0000036"
+  ],
+  "get_sm_ID0000025": [
+    "stage_out_local_condorpool_0_0",
+    "generate_train_ID0000037"
+  ],
+  "get_sm_ID0000015": [
+    "stage_out_local_condorpool_0_0",
+    "generate_train_ID0000027"
+  ],
+  "get_sm_ID0000026": [
+    "stage_out_local_condorpool_0_1",
+    "generate_train_ID0000038"
+  ],
+  "get_sm_ID0000016": [
+    "stage_out_local_condorpool_0_1",
+    "generate_train_ID0000028"
+  ],
+  "get_sm_ID0000017": [
+    "stage_out_local_condorpool_0_0",
+    "generate_train_ID0000029"
+  ],
+  "get_sm_ID0000018": [
+    "stage_out_local_condorpool_0_0",
+    "generate_train_ID0000030"
+  ],
+  "get_sm_ID0000019": [
+    "stage_out_local_condorpool_0_1",
+    "generate_train_ID0000031"
+  ],
+  "merge_ID0000001": [
+    "stage_out_local_condorpool_0_0",
+    "reproject_ID0000011",
+    "reproject_ID0000002"
+  ],
+  "stage_out_local_condorpool_0_1": [
+    "cleanup_somospie_0_condorpool",
+    "register_condorpool_0_1"
+  ],
+  "stage_out_local_condorpool_0_0": [
+    "register_condorpool_0_0",
+    "cleanup_somospie_0_condorpool"
+  ],
+  "reproject_ID0000011": [
+    "stage_out_local_condorpool_1_0",
+    "generate_train_ID0000037",
+    "generate_train_ID0000038",
+    "generate_train_ID0000027",
+    "generate_train_ID0000028",
+    "generate_train_ID0000029",
+    "generate_train_ID0000033",
+    "generate_train_ID0000034",
+    "generate_train_ID0000035",
+    "generate_train_ID0000036",
+    "generate_eval_ID0000041",
+    "generate_eval_ID0000040",
+    "generate_train_ID0000030",
+    "generate_train_ID0000031",
+    "generate_eval_ID0000042",
+    "generate_train_ID0000032",
+    "generate_eval_ID0000039"
+  ],
+  "reproject_ID0000002": [
+    "stage_out_local_condorpool_1_0",
+    "crop_ID0000009",
+    "crop_ID0000007",
+    "crop_ID0000005",
+    "crop_ID0000003"
+  ],
+  "register_condorpool_0_1": [],
+  "register_condorpool_0_0": [],
+  "stage_out_local_condorpool_1_0": [
+    "cleanup_somospie_0_condorpool",
+    "register_condorpool_1_0"
+  ],
+  "crop_ID0000009": [
+    "stage_out_local_condorpool_2_0",
+    "compute_ID0000010"
+  ],
+  "crop_ID0000007": [
+    "stage_out_local_condorpool_2_0",
+    "compute_ID0000008"
+  ],
+  "crop_ID0000005": [
+    "compute_ID0000006",
+    "stage_out_local_condorpool_2_0"
+  ],
+  "crop_ID0000003": [
+    "compute_ID0000004",
+    "stage_out_local_condorpool_2_0"
+  ],
+  "register_condorpool_1_0": [],
+  "compute_ID0000010": [
+    "stage_out_local_condorpool_3_0",
+    "merge_avg_ID0000014",
+    "merge_avg_ID0000012",
+    "merge_avg_ID0000013"
+  ],
+  "compute_ID0000008": [
+    "stage_out_local_condorpool_3_0",
+    "merge_avg_ID0000014",
+    "merge_avg_ID0000012",
+    "merge_avg_ID0000013"
+  ],
+  "compute_ID0000006": [
+    "stage_out_local_condorpool_3_0",
+    "merge_avg_ID0000014",
+    "merge_avg_ID0000012",
+    "merge_avg_ID0000013"
+  ],
+  "compute_ID0000004": [
+    "stage_out_local_condorpool_3_0",
+    "merge_avg_ID0000014",
+    "merge_avg_ID0000012",
+    "merge_avg_ID0000013"
+  ],
+  "stage_out_local_condorpool_2_0": [
+    "cleanup_somospie_0_condorpool",
+    "register_condorpool_2_0"
+  ],
+  "stage_out_local_condorpool_3_0": [
+    "cleanup_somospie_0_condorpool",
+    "register_condorpool_3_0"
+  ],
+  "merge_avg_ID0000014": [
+    "generate_train_ID0000037",
+    "generate_train_ID0000038",
+    "generate_train_ID0000027",
+    "stage_out_local_condorpool_4_0",
+    "generate_train_ID0000028",
+    "generate_train_ID0000029",
+    "generate_train_ID0000033",
+    "generate_train_ID0000034",
+    "generate_train_ID0000035",
+    "generate_train_ID0000036",
+    "generate_eval_ID0000041",
+    "generate_eval_ID0000040",
+    "generate_train_ID0000030",
+    "generate_train_ID0000031",
+    "generate_eval_ID0000042",
+    "generate_train_ID0000032",
+    "generate_eval_ID0000039"
+  ],
+  "merge_avg_ID0000012": [
+    "generate_train_ID0000037",
+    "generate_train_ID0000038",
+    "generate_train_ID0000027",
+    "stage_out_local_condorpool_4_0",
+    "generate_train_ID0000028",
+    "generate_train_ID0000029",
+    "generate_train_ID0000033",
+    "generate_train_ID0000034",
+    "generate_train_ID0000035",
+    "generate_train_ID0000036",
+    "generate_eval_ID0000041",
+    "generate_eval_ID0000040",
+    "generate_train_ID0000030",
+    "generate_train_ID0000031",
+    "generate_eval_ID0000042",
+    "generate_train_ID0000032",
+    "generate_eval_ID0000039"
+  ],
+  "merge_avg_ID0000013": [
+    "generate_train_ID0000037",
+    "generate_train_ID0000038",
+    "generate_train_ID0000027",
+    "stage_out_local_condorpool_4_0",
+    "generate_train_ID0000028",
+    "generate_train_ID0000029",
+    "generate_train_ID0000033",
+    "generate_train_ID0000034",
+    "generate_train_ID0000035",
+    "generate_train_ID0000036",
+    "generate_eval_ID0000041",
+    "generate_eval_ID0000040",
+    "generate_train_ID0000030",
+    "generate_train_ID0000031",
+    "generate_eval_ID0000042",
+    "generate_train_ID0000032",
+    "generate_eval_ID0000039"
+  ],
+  "register_condorpool_2_0": [],
+  "register_condorpool_3_0": [],
+  "generate_train_ID0000037": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_train_ID0000038": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_train_ID0000027": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "stage_out_local_condorpool_4_0": [
+    "cleanup_somospie_0_condorpool",
+    "register_condorpool_4_0"
+  ],
+  "generate_train_ID0000028": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_train_ID0000029": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_train_ID0000033": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_train_ID0000034": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_train_ID0000035": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_train_ID0000036": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_eval_ID0000041": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_eval_ID0000040": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_train_ID0000030": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_train_ID0000031": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_eval_ID0000042": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_train_ID0000032": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "generate_eval_ID0000039": [
+    "stage_out_local_condorpool_5_0",
+    "stage_out_local_condorpool_5_1"
+  ],
+  "register_condorpool_4_0": [],
+  "stage_out_local_condorpool_5_0": [
+    "register_condorpool_5_0",
+    "cleanup_somospie_0_condorpool"
+  ],
+  "stage_out_local_condorpool_5_1": [
+    "register_condorpool_5_1",
+    "cleanup_somospie_0_condorpool"
+  ],
+  "register_condorpool_5_0": [],
+  "register_condorpool_5_1": [],
+  "cleanup_somospie_0_condorpool": []
+}
