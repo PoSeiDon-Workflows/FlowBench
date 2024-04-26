@@ -1,0 +1,58 @@
+{
+  "create_dir_pycbc-inference_0_condorpool": [
+    "inference_ID1_ID0000001",
+    "page_versioning_ID8_ID0000008",
+    "plot_prior_ID6_ID0000006"
+  ],
+  "inference_ID1_ID0000001": [
+    "stage_out_local_condorpool_0_0",
+    "extract_posterior_ID2_ID0000002",
+    "plot_spectrum_ID7_ID0000007"
+  ],
+  "page_versioning_ID8_ID0000008": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "plot_prior_ID6_ID0000006": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "extract_posterior_ID2_ID0000002": [
+    "table_summary_ID3_ID0000003",
+    "plot_posterior_summary_ID4_ID0000004",
+    "stage_out_local_condorpool_1_0",
+    "plot_posterior_ID5_ID0000005"
+  ],
+  "plot_spectrum_ID7_ID0000007": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "stage_out_local_condorpool_0_0": [
+    "register_condorpool_0_0",
+    "cleanup_pycbc-inference_0_condorpool"
+  ],
+  "table_summary_ID3_ID0000003": [
+    "results_page_ID9_ID0000009",
+    "stage_out_local_condorpool_2_0"
+  ],
+  "plot_posterior_summary_ID4_ID0000004": [
+    "results_page_ID9_ID0000009",
+    "stage_out_local_condorpool_2_0"
+  ],
+  "plot_posterior_ID5_ID0000005": [
+    "results_page_ID9_ID0000009",
+    "stage_out_local_condorpool_2_0"
+  ],
+  "stage_out_local_condorpool_1_0": [
+    "cleanup_pycbc-inference_0_condorpool",
+    "register_condorpool_1_0"
+  ],
+  "register_condorpool_0_0": [],
+  "results_page_ID9_ID0000009": [
+    "cleanup_pycbc-inference_0_condorpool"
+  ],
+  "stage_out_local_condorpool_2_0": [
+    "cleanup_pycbc-inference_0_condorpool",
+    "register_condorpool_2_0"
+  ],
+  "register_condorpool_1_0": [],
+  "cleanup_pycbc-inference_0_condorpool": [],
+  "register_condorpool_2_0": []
+}
