@@ -163,6 +163,40 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
     <td>433642</td>
     <td>440174</td>
   </tr>
+  <tr>
+    <td>Soil Moisture</td>
+    <td>60</td>
+    <td>185</td>
+    <td>125</td>
+    <td>98</td>
+    <td>97</td>
+    <td>-</td>
+    <td>92</td>
+    <td>93</td>
+    <td>1122768</td>
+    <td>78476</td>
+    <td>65688</td>
+    <td>-</td>
+    <td>61824</td>
+    <td>65044</td>
+  </tr>
+  <tr>
+    <td>PyCBC Inference</td>
+    <td>17</td>
+    <td>26</td>
+    <td>206</td>
+    <td>89</td>
+    <td>74</td>
+    <td>-</td>
+    <td>67</td>
+    <td>66</td>
+    <td>320620</td>
+    <td>25254</td>
+    <td>14996</td>
+    <td>-</td>
+    <td>17848</td>
+    <td>13846</td>
+  </tr>
 </tbody>
 </table>
 
