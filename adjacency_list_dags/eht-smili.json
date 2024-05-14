@@ -1,0 +1,59 @@
+{
+  "create_dir_eht-smili_0_condorpool": [
+    "smili_imaging_pipeline_ID0000008",
+    "smili_imaging_pipeline_ID0000006",
+    "smili_imaging_pipeline_ID0000007",
+    "smili_imaging_pipeline_ID0000004",
+    "smili_imaging_pipeline_ID0000005",
+    "smili_imaging_pipeline_ID0000002",
+    "smili_imaging_pipeline_ID0000003",
+    "smili_imaging_pipeline_ID0000001"
+  ],
+  "smili_imaging_pipeline_ID0000008": [
+    "stage_out_local_condorpool_0_0",
+    "smili_postprocessing_ID0000009"
+  ],
+  "smili_imaging_pipeline_ID0000006": [
+    "stage_out_local_condorpool_0_0",
+    "smili_postprocessing_ID0000011"
+  ],
+  "smili_imaging_pipeline_ID0000007": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "smili_imaging_pipeline_ID0000004": [
+    "stage_out_local_condorpool_0_0",
+    "smili_postprocessing_ID0000010"
+  ],
+  "smili_imaging_pipeline_ID0000005": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "smili_imaging_pipeline_ID0000002": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "smili_imaging_pipeline_ID0000003": [
+    "stage_out_local_condorpool_0_0"
+  ],
+  "smili_imaging_pipeline_ID0000001": [
+    "stage_out_local_condorpool_0_0",
+    "smili_postprocessing_ID0000012"
+  ],
+  "smili_postprocessing_ID0000009": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "smili_postprocessing_ID0000011": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "smili_postprocessing_ID0000010": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "stage_out_local_condorpool_0_0": [
+    "cleanup_eht-smili_0_condorpool"
+  ],
+  "smili_postprocessing_ID0000012": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "stage_out_local_condorpool_1_0": [
+    "cleanup_eht-smili_0_condorpool"
+  ],
+  "cleanup_eht-smili_0_condorpool": []
+}
