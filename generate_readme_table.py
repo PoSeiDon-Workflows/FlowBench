@@ -16,7 +16,7 @@ workflow_stats = {
     "casa_nowcast_small": {"name": "CASA Nowcast Small", "stats": {}},
     "somospie": {"name": "Soil Moisture", "stats": {}},
     "pycbc_inference": {"name": "PyCBC Inference", "stats": {}},
-    "pycbc_search": {"name": "PyCBC Search", "stats": {}},
+    #"pycbc_search": {"name": "PyCBC Search", "stats": {}},
     "eht_difmap": {"name": "EHT Difmap", "stats": {}},
     "eht_imaging": {"name": "EHT Imaging", "stats": {}},
     "eht_smili": {"name": "EHT Smili", "stats": {}}
@@ -134,11 +134,12 @@ if __name__ == "__main__":
         for j in dag_obj:
             edges += len(dag_obj[j])
     
+        all_stats = pd.DataFrame()
+        
         with ZipFile(stats_zip, 'r') as f:
             os.mkdir(stats_folder)
             f.extractall(stats_folder)
     
-        all_stats = pd.DataFrame()
     
         for f in os.listdir(stats_folder):
             run_number = f.split('-')[-1].split('.')[0]
