@@ -1,43 +1,15 @@
 import os.path as osp
+from flowbench import list_workflows
 from flowbench.dataset import FlowDataset, MergeFlowDataset
 
 ROOT = osp.join("/tmp", "data", "poseidon")
 
 
-def test_1000genome():
-    dataset = FlowDataset(ROOT, "1000genome", force_reprocess=True, log=True)
-    print(dataset)
-    assert dataset.name == "1000genome"
-
-
-def test_montage():
-    dataset = FlowDataset(ROOT, "montage", force_reprocess=True, log=True)
-    print(dataset)
-    assert dataset.name == "montage"
-
-
-def test_predict_future_sales():
-    dataset = FlowDataset(ROOT, "predict_future_sales", force_reprocess=True, log=True)
-    print(dataset)
-    assert dataset.name == "predict_future_sales"
-
-
-def test_casa_wind_full():
-    dataset = FlowDataset(ROOT, "casa_wind_full", force_reprocess=True, log=True)
-    print(dataset)
-    assert dataset.name == "casa_wind_full"
-
-
-def test_casa_nowcast_full():
-    dataset = FlowDataset(ROOT, "casa_nowcast_full", force_reprocess=True, log=True)
-    print(dataset)
-    assert dataset.name == "casa_nowcast_full"
-
-
-def test_variant_calling():
-    dataset = FlowDataset(ROOT, "variant_calling", force_reprocess=True, log=True)
-    print(dataset)
-    assert dataset.name == "variant_calling"
+def test_workflow():
+    for ds in list_workflows():
+        dataset = FlowDataset(ROOT, ds, force_reprocess=True, log=True)
+        print(dataset)
+        assert dataset.name == ds
 
 
 def test_force_reprocess():
