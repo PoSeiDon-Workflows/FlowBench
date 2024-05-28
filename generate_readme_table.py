@@ -16,7 +16,7 @@ workflow_stats = {
     "casa_nowcast_small": {"name": "CASA Nowcast Small", "stats": {}},
     "somospie": {"name": "Soil Moisture", "stats": {}},
     "pycbc_inference": {"name": "PyCBC Inference", "stats": {}},
-    #"pycbc_search": {"name": "PyCBC Search", "stats": {}},
+    "pycbc_search": {"name": "PyCBC Search", "stats": {}},
     "eht_difmap": {"name": "EHT Difmap", "stats": {}},
     "eht_imaging": {"name": "EHT Imaging", "stats": {}},
     "eht_smili": {"name": "EHT Smili", "stats": {}}

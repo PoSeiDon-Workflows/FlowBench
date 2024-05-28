@@ -198,6 +198,23 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
 <td>301</td>
 </tr>
 <tr>
+<td>PyCBC Search</td>
+<td>220</td>
+<td>704</td>
+<td>102</td>
+<td>100</td>
+<td>100</td>
+<td>-</td>
+<td>104</td>
+<td>100</td>
+<td>151004</td>
+<td>9495</td>
+<td>9039</td>
+<td>-</td>
+<td>8324</td>
+<td>8346</td>
+</tr>
+<tr>
 <td>EHT Difmap</td>
 <td>33</td>
 <td>59</td>
