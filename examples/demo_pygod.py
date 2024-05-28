@@ -1,7 +1,7 @@
-""" An example of using PyOD models in FlowBench.
+""" An example of using PyGOD models in FlowBench.
 
-It takes GMM (Gaussian Mixture Model) as an example to demonstrate
-how to use PyOD models in FlowBench, including loading a dataset, training a
+It takes GAE (Graph Auto-Encoder) as an example to demonstrate
+how to use PyGOD models in FlowBench, including loading a dataset, training a
 model, and evaluating the model.
 
 Author: PoSeiDon Team
@@ -12,7 +12,7 @@ from time import time
 
 import numpy as np
 import torch
-from pyod.models.gmm import GMM
+from pygod.detector import GAE
 
 from examples.utils import load_workflow
 from flowbench.metrics import (eval_accuracy, eval_average_precision,
@@ -31,7 +31,6 @@ print(f'Number of abnormal (1): {(ys == 1).sum()}')
 print(f'anomalous rate: {np.mean(ys):.3f}')
 print(f'Ground truth shape: {len(ys)}.\n')
 
-
 train_mask = ds.train_mask.numpy()
 val_mask = ds.val_mask.numpy()
 test_mask = ds.test_mask.numpy()
@@ -40,33 +39,28 @@ train_Xs, train_ys = Xs[train_mask], ys[train_mask]
 val_Xs, val_ys = Xs[val_mask], ys[val_mask]
 test_Xs, test_ys = Xs[test_mask], ys[test_mask]
 
-
-gmm = GMM(n_components=1,
-          covariance_type='full',
-          tol=1e-3,
-          reg_covar=1e-6,
-          max_iter=100,
-          n_init=1,
-          init_params='kmeans',
-          random_state=12345)
-
+gae = GAE(hid_dim=64,
+          num_layers=4,
+          dropout=0,
+          weight_decay=0,
+          contamination=0.1,
+          lr=0.004,
+          epoch=100,
+          gpu=0,
+          )
 
 tic = time()
-gmm.fit(train_Xs)
+gae.fit(ds[0])
 toc = time()
 print(f"Training time: {toc - tic:.3f} sec")
 
-tic = time()
-test_ys_pred = gmm.predict(test_Xs)
-toc = time()
-print(f"Inference time: {toc - tic:.3f} sec")
-
+test_ys_pred = gae.label_.numpy()[test_mask]
 ap = eval_average_precision(test_ys, test_ys_pred)
 auc = eval_roc_auc(test_ys, test_ys_pred)
 recall = eval_recall(test_ys, test_ys_pred)
 acc = eval_accuracy(test_ys, test_ys_pred)
 
-print("GMM results:",
+print("GAE results:",
       f"Accuracy {acc:.3f}",
       f"AP {ap:.3f}",
       f"AUC {auc:.3f}",
