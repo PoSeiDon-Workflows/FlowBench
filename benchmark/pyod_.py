@@ -1,4 +1,6 @@
-""" Benchmarks of node-level Anomoly detection in PyGOD. """
+""" Benchmarks of node-level Anomoly detection in PyGOD.
+
+"""
 import argparse
 import os.path as osp
 import warnings
@@ -7,29 +9,16 @@ import matplotlib.font_manager
 import matplotlib.pyplot as plt
 import numpy as np
 from numpy import percentile
-# from pygod.metric import (eval_average_precision, eval_precision_at_k,
-#   eval_recall_at_k, eval_roc_auc)
-from flowbench.metrics import (eval_average_precision, eval_precision_at_k,
-                               eval_recall_at_k, eval_roc_auc)
-# Import all models
-from pyod.models.abod import ABOD
-from pyod.models.cblof import CBLOF
-from pyod.models.feature_bagging import FeatureBagging
-from pyod.models.gmm import GMM
-from pyod.models.hbos import HBOS
-from pyod.models.iforest import IForest
-from pyod.models.inne import INNE
-from pyod.models.kde import KDE
-from pyod.models.knn import KNN
-from pyod.models.lmdd import LMDD
-from pyod.models.lof import LOF
-from pyod.models.lscp import LSCP
-from pyod.models.mcd import MCD
-from pyod.models.ocsvm import OCSVM
-from pyod.models.pca import PCA
 from torch_geometric.datasets import Planetoid
 
 from flowbench.dataset import FlowDataset
+from flowbench.metrics import (eval_average_precision, eval_precision_at_k,
+                               eval_recall_at_k, eval_roc_auc)
+from flowbench.unsupervised.pyod import (ABOD, CBLOF, GMM, HBOS, INNE, KDE,
+                                         KNN, LMDD, LOF, LSCP, MCD, OCSVM, PCA,
+                                         FeatureBagging, IForest)
+
+
 # TODO: add sklearnex to accelerate sklearn
 # from sklearnex import patch_sklearn
 # patch_sklearn()

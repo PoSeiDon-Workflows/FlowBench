@@ -8,19 +8,21 @@ Author: PoSeiDon Team
 License: MIT
 """
 
+# %%
 from time import time
 
 import numpy as np
 import torch
-from pygod.detector import GAE
 
 from examples.utils import load_workflow
 from flowbench.metrics import (eval_accuracy, eval_average_precision,
                                eval_recall, eval_roc_auc)
+from flowbench.unsupervised.pygod import GAE
 
 torch.manual_seed(12345)
 np.random.seed(12345)
 
+# %%
 ds = load_workflow("1000genome")
 
 Xs = ds.x.numpy()
@@ -39,6 +41,7 @@ train_Xs, train_ys = Xs[train_mask], ys[train_mask]
 val_Xs, val_ys = Xs[val_mask], ys[val_mask]
 test_Xs, test_ys = Xs[test_mask], ys[test_mask]
 
+# %%
 gae = GAE(hid_dim=64,
           num_layers=4,
           dropout=0,

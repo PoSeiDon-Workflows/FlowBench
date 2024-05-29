@@ -12,11 +12,11 @@ from time import time
 
 import numpy as np
 import torch
-from pyod.models.gmm import GMM
 
 from examples.utils import load_workflow
 from flowbench.metrics import (eval_accuracy, eval_average_precision,
                                eval_recall, eval_roc_auc)
+from flowbench.unsupervised.pyod import GMM
 
 torch.manual_seed(12345)
 np.random.seed(12345)
