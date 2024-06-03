@@ -41,7 +41,7 @@ def parse_adj(workflow):
         adj_file = osp.join(adj_folder, f"{workflow.replace('-', '_')}.json")
     adj = json.load(open(adj_file))
 
-    if workflow == "predict_future_sales":
+    if workflow in ["predict_future_sales", "pycbc_search"]:
         nodes = {}
         for idx, node_name in enumerate(adj.keys()):
             nodes[node_name] = idx

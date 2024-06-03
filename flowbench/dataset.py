@@ -218,7 +218,7 @@ class FlowDataset(InMemoryDataset):
 
             if self.include_hops:
                 # DEBUG: check the hops for predict_future_sales
-                if self.name != "predict_future_sales":
+                if self.name not in ["predict_future_sales", "pycbc_search"]:
                     hops = np.array([nx.shortest_path_length(self.nx_graph, 0, i) for i in range(len(nodes))])
                     _df['node_hop'] = hops
                 else:
