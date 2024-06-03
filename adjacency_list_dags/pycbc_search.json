@@ -20,7 +20,16 @@
     "pegasus-plan_ID0000174",
     "pegasus-plan_ID0000076",
     "pegasus-plan_ID0000066",
-    "pegasus-plan_ID0000068"
+    "pegasus-plan_ID0000068",
+    "noop_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000070",
+    "create_dir_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000072",
+    "noop_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000074",
+    "create_dir_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000076",
+    "noop_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000066",
+    "create_dir_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000068",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_FOREGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000082",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_BACKGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000084",
+    "create_dir_H1L1V1-INJECTION_MINIFOLLOWUP_BBH-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000174"
   ],
   "calculate_psd_ID38_ID0000041": [
     "register_condorpool_0_0",
@@ -117,7 +126,16 @@
     "hdf_trigger_merge_ID6_ID0000009",
     "coinc_ID15_ID0000018",
     "pegasus-plan_ID0000082",
-    "pegasus-plan_ID0000084"
+    "pegasus-plan_ID0000084",
+    "noop_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000070",
+    "create_dir_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000072",
+    "noop_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000074",
+    "create_dir_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000076",
+    "noop_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000066",
+    "create_dir_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000068",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_FOREGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000082",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_BACKGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000084",
+    "create_dir_H1L1V1-INJECTION_MINIFOLLOWUP_BBH-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000174"
   ],
   "inj2hdf_ID124_ID0000133": [
     "optimal_snr_ID125_ID0000134",
@@ -126,7 +144,8 @@
     "inspiral-BBH_INJECTIONS-H1_ID128_ID0000137",
     "inspiral-BBH_INJECTIONS-V1_ID130_ID0000139",
     "pegasus-plan_ID0000174",
-    "inspiral-BBH_INJECTIONS-L1_ID129_ID0000138"
+    "inspiral-BBH_INJECTIONS-L1_ID129_ID0000138",
+    "create_dir_H1L1V1-INJECTION_MINIFOLLOWUP_BBH-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000174"
   ],
   "plot_range_ID42_ID0000043": [
     "stage_out_local_condorpool_1_0"
@@ -225,7 +244,11 @@
     "fit_by_template_ID9_ID0000010",
     "pegasus-plan_ID0000068",
     "plot_coinc_snrchi_ID155_ID0000169",
-    "plot_gating_ID44_ID0000045"
+    "plot_gating_ID44_ID0000045",
+    "noop_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000066",
+    "create_dir_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000068",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_FOREGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000082",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_BACKGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000084"
   ],
   "hdf_trigger_merge_ID6_ID0000009": [
     "plot_singles_ID51_ID0000060",
@@ -257,7 +280,11 @@
     "fit_by_template_ID9_ID0000014",
     "plot_hist_ID52_ID0000062",
     "plot_gating_ID44_ID0000045",
-    "plot_hist_ID52_ID0000061"
+    "plot_hist_ID52_ID0000061",
+    "noop_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000074",
+    "create_dir_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000076",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_FOREGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000082",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_BACKGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000084"
   ],
   "hdf_trigger_merge_ID6_ID0000008": [
     "page_foreground_ID71_ID0000105",
@@ -289,7 +316,11 @@
     "pegasus-plan_ID0000084",
     "fit_by_template_ID9_ID0000012",
     "plot_gating_ID44_ID0000045",
-    "plot_coinc_snrchi_ID155_ID0000168"
+    "plot_coinc_snrchi_ID155_ID0000168",
+    "noop_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000070",
+    "create_dir_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000072",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_FOREGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000082",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_BACKGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000084"
   ],
   "hdf_trigger_merge_ID6_ID0000140": [
     "plot_coinc_snrchi_ID155_ID0000167",
@@ -302,7 +333,8 @@
     "pegasus-plan_ID0000174",
     "plot_throughput_ID63_ID0000175",
     "plot_coinc_snrchi_ID155_ID0000169",
-    "coinc_ID15_ID0000149"
+    "coinc_ID15_ID0000149",
+    "create_dir_H1L1V1-INJECTION_MINIFOLLOWUP_BBH-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000174"
   ],
   "hdf_trigger_merge_ID6_ID0000142": [
     "plot_coinc_snrchi_ID155_ID0000166",
@@ -315,7 +347,8 @@
     "plot_coinc_snrchi_ID155_ID0000170",
     "pegasus-plan_ID0000174",
     "plot_throughput_ID63_ID0000175",
-    "coinc_ID15_ID0000149"
+    "coinc_ID15_ID0000149",
+    "create_dir_H1L1V1-INJECTION_MINIFOLLOWUP_BBH-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000174"
   ],
   "hdf_trigger_merge_ID6_ID0000141": [
     "coinc_ID15_ID0000147",
@@ -328,7 +361,8 @@
     "pegasus-plan_ID0000174",
     "plot_throughput_ID63_ID0000175",
     "coinc_ID15_ID0000149",
-    "plot_coinc_snrchi_ID155_ID0000168"
+    "plot_coinc_snrchi_ID155_ID0000168",
+    "create_dir_H1L1V1-INJECTION_MINIFOLLOWUP_BBH-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000174"
   ],
   "register_condorpool_2_0": [],
   "register_condorpool_1_0": [],
@@ -378,7 +412,13 @@
     "pegasus-plan_ID0000074",
     "pegasus-plan_ID0000076",
     "pegasus-plan_ID0000066",
-    "pegasus-plan_ID0000068"
+    "pegasus-plan_ID0000068",
+    "noop_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000070",
+    "create_dir_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000072",
+    "noop_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000074",
+    "create_dir_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000076",
+    "noop_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000066",
+    "create_dir_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000068"
   ],
   "fit_over_param_ID10_ID0000015": [
     "coinc_ID15_ID0000016",
@@ -401,7 +441,13 @@
     "pegasus-plan_ID0000074",
     "pegasus-plan_ID0000076",
     "pegasus-plan_ID0000066",
-    "pegasus-plan_ID0000068"
+    "pegasus-plan_ID0000068",
+    "noop_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000070",
+    "create_dir_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000072",
+    "noop_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000074",
+    "create_dir_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000076",
+    "noop_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000066",
+    "create_dir_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000068"
   ],
   "fit_over_param_ID10_ID0000013": [
     "coinc_ID15_ID0000016",
@@ -424,7 +470,13 @@
     "pegasus-plan_ID0000074",
     "pegasus-plan_ID0000076",
     "pegasus-plan_ID0000066",
-    "pegasus-plan_ID0000068"
+    "pegasus-plan_ID0000068",
+    "noop_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000070",
+    "create_dir_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000072",
+    "noop_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000074",
+    "create_dir_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000076",
+    "noop_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000066",
+    "create_dir_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000068"
   ],
   "register_condorpool_3_0": [],
   "stage_out_local_condorpool_4_0": [
@@ -843,7 +895,9 @@
     "page_foreground_ID71_ID0000079",
     "page_ifar_catalog_ID70_ID0000077",
     "foreground_censor_ID37_ID0000038",
-    "stage_out_local_condorpool_9_4"
+    "stage_out_local_condorpool_9_4",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_FOREGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000082",
+    "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_BACKGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000084"
   ],
   "plot_snrifar_ID76_ID0000128": [
     "stage_out_local_condorpool_9_5"
@@ -1005,7 +1059,8 @@
     "pegasus-plan_ID0000174",
     "stage_out_local_condorpool_11_1",
     "plot_coinc_snrchi_ID155_ID0000169",
-    "plot_coinc_snrchi_ID155_ID0000168"
+    "plot_coinc_snrchi_ID155_ID0000168",
+    "create_dir_H1L1V1-INJECTION_MINIFOLLOWUP_BBH-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000174"
   ],
   "hdfinjfind_ID149_ID0000159": [
     "plot_sensitivity_ID166_ID0000180",
@@ -1118,5 +1173,567 @@
   "register_condorpool_12_0": [],
   "register_condorpool_12_1": [],
   "register_condorpool_12_2": [],
-  "cleanup_pycbc-search_0_condorpool": []
+  "cleanup_pycbc-search_0_condorpool": [],
+  "noop_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000070": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "create_dir_L1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000072": [
+    "plot_waveform_ID5_ID0000006_pegasus-plan_ID0000072",
+    "page_snglinfo_ID0_ID0000001_pegasus-plan_ID0000072",
+    "plot_trigger_timeseries_ID1_ID0000003_pegasus-plan_ID0000072",
+    "single_template_ID3_ID0000004_pegasus-plan_ID0000072",
+    "plot_trigger_timeseries_ID1_ID0000002_pegasus-plan_ID0000072",
+    "plot_qscan_ID7_ID0000008_pegasus-plan_ID0000072",
+    "plot_singles_timefreq_ID6_ID0000007_pegasus-plan_ID0000072"
+  ],
+  "plot_waveform_ID5_ID0000006_pegasus-plan_ID0000072": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000072"
+  ],
+  "page_snglinfo_ID0_ID0000001_pegasus-plan_ID0000072": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000072"
+  ],
+  "plot_trigger_timeseries_ID1_ID0000003_pegasus-plan_ID0000072": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000072"
+  ],
+  "single_template_ID3_ID0000004_pegasus-plan_ID0000072": [
+    "register_condorpool_0_0_pegasus-plan_ID0000072",
+    "single_template_plot_ID4_ID0000005_pegasus-plan_ID0000072"
+  ],
+  "plot_trigger_timeseries_ID1_ID0000002_pegasus-plan_ID0000072": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000072"
+  ],
+  "plot_qscan_ID7_ID0000008_pegasus-plan_ID0000072": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000072"
+  ],
+  "plot_singles_timefreq_ID6_ID0000007_pegasus-plan_ID0000072": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000072"
+  ],
+  "single_template_plot_ID4_ID0000005_pegasus-plan_ID0000072": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000072"
+  ],
+  "stage_out_local_condorpool_0_0_pegasus-plan_ID0000072": [
+    "register_condorpool_0_0_pegasus-plan_ID0000072"
+  ],
+  "stage_out_local_condorpool_1_0_pegasus-plan_ID0000072": [
+    "register_condorpool_1_0_pegasus-plan_ID0000072"
+  ],
+  "register_condorpool_0_0_pegasus-plan_ID0000072": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_1_0_pegasus-plan_ID0000072": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "noop_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000074": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "create_dir_V1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000076": [
+    "plot_waveform_ID5_ID0000006_pegasus-plan_ID0000076",
+    "page_snglinfo_ID0_ID0000001_pegasus-plan_ID0000076",
+    "plot_trigger_timeseries_ID1_ID0000003_pegasus-plan_ID0000076",
+    "single_template_ID3_ID0000004_pegasus-plan_ID0000076",
+    "plot_trigger_timeseries_ID1_ID0000002_pegasus-plan_ID0000076",
+    "plot_qscan_ID7_ID0000008_pegasus-plan_ID0000076",
+    "plot_singles_timefreq_ID6_ID0000007_pegasus-plan_ID0000076"
+  ],
+  "plot_waveform_ID5_ID0000006_pegasus-plan_ID0000076": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000076"
+  ],
+  "page_snglinfo_ID0_ID0000001_pegasus-plan_ID0000076": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000076"
+  ],
+  "plot_trigger_timeseries_ID1_ID0000003_pegasus-plan_ID0000076": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000076"
+  ],
+  "single_template_ID3_ID0000004_pegasus-plan_ID0000076": [
+    "register_condorpool_0_0_pegasus-plan_ID0000076",
+    "single_template_plot_ID4_ID0000005_pegasus-plan_ID0000076"
+  ],
+  "plot_trigger_timeseries_ID1_ID0000002_pegasus-plan_ID0000076": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000076"
+  ],
+  "plot_qscan_ID7_ID0000008_pegasus-plan_ID0000076": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000076"
+  ],
+  "plot_singles_timefreq_ID6_ID0000007_pegasus-plan_ID0000076": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000076"
+  ],
+  "single_template_plot_ID4_ID0000005_pegasus-plan_ID0000076": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000076"
+  ],
+  "stage_out_local_condorpool_0_0_pegasus-plan_ID0000076": [
+    "register_condorpool_0_0_pegasus-plan_ID0000076"
+  ],
+  "stage_out_local_condorpool_1_0_pegasus-plan_ID0000076": [
+    "register_condorpool_1_0_pegasus-plan_ID0000076"
+  ],
+  "register_condorpool_0_0_pegasus-plan_ID0000076": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_1_0_pegasus-plan_ID0000076": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "noop_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax_0_pegasus-plan_ID0000066": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "create_dir_H1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000068": [
+    "plot_waveform_ID5_ID0000006_pegasus-plan_ID0000068",
+    "page_snglinfo_ID0_ID0000001_pegasus-plan_ID0000068",
+    "plot_trigger_timeseries_ID1_ID0000003_pegasus-plan_ID0000068",
+    "single_template_ID3_ID0000004_pegasus-plan_ID0000068",
+    "plot_trigger_timeseries_ID1_ID0000002_pegasus-plan_ID0000068",
+    "plot_qscan_ID7_ID0000008_pegasus-plan_ID0000068",
+    "plot_singles_timefreq_ID6_ID0000007_pegasus-plan_ID0000068"
+  ],
+  "plot_waveform_ID5_ID0000006_pegasus-plan_ID0000068": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000068"
+  ],
+  "page_snglinfo_ID0_ID0000001_pegasus-plan_ID0000068": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000068"
+  ],
+  "plot_trigger_timeseries_ID1_ID0000003_pegasus-plan_ID0000068": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000068"
+  ],
+  "single_template_ID3_ID0000004_pegasus-plan_ID0000068": [
+    "register_condorpool_0_0_pegasus-plan_ID0000068",
+    "single_template_plot_ID4_ID0000005_pegasus-plan_ID0000068"
+  ],
+  "plot_trigger_timeseries_ID1_ID0000002_pegasus-plan_ID0000068": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000068"
+  ],
+  "plot_qscan_ID7_ID0000008_pegasus-plan_ID0000068": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000068"
+  ],
+  "plot_singles_timefreq_ID6_ID0000007_pegasus-plan_ID0000068": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000068"
+  ],
+  "single_template_plot_ID4_ID0000005_pegasus-plan_ID0000068": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000068"
+  ],
+  "stage_out_local_condorpool_0_0_pegasus-plan_ID0000068": [
+    "register_condorpool_0_0_pegasus-plan_ID0000068"
+  ],
+  "stage_out_local_condorpool_1_0_pegasus-plan_ID0000068": [
+    "register_condorpool_1_0_pegasus-plan_ID0000068"
+  ],
+  "register_condorpool_0_0_pegasus-plan_ID0000068": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_1_0_pegasus-plan_ID0000068": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_FOREGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000082": [
+    "plot_qscan_ID10_ID0000015_pegasus-plan_ID0000082",
+    "plot_singles_timefreq_ID9_ID0000012_pegasus-plan_ID0000082",
+    "plot_qscan_ID10_ID0000013_pegasus-plan_ID0000082",
+    "plot_singles_timefreq_ID9_ID0000014_pegasus-plan_ID0000082",
+    "single_template_ID3_ID0000008_pegasus-plan_ID0000082",
+    "plot_singles_timefreq_ID9_ID0000010_pegasus-plan_ID0000082",
+    "single_template_ID3_ID0000006_pegasus-plan_ID0000082",
+    "plot_trigger_timeseries_ID1_ID0000003_pegasus-plan_ID0000082",
+    "single_template_ID3_ID0000004_pegasus-plan_ID0000082",
+    "plot_trigger_timeseries_ID1_ID0000002_pegasus-plan_ID0000082",
+    "page_coincinfo_ID0_ID0000001_pegasus-plan_ID0000082",
+    "plot_qscan_ID10_ID0000011_pegasus-plan_ID0000082"
+  ],
+  "plot_qscan_ID10_ID0000015_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000082"
+  ],
+  "plot_singles_timefreq_ID9_ID0000012_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000082"
+  ],
+  "plot_qscan_ID10_ID0000013_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000082"
+  ],
+  "plot_singles_timefreq_ID9_ID0000014_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000082"
+  ],
+  "single_template_ID3_ID0000008_pegasus-plan_ID0000082": [
+    "register_condorpool_0_0_pegasus-plan_ID0000082",
+    "single_template_plot_ID4_ID0000009_pegasus-plan_ID0000082"
+  ],
+  "plot_singles_timefreq_ID9_ID0000010_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000082"
+  ],
+  "single_template_ID3_ID0000006_pegasus-plan_ID0000082": [
+    "register_condorpool_0_0_pegasus-plan_ID0000082",
+    "single_template_plot_ID4_ID0000007_pegasus-plan_ID0000082"
+  ],
+  "plot_trigger_timeseries_ID1_ID0000003_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000082"
+  ],
+  "single_template_ID3_ID0000004_pegasus-plan_ID0000082": [
+    "register_condorpool_0_0_pegasus-plan_ID0000082",
+    "single_template_plot_ID4_ID0000005_pegasus-plan_ID0000082"
+  ],
+  "plot_trigger_timeseries_ID1_ID0000002_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000082"
+  ],
+  "page_coincinfo_ID0_ID0000001_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000082"
+  ],
+  "plot_qscan_ID10_ID0000011_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000082"
+  ],
+  "single_template_plot_ID4_ID0000009_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000082"
+  ],
+  "single_template_plot_ID4_ID0000007_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000082"
+  ],
+  "single_template_plot_ID4_ID0000005_pegasus-plan_ID0000082": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000082"
+  ],
+  "stage_out_local_condorpool_0_1_pegasus-plan_ID0000082": [
+    "register_condorpool_0_1_pegasus-plan_ID0000082"
+  ],
+  "stage_out_local_condorpool_0_0_pegasus-plan_ID0000082": [
+    "register_condorpool_0_0_pegasus-plan_ID0000082"
+  ],
+  "stage_out_local_condorpool_1_0_pegasus-plan_ID0000082": [
+    "register_condorpool_1_0_pegasus-plan_ID0000082"
+  ],
+  "register_condorpool_0_1_pegasus-plan_ID0000082": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_0_0_pegasus-plan_ID0000082": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_1_0_pegasus-plan_ID0000082": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "create_dir_H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_BACKGROUND-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000084": [
+    "plot_qscan_ID10_ID0000015_pegasus-plan_ID0000084",
+    "plot_singles_timefreq_ID9_ID0000012_pegasus-plan_ID0000084",
+    "plot_qscan_ID10_ID0000013_pegasus-plan_ID0000084",
+    "plot_singles_timefreq_ID9_ID0000014_pegasus-plan_ID0000084",
+    "single_template_ID3_ID0000008_pegasus-plan_ID0000084",
+    "plot_singles_timefreq_ID9_ID0000010_pegasus-plan_ID0000084",
+    "single_template_ID3_ID0000006_pegasus-plan_ID0000084",
+    "plot_trigger_timeseries_ID1_ID0000003_pegasus-plan_ID0000084",
+    "single_template_ID3_ID0000004_pegasus-plan_ID0000084",
+    "plot_trigger_timeseries_ID1_ID0000002_pegasus-plan_ID0000084",
+    "page_coincinfo_ID0_ID0000001_pegasus-plan_ID0000084",
+    "plot_qscan_ID10_ID0000011_pegasus-plan_ID0000084"
+  ],
+  "plot_qscan_ID10_ID0000015_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000084"
+  ],
+  "plot_singles_timefreq_ID9_ID0000012_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000084"
+  ],
+  "plot_qscan_ID10_ID0000013_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000084"
+  ],
+  "plot_singles_timefreq_ID9_ID0000014_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000084"
+  ],
+  "single_template_ID3_ID0000008_pegasus-plan_ID0000084": [
+    "register_condorpool_0_0_pegasus-plan_ID0000084",
+    "single_template_plot_ID4_ID0000009_pegasus-plan_ID0000084"
+  ],
+  "plot_singles_timefreq_ID9_ID0000010_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000084"
+  ],
+  "single_template_ID3_ID0000006_pegasus-plan_ID0000084": [
+    "register_condorpool_0_0_pegasus-plan_ID0000084",
+    "single_template_plot_ID4_ID0000007_pegasus-plan_ID0000084"
+  ],
+  "plot_trigger_timeseries_ID1_ID0000003_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000084"
+  ],
+  "single_template_ID3_ID0000004_pegasus-plan_ID0000084": [
+    "register_condorpool_0_0_pegasus-plan_ID0000084",
+    "single_template_plot_ID4_ID0000005_pegasus-plan_ID0000084"
+  ],
+  "plot_trigger_timeseries_ID1_ID0000002_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000084"
+  ],
+  "page_coincinfo_ID0_ID0000001_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000084"
+  ],
+  "plot_qscan_ID10_ID0000011_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000084"
+  ],
+  "single_template_plot_ID4_ID0000009_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000084"
+  ],
+  "single_template_plot_ID4_ID0000007_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000084"
+  ],
+  "single_template_plot_ID4_ID0000005_pegasus-plan_ID0000084": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000084"
+  ],
+  "stage_out_local_condorpool_0_1_pegasus-plan_ID0000084": [
+    "register_condorpool_0_1_pegasus-plan_ID0000084"
+  ],
+  "stage_out_local_condorpool_0_0_pegasus-plan_ID0000084": [
+    "register_condorpool_0_0_pegasus-plan_ID0000084"
+  ],
+  "stage_out_local_condorpool_1_0_pegasus-plan_ID0000084": [
+    "register_condorpool_1_0_pegasus-plan_ID0000084"
+  ],
+  "register_condorpool_0_1_pegasus-plan_ID0000084": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_0_0_pegasus-plan_ID0000084": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_1_0_pegasus-plan_ID0000084": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "create_dir_H1L1V1-INJECTION_MINIFOLLOWUP_BBH-1186740100-3400.dax_0_condorpool_pegasus-plan_ID0000174": [
+    "page_snglinfo_ID2_ID0000003_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000040_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000042_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000020_pegasus-plan_ID0000174",
+    "plot_qscan_ID8_ID0000011_pegasus-plan_ID0000174",
+    "plot_singles_timefreq_ID7_ID0000008_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000018_pegasus-plan_ID0000174",
+    "plot_qscan_ID8_ID0000013_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000032_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000034_pegasus-plan_ID0000174",
+    "page_snglinfo_ID2_ID0000004_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000036_pegasus-plan_ID0000174",
+    "page_snglinfo_ID2_ID0000005_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000014_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000038_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000016_pegasus-plan_ID0000174",
+    "plot_trigger_timeseries_ID5_ID0000006_pegasus-plan_ID0000174",
+    "plot_trigger_timeseries_ID5_ID0000007_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000030_pegasus-plan_ID0000174",
+    "plot_singles_timefreq_ID7_ID0000012_pegasus-plan_ID0000174",
+    "page_injinfo_ID0_ID0000001_pegasus-plan_ID0000174",
+    "plot_singles_timefreq_ID7_ID0000010_pegasus-plan_ID0000174",
+    "page_coincinfo_ID1_ID0000002_pegasus-plan_ID0000174",
+    "plot_qscan_ID8_ID0000009_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000044_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000022_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000046_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000024_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000048_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000026_pegasus-plan_ID0000174",
+    "single_template_ID13_ID0000028_pegasus-plan_ID0000174"
+  ],
+  "page_snglinfo_ID2_ID0000003_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000040_pegasus-plan_ID0000174": [
+    "register_condorpool_0_0_pegasus-plan_ID0000174",
+    "single_template_plot_ID14_ID0000041_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000042_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000043_pegasus-plan_ID0000174",
+    "register_condorpool_0_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000020_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000021_pegasus-plan_ID0000174",
+    "register_condorpool_0_1_pegasus-plan_ID0000174"
+  ],
+  "plot_qscan_ID8_ID0000011_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000174"
+  ],
+  "plot_singles_timefreq_ID7_ID0000008_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000018_pegasus-plan_ID0000174": [
+    "register_condorpool_0_3_pegasus-plan_ID0000174",
+    "single_template_plot_ID14_ID0000019_pegasus-plan_ID0000174"
+  ],
+  "plot_qscan_ID8_ID0000013_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_3_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000032_pegasus-plan_ID0000174": [
+    "register_condorpool_0_0_pegasus-plan_ID0000174",
+    "single_template_plot_ID14_ID0000033_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000034_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000035_pegasus-plan_ID0000174",
+    "register_condorpool_0_1_pegasus-plan_ID0000174"
+  ],
+  "page_snglinfo_ID2_ID0000004_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000036_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000037_pegasus-plan_ID0000174",
+    "register_condorpool_0_2_pegasus-plan_ID0000174"
+  ],
+  "page_snglinfo_ID2_ID0000005_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000014_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000015_pegasus-plan_ID0000174",
+    "register_condorpool_0_2_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000038_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000039_pegasus-plan_ID0000174",
+    "register_condorpool_0_3_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000016_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000017_pegasus-plan_ID0000174",
+    "register_condorpool_0_3_pegasus-plan_ID0000174"
+  ],
+  "plot_trigger_timeseries_ID5_ID0000006_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000174"
+  ],
+  "plot_trigger_timeseries_ID5_ID0000007_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000030_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000031_pegasus-plan_ID0000174",
+    "register_condorpool_0_2_pegasus-plan_ID0000174"
+  ],
+  "plot_singles_timefreq_ID7_ID0000012_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000174"
+  ],
+  "page_injinfo_ID0_ID0000001_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_1_pegasus-plan_ID0000174"
+  ],
+  "plot_singles_timefreq_ID7_ID0000010_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_2_pegasus-plan_ID0000174"
+  ],
+  "page_coincinfo_ID1_ID0000002_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_3_pegasus-plan_ID0000174"
+  ],
+  "plot_qscan_ID8_ID0000009_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_0_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000044_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000045_pegasus-plan_ID0000174",
+    "register_condorpool_0_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000022_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000023_pegasus-plan_ID0000174",
+    "register_condorpool_0_3_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000046_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000047_pegasus-plan_ID0000174",
+    "register_condorpool_0_2_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000024_pegasus-plan_ID0000174": [
+    "register_condorpool_0_0_pegasus-plan_ID0000174",
+    "single_template_plot_ID14_ID0000025_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000048_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000049_pegasus-plan_ID0000174",
+    "register_condorpool_0_3_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000026_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000027_pegasus-plan_ID0000174",
+    "register_condorpool_0_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_ID13_ID0000028_pegasus-plan_ID0000174": [
+    "single_template_plot_ID14_ID0000029_pegasus-plan_ID0000174",
+    "register_condorpool_0_2_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000041_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000043_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000021_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000019_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000033_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000035_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000037_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000015_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000039_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000017_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000031_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_1_pegasus-plan_ID0000174"
+  ],
+  "stage_out_local_condorpool_0_1_pegasus-plan_ID0000174": [
+    "register_condorpool_0_1_pegasus-plan_ID0000174"
+  ],
+  "stage_out_local_condorpool_0_2_pegasus-plan_ID0000174": [
+    "register_condorpool_0_2_pegasus-plan_ID0000174"
+  ],
+  "stage_out_local_condorpool_0_3_pegasus-plan_ID0000174": [
+    "register_condorpool_0_3_pegasus-plan_ID0000174"
+  ],
+  "stage_out_local_condorpool_0_0_pegasus-plan_ID0000174": [
+    "register_condorpool_0_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000045_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000023_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000047_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000025_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_1_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000049_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000027_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_0_pegasus-plan_ID0000174"
+  ],
+  "single_template_plot_ID14_ID0000029_pegasus-plan_ID0000174": [
+    "stage_out_local_condorpool_1_1_pegasus-plan_ID0000174"
+  ],
+  "register_condorpool_0_1_pegasus-plan_ID0000174": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_0_2_pegasus-plan_ID0000174": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_0_3_pegasus-plan_ID0000174": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_0_0_pegasus-plan_ID0000174": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "stage_out_local_condorpool_1_0_pegasus-plan_ID0000174": [
+    "register_condorpool_1_0_pegasus-plan_ID0000174"
+  ],
+  "stage_out_local_condorpool_1_1_pegasus-plan_ID0000174": [
+    "register_condorpool_1_1_pegasus-plan_ID0000174"
+  ],
+  "register_condorpool_1_0_pegasus-plan_ID0000174": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ],
+  "register_condorpool_1_1_pegasus-plan_ID0000174": [
+    "cleanup_pycbc-search_0_condorpool",
+    "cleanup_pycbc-search_0_local"
+  ]
 }
