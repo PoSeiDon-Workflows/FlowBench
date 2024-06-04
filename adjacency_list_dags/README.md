@@ -189,8 +189,8 @@
 </tr>
 <tr>
 <td>PyCBC Search</td>
-<td>220</td>
-<td>704</td>
+<td>368</td>
+<td>1025</td>
 <td>102</td>
 <td>100</td>
 <td>100</td>
@@ -257,7 +257,6 @@
 </tr>
 </tbody>
 </table>
-
 
 ### 1000 Genome Workflow
 
