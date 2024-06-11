@@ -79,12 +79,7 @@ The repository is structured as follows:
 ├── adjacency_list_dags
 ├── benchmark
 ├── data 
-│   ├── 1000genome.zip
-│   ├── casa_nowcast_full.zip
-│   ├── casa_wind_full.zip
-│   ├── montage.zip
-│   ├── predict_future_sales.zip
-│   └── variant_calling.zip
+│   ├── xxx.zip
 ├── examples
 |   └── demo_xxx.py
 ├── flowbench
@@ -98,7 +93,6 @@ The repository is structured as follows:
 |       ├── gmm.py
 |       ├── pca.py
 |       └── xxx.py
-├── flowbench.egg-info
 ├── hps/
 ├── tests/
 ├── LICENSE
