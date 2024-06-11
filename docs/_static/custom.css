@@ -1,0 +1,6 @@
+.logo {
+  width: 100px;
+  /* or any size you want */
+  height: auto;
+  /* keep aspect ratio */
+}
