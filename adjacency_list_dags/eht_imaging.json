@@ -1,0 +1,43 @@
+{
+  "create_dir_eht-imaging_0_condorpool": [
+    "eht-imaging_pipeline_ID0000001",
+    "eht-imaging_pipeline_ID0000003",
+    "eht-imaging_pipeline_ID0000005",
+    "eht-imaging_pipeline_ID0000007"
+  ],
+  "eht-imaging_pipeline_ID0000001": [
+    "stage_out_local_condorpool_0_0",
+    "eht-imaging_postprocessing_ID0000002"
+  ],
+  "eht-imaging_pipeline_ID0000003": [
+    "eht-imaging_postprocessing_ID0000004",
+    "stage_out_local_condorpool_0_0"
+  ],
+  "eht-imaging_pipeline_ID0000005": [
+    "stage_out_local_condorpool_0_0",
+    "eht-imaging_postprocessing_ID0000006"
+  ],
+  "eht-imaging_pipeline_ID0000007": [
+    "stage_out_local_condorpool_0_0",
+    "eht-imaging_postprocessing_ID0000008"
+  ],
+  "eht-imaging_postprocessing_ID0000002": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "eht-imaging_postprocessing_ID0000004": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "eht-imaging_postprocessing_ID0000006": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "stage_out_local_condorpool_0_0": [
+    "cleanup_eht-imaging_0_condorpool"
+  ],
+  "eht-imaging_postprocessing_ID0000008": [
+    "stage_out_local_condorpool_1_0"
+  ],
+  "stage_out_local_condorpool_1_0": [
+    "cleanup_eht-imaging_0_condorpool"
+  ],
+  "cleanup_eht-imaging_0_condorpool": []
+}

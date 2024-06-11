@@ -1,0 +1,484 @@
+---
+adone:
+  default:
+    hid_dim: 64
+    num_layers: 4
+    dropout: 0.
+    weight_decay: 0.
+    contamination: 0.1
+    lr: 0.005
+    epoch: 100
+    gpu: 0
+  search_space:
+    hid_dim:
+      - 64
+      - 128
+      - 256
+    num_layers:
+      - 2
+      - 4
+      - 6
+    dropout:
+      - 0.
+      - 0.1
+      - 0.2
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 100
+      - 200
+      - 300
+
+anomalous:
+  default:
+    gamma: 1.
+    weight_decay: 0.
+    lr: 0.005
+    epoch: 100
+    contamination: 0.1
+    gpu: 0
+  search_space:
+    gamma:
+      - 1.
+      - 2.
+      - 3.
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 100
+      - 200
+      - 300
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+
+anomalydae:
+  default:
+    emb_dim: 64
+    hid_dim: 64
+    num_layers: 4
+    dropout: 0.
+    weight_decay: 0.
+    contamination: 0.1
+    lr: 0.005
+    epoch: 5
+    gpu: 0
+  search_space:
+    emb_dim:
+      - 64
+      - 128
+      - 256
+    hid_dim:
+      - 64
+      - 128
+      - 256
+    num_layers:
+      - 2
+      - 4
+      - 6
+    dropout:
+      - 0.
+      - 0.1
+      - 0.2
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 5
+      - 10
+      - 15
+
+conad:
+  default:
+    hid_dim: 64
+    num_layers: 4
+    dropout: 0.
+    weight_decay: 0.
+    contamination: 0.1
+    lr: 0.005
+    epoch: 100
+    gpu: 0
+  search_space:
+    hid_dim:
+      - 64
+      - 128
+      - 256
+    num_layers:
+      - 2
+      - 4
+      - 6
+    dropout:
+      - 0.
+      - 0.1
+      - 0.2
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 100
+      - 200
+      - 300
+
+dominant:
+  default:
+    hid_dim: 64
+    num_layers: 4
+    dropout: 0.
+    weight_decay: 0.
+    contamination: 0.1
+    lr: 0.005
+    epoch: 100
+    gpu: 0
+  search_space:
+    hid_dim:
+      - 64
+      - 128
+      - 256
+    num_layers:
+      - 2
+      - 4
+      - 6
+    dropout:
+      - 0.
+      - 0.1
+      - 0.2
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 100
+      - 200
+      - 300
+
+done:
+  default:
+    hid_dim: 64
+    num_layers: 4
+    dropout: 0.
+    weight_decay: 0.
+    contamination: 0.1
+    lr: 0.005
+    epoch: 100
+    gpu: 0
+  search_space:
+    hid_dim:
+      - 64
+      - 128
+      - 256
+    num_layers:
+      - 2
+      - 4
+      - 6
+    dropout:
+      - 0.
+      - 0.1
+      - 0.2
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 100
+      - 200
+      - 300
+
+gaan:
+  default:
+    noise_dim: 64
+    hid_dim: 64
+    num_layers: 4
+    dropout: 0.
+    weight_decay: 0.
+    contamination: 0.1
+    lr: 0.005
+    epoch: 100
+    gpu: 0
+  search_space:
+    noise_dim:
+      - 64
+      - 128
+      - 256
+    hid_dim:
+      - 64
+      - 128
+      - 256
+    num_layers:
+      - 2
+      - 4
+      - 6
+    dropout:
+      - 0.
+      - 0.1
+      - 0.2
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 100
+      - 200
+      - 300
+
+gae:
+  default:
+    hid_dim: 64
+    num_layers: 4
+    dropout: 0.
+    weight_decay: 0.
+    contamination: 0.1
+    lr: 0.005
+    epoch: 100
+    gpu: 0
+  search_space:
+    hid_dim:
+      - 64
+      - 128
+      - 256
+    num_layers:
+      - 2
+      - 4
+      - 6
+    dropout:
+      - 0.
+      - 0.1
+      - 0.2
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 100
+      - 200
+      - 300
+
+guide:
+  default:
+    hid_a: 64
+    hid_s: 4
+    num_layers: 4
+    dropout: 0.
+    weight_decay: 0.
+    contamination: 0.1
+    lr: 0.005
+    epoch: 100
+    gpu: 0
+  search_space:
+    hid_a:
+      - 64
+      - 128
+      - 256
+    hid_s:
+      - 4
+      - 8
+      - 16
+    num_layers:
+      - 2
+      - 4
+      - 6
+    dropout:
+      - 0.
+      - 0.1
+      - 0.2
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 100
+      - 200
+      - 300
+
+ocgnn:
+  default:
+    hid_dim: 64
+    num_layers: 2
+    dropout: 0.
+    weight_decay: 0.
+    contamination: 0.1
+    lr: 0.005
+    epoch: 100
+    gpu: 0
+  search_space:
+    hid_dim:
+      - 64
+      - 128
+      - 256
+    num_layers:
+      - 2
+      - 4
+      - 6
+    dropout:
+      - 0.
+      - 0.1
+      - 0.2
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 100
+      - 200
+      - 300
+
+one:
+  default:
+    hid_a: 36
+    hid_s: 36
+    weight_decay: 0.
+    contamination: 0.1
+    lr: 0.005
+    epoch: 5
+    gpu: 0
+  search_space:
+    hid_a:
+      - 36
+      - 72
+      - 144
+    hid_s:
+      - 36
+      - 72
+      - 144
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 5
+      - 10
+      - 15
+
+radar:
+  default:
+    weight_decay: 0.
+    contamination: 0.1
+    lr: 0.005
+    epoch: 100
+    gpu: 0
+  search_space:
+    weight_decay:
+      - 0.
+      - 0.1
+      - 0.2
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3
+    lr:
+      - 0.005
+      - 0.01
+      - 0.02
+    epoch:
+      - 100
+      - 200
+      - 300
+
+scan:
+  default:
+    eps: 0.5
+    mu: 2
+    contamination: 0.1
+  search_space:
+    eps:
+      - 0.
+      - 0.5
+      - 1
+    mu:
+      - 1
+      - 2
+      - 4
+    contamination:
+      - 0.1
+      - 0.2
+      - 0.3

@@ -1,0 +1,452 @@
+---
+abod:
+  default:
+    contamination: 0.1
+    n_neighbors: 10
+    method: fast
+  search_space:
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+    n_neighbors:
+      type: int
+      min: 5
+      max: 15
+      step: 1
+    method:
+      type: str
+      values: ["fast", "default"]
+
+cblof:
+  default:
+    n_clusters: 8
+    contamination: 0.1
+    clustering_estimator: null
+    alpha: 0.9
+    beta: 5
+    use_weights: False
+    check_estimator: False
+    random_state: null
+  search_space:
+    n_clusters:
+      type: int
+      min: 5
+      max: 15
+      step: 1
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+    alpha:
+      type: float
+      min: 0.1
+      max: 0.9
+      step: 0.1
+    beta:
+      type: int
+      min: 1
+      max: 10
+      step: 1
+
+feature_bagging:
+  default:
+    base_estimator: null
+    n_estimators: 10
+    contamination: 0.1
+    max_features: 1.0
+    bootstrap_features: False
+    check_detector: True
+    n_jobs: -1
+    random_state: null
+    combination: average
+    verbose: 0
+    estimator_params: null
+  search_space:
+    n_estimators:
+      type: int
+      min: 5
+      max: 15
+      step: 1
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+    max_features:
+      type: float
+      min: 0.1
+      max: 1.0
+      step: 0.1
+    bootstrap_features:
+      type: bool
+      values: [True, False]
+    combination:
+      type: str
+      values: ["average", "max"]
+
+gmm:
+  default:
+    n_components: 1
+    covariance_type: full
+    tol: 0.001
+    reg_covar: 0.000001
+    max_iter: 100
+    n_init: 1
+    init_params: "kmeans"
+    warm_start: False
+    contamination: 0.1
+  search_space:
+    n_components:
+      type: int
+      min: 1
+      max: 10
+      step: 1
+    covariance_type:
+      type: str
+      values: ["full", "tied", "diag", "spherical"]
+    tol:
+      type: float
+      min: 0.0001
+      max: 0.01
+      step: 0.0001
+    reg_covar:
+      type: float
+      min: 1e-08
+      max: 1e-06
+      step: 1e-08
+    max_iter:
+      type: int
+      min: 50
+      max: 150
+      step: 10
+    n_init:
+      type: int
+      min: 1
+      max: 5
+      step: 1
+    init_params:
+      type: str
+      values: ["kmeans", "random"]
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+
+hbos:
+  default:
+    n_bins: 10
+    alpha: 0.1
+    tol: 0.5
+    contamination: 0.1
+  search_space:
+    n_bins:
+      type: int
+      min: 5
+      max: 15
+      step: 1
+    alpha:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+    tol:
+      type: float
+      min: 0.1
+      max: 1.0
+      step: 0.1
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+
+iforest:
+  default:
+    n_estimators: 100
+    max_samples: "auto"
+    contamination: 0.1
+    max_features: 1.0
+    bootstrap: False
+    n_jobs: -1
+    behaviour: "old"
+    random_state: null
+    verbose: 0
+  search_space:
+    n_estimators:
+      type: int
+      min: 50
+      max: 150
+      step: 10
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+    max_features:
+      type: float
+      min: 0.1
+      max: 1.0
+      step: 0.1
+    bootstrap:
+      type: bool
+      values: [True, False]
+
+inne:
+  default:
+    n_estimators: 200
+    max_samples: "auto"
+    contamination: 0.1
+    random_state: null
+  search_space:
+    n_estimators:
+      type: int
+      min: 100
+      max: 300
+      step: 10
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+
+kde:
+  default:
+    bandwidth: 1.0
+    algorithm: "auto"
+    leaf_size: 30
+    metric: "minkowski"
+    contamination: 0.1
+  search_space:
+    bandwidth:
+      type: float
+      min: 0.1
+      max: 1.0
+      step: 0.1
+    leaf_size:
+      type: int
+      min: 10
+      max: 50
+      step: 5
+    metric:
+      type: str
+      values: ["minkowski", "euclidean", "manhattan"]
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+
+knn:
+  default:
+    n_neighbors: 5
+    method: "largest"
+    radius: 1.0
+    algorithm: "auto"
+    leaf_size: 30
+    metric: "minkowski"
+    p: 2
+    n_jobs: -1
+    contamination: 0.1
+  search_space:
+    n_neighbors:
+      type: int
+      min: 1
+      max: 10
+      step: 1
+    method:
+      type: str
+      values: ["largest", "mean", "median"]
+    radius:
+      type: float
+      min: 0.1
+      max: 1.0
+      step: 0.1
+    leaf_size:
+      type: int
+      min: 10
+      max: 50
+      step: 5
+    metric:
+      type: str
+      values: ["minkowski", "euclidean", "manhattan"]
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+lmdd:
+  default:
+    contamination: 0.1
+    n_iter: 50
+    dis_measure: "aad"
+    random_state: null
+  search_space:
+    n_iter:
+      type: int
+      min: 10
+      max: 100
+      step: 10
+    dis_measure:
+      type: str
+      values: ["aad", "var", "iqr"]
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+
+lof:
+  default:
+    n_neighbors: 20
+    algorithm: "auto"
+    leaf_size: 30
+    metric: "minkowski"
+    p: 2
+    contamination: 0.1
+    n_jobs: -1
+    novelty: True
+  search_space:
+    n_neighbors:
+      type: int
+      min: 10
+      max: 30
+      step: 1
+    leaf_size:
+      type: int
+      min: 10
+      max: 50
+      step: 5
+    metric:
+      type: str
+      values: ["minkowski", "euclidean", "manhattan"]
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+
+lscp:
+  default:
+    local_region_size: 30
+    local_max_features: 1.0
+    n_bins: 10
+    contamination: 0.1
+    random_state: null
+  search_space:
+    local_region_size:
+      type: int
+      min: 10
+      max: 50
+      step: 5
+    local_max_features:
+      type: float
+      min: 0.1
+      max: 1.0
+      step: 0.1
+    n_bins:
+      type: int
+      min: 5
+      max: 15
+      step: 1
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+
+mcd:
+  default:
+    contamination: 0.1
+    store_precision: True
+    assume_centered: False
+    random_state: null
+  search_space:
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+    store_precision:
+      type: bool
+      values: [True, False]
+    assume_centered:
+      type: bool
+      values: [True, False]
+
+ocsvm:
+  default:
+    kernel: "rbf"
+    nu: 0.5
+    degree: 3
+    gamma: "auto"
+    coef0: 0.0
+    tol: 0.001
+    shrinking: True
+    cache_size: 200
+    max_iter: -1
+    contamination: 0.1
+  search_space:
+    kernel:
+      type: str
+      values: ["linear", "poly", "rbf", "sigmoid"]
+    nu:
+      type: float
+      min: 0.1
+      max: 0.9
+      step: 0.1
+    degree:
+      type: int
+      min: 2
+      max: 5
+      step: 1
+    gamma:
+      type: str
+      values: ["auto", "scale"]
+    coef0:
+      type: float
+      min: 0.0
+      max: 1.0
+      step: 0.1
+    tol:
+      type: float
+      min: 0.0001
+      max: 0.01
+      step: 0.0001
+    shrinking:
+      type: bool
+      values: [True, False]
+    cache_size:
+      type: int
+      min: 100
+      max: 300
+      step: 100
+    max_iter:
+      type: int
+      min: 50
+      max: 150
+      step: 10
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
+
+pca:
+  default:
+    n_components: 1
+    contamination: 0.1
+  search_space:
+    n_components:
+      type: int
+      min: 1
+      max: 10
+      step: 1
+    contamination:
+      type: float
+      min: 0.01
+      max: 0.5
+      step: 0.01
