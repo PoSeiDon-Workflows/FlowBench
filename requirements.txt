@@ -1,6 +1,6 @@
 networkx
 numba
-pytorch>=2.0.0
+torch>=2.0.0
 torch_geometric>=2.1.0
 pygod
 pygod
