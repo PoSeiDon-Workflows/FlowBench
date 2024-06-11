@@ -143,11 +143,11 @@ class GNN_v2(L.LightningModule):
     def training_step(self, batch, batch_idx):
         x = self.forward(batch)
         loss = torch.nn.functional.cross_entropy(x, batch.y)
-        self.log('train_loss', loss)
-        acc = self.acc(x.argmax(dim=1), batch.y)
-        self.log('train_acc', acc, on_epoch=True, prog_bar=True, on_step=False)
-        auc = self.auroc(x.argmax(dim=1), batch.y)
-        self.log('train_auc', auc, on_epoch=True)
+        # self.log('train_loss', loss)
+        # acc = self.acc(x.argmax(dim=1), batch.y)
+        # self.log('train_acc', acc, on_epoch=False, prog_bar=False, on_step=False)
+        # auc = self.auroc(x.argmax(dim=1), batch.y)
+        # self.log('train_auc', auc, on_epoch=False)
         return loss
 
     def validation_step(self, batch, batch_idx):

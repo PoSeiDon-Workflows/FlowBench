@@ -8,7 +8,7 @@ Author: PoSeiDon Team
 License: MIT
 """
 
-# %%
+import argparse
 from time import time
 
 import numpy as np
@@ -19,11 +19,14 @@ from flowbench.metrics import (eval_accuracy, eval_average_precision,
                                eval_recall, eval_roc_auc)
 from flowbench.unsupervised.pygod import GAE
 
-torch.manual_seed(12345)
-np.random.seed(12345)
+# torch.manual_seed(12345)
+# np.random.seed(12345)
 
-# %%
-ds = load_workflow("1000genome")
+parser = argparse.ArgumentParser()
+parser.add_argument("--dataset", type=str, default="1000genome")
+args = parser.parse_args()
+
+ds = load_workflow(args.dataset)
 
 Xs = ds.x.numpy()
 ys = ds.y.numpy()
@@ -41,7 +44,6 @@ train_Xs, train_ys = Xs[train_mask], ys[train_mask]
 val_Xs, val_ys = Xs[val_mask], ys[val_mask]
 test_Xs, test_ys = Xs[test_mask], ys[test_mask]
 
-# %%
 gae = GAE(hid_dim=64,
           num_layers=4,
           dropout=0,
@@ -63,7 +65,7 @@ auc = eval_roc_auc(test_ys, test_ys_pred)
 recall = eval_recall(test_ys, test_ys_pred)
 acc = eval_accuracy(test_ys, test_ys_pred)
 
-print("GAE results:",
+print(f"{args.dataset} - GAE:",
       f"Accuracy {acc:.3f}",
       f"AP {ap:.3f}",
       f"AUC {auc:.3f}",

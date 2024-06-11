@@ -1,229 +1,165 @@
 """ Benchmarks of node-level Anomoly detection in PyGOD.
 
+Author: PoSeiDon Team
+License: MIT
 """
-
 
 import argparse
 import os.path as osp
 import warnings
-from random import choice
+from time import time
 
 import numpy as np
-from torch_geometric.datasets import Planetoid
-from torch_geometric.nn import MLP
+import torch
+import torch_geometric.transforms as T
+import yaml
 from tqdm import tqdm
 
+from flowbench import list_workflows
 from flowbench.dataset import FlowDataset
-from flowbench.metrics import (eval_average_precision, eval_precision_at_k,
+from flowbench.metrics import (eval_accuracy, eval_average_precision,
+                               eval_precision_at_k, eval_recall,
                                eval_recall_at_k, eval_roc_auc)
+from flowbench.transforms import MinMaxNormalizeFeatures
 from flowbench.unsupervised.pygod import (ANOMALOUS, CONAD, DOMINANT, DONE,
                                           GAAN, GAE, GUIDE, SCAN, AdONE,
                                           AnomalyDAE, Radar)
 
 
-def init_model(args):
-    r""" Initiate model for PyGOD
+def load_workflow(workflow="1000genome", root="/tmp"):
+    r""" Load workflow dataset.
 
     Args:
-        args (dict): Args from argparser.
+        workflow (str): Name of the workflow dataset. Default: "1000genome".
 
     Returns:
-        object: Model object.
+        pyg.data.Dataset: The dataset.
     """
 
-    # from sklearn.ensemble import IsolationForest
-    if not isinstance(args, dict):
-        args = vars(args)
-    dropout = [0, 0.1, 0.3]
-    lr = [0.1, 0.05, 0.01]
-    weight_decay = 0.01
+    ROOT = osp.join(root, "data", "flowbench")
+    pre_transform = T.Compose([MinMaxNormalizeFeatures(),
+                               T.ToUndirected(),
+                               T.RandomNodeSplit(split="train_rest",
+                                                 num_val=0.1,
+                                                 num_test=0.2)])
+    ds = FlowDataset(root=ROOT,
+                     name=workflow,
+                     binary_labels=True,
+                     node_level=True,
+                     pre_transform=pre_transform,
+                     force_reprocess=False)
+    return ds
 
-    if args['dataset'] == 'inj_flickr':
-        # sampling and minibatch training on large dataset flickr
-        batch_size = 64
-        num_neigh = 3
-        epoch = 2
-    else:
-        batch_size = 0
-        num_neigh = -1
-        epoch = 300
 
-    model_name = args['model']
-    gpu = args['gpu']
+def load_params(model_name):
+    r""" Load default hyperparameters for the model from preconfigured yaml file.
 
-    # if hasattr(args, 'epoch'):
-    epoch = args.get('epoch', 200)
+    Args:
+        model_name (str): Name of the model.
 
-    if args['dataset'] == 'reddit':
-        # for the low feature dimension dataset
-        hid_dim = [32, 48, 64]
-    else:
-        hid_dim = [32, 64, 128, 256]
+    Returns:
+        dict: Hyperparameters for the model.
+    """
+    with open("hps/unsupervised/pygod_config.yaml", 'r') as config_file:
+        try:
+            config = yaml.safe_load(config_file)
+        except yaml.YAMLError as exc:
+            print(exc)
+    return config[model_name]['default']
 
-    if args['dataset'][:3] == 'inj':
-        # auto balancing on injected dataset
-        alpha = [None]
-    else:
-        alpha = [0.8, 0.5, 0.2]
 
-    if model_name == "adone":
-        return AdONE(hid_dim=choice(hid_dim),
-                     weight_decay=weight_decay,
-                     dropout=choice(dropout),
-                     lr=choice(lr),
-                     epoch=epoch,
-                     gpu=gpu,
-                     batch_size=batch_size,
-                     num_neigh=num_neigh)
-    elif model_name == 'anomalydae':
-        hd = choice(hid_dim)
-        return AnomalyDAE(embed_dim=hd,
-                          out_dim=hd,
-                          weight_decay=weight_decay,
-                          dropout=choice(dropout),
-                          theta=choice([10., 40., 90.]),
-                          eta=choice([3., 5., 8.]),
-                          lr=choice(lr),
-                          epoch=epoch,
-                          gpu=gpu,
-                          alpha=choice(alpha),
-                          batch_size=batch_size,
-                          num_neigh=num_neigh)
-    elif model_name == 'conad':
-        return CONAD(hid_dim=choice(hid_dim),
-                     weight_decay=weight_decay,
-                     dropout=choice(dropout),
-                     lr=choice(lr),
-                     epoch=epoch,
-                     gpu=gpu,
-                     alpha=choice(alpha),
-                     batch_size=batch_size,
-                     num_neigh=num_neigh)
-    elif model_name == 'dominant':
-        return DOMINANT(hid_dim=choice(hid_dim),
-                        weight_decay=weight_decay,
-                        dropout=choice(dropout),
-                        lr=choice(lr),
-                        epoch=epoch,
-                        gpu=gpu,
-                        alpha=choice(alpha),
-                        batch_size=batch_size,
-                        num_neigh=num_neigh)
-    elif model_name == 'done':
-        return DONE(hid_dim=choice(hid_dim),
-                    weight_decay=weight_decay,
-                    dropout=choice(dropout),
-                    lr=choice(lr),
-                    epoch=epoch,
-                    gpu=gpu,
-                    batch_size=batch_size,
-                    num_neigh=num_neigh)
-    elif model_name == 'gaan':
-        return GAAN(noise_dim=choice([8, 16, 32]),
-                    hid_dim=choice(hid_dim),
-                    weight_decay=weight_decay,
-                    dropout=choice(dropout),
-                    lr=choice(lr),
-                    epoch=epoch,
-                    gpu=gpu,
-                    alpha=choice(alpha),
-                    batch_size=batch_size,
-                    num_neigh=num_neigh)
-    elif model_name == 'gcnae':
-        return GAE(hid_dim=choice(hid_dim),
-                   weight_decay=weight_decay,
-                   dropout=choice(dropout),
-                   lr=choice(lr),
-                   epoch=epoch,
-                   gpu=gpu,
-                   batch_size=batch_size,
-                   num_neigh=num_neigh)
-    elif model_name == 'guide':
-        return GUIDE(a_hid=choice(hid_dim),
-                     s_hid=choice([4, 5, 6]),
-                     weight_decay=weight_decay,
-                     dropout=choice(dropout),
-                     lr=choice(lr),
-                     epoch=epoch,
-                     gpu=gpu,
-                     alpha=choice(alpha),
-                     batch_size=batch_size,
-                     num_neigh=num_neigh,
-                     cache_dir='./tmp')
-    elif model_name == "mlpae":
-        return GAE(hid_dim=choice(hid_dim),
-                   weight_decay=weight_decay,
-                   backbone=MLP,
-                   dropout=choice(dropout),
-                   lr=choice(lr),
-                   epoch=epoch,
-                   gpu=gpu,
-                   batch_size=batch_size)
-    elif model_name == 'radar':
-        return Radar(lr=choice(lr), gpu=gpu)
-    elif model_name == 'anomalous':
-        return ANOMALOUS(lr=choice(lr), gpu=gpu)
-    elif model_name == 'scan':
-        return SCAN(eps=choice([0.3, 0.5, 0.8]), mu=choice([2, 5, 10]))
-
+models = {
+    "adone": AdONE,
+    "anomalous": ANOMALOUS,
+    "anomalydae": AnomalyDAE,
+    "conad": CONAD,
+    "dominant": DOMINANT,
+    "done": DONE,
+    "gaan": GAAN,
+    "gae": GAE,
+    "guide": GUIDE,
+    "radar": Radar,
+    "scan": SCAN,
+}
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset", type=str, default="1000genome_new_2022",
-                        help="Workflow name.")
-    parser.add_argument("--gpu", type=int, default=0,
-                        help="GPU Index. Default: 0. -1 for CPU only.")
-    parser.add_argument("--model", type=str, default="radar",
-                        help="supported model: [lof, if, mlpae, scan, radar, "
-                             "anomalous, gcnae, dominant, done, adone, "
-                             "anomalydae, gaan, guide, conad]. "
-                             "Default: dominant")
-
+    parser.add_argument("--dataset", type=str, default="1000genome")
+    parser.add_argument("--model", type=str, default="gae")
+    parser.add_argument("--gpu", type=int, default=-1)
+    parser.add_argument("--seed", action="store_true")
     args = parser.parse_args()
-    model = init_model(args)
 
-    ROOT = osp.join(osp.expanduser("~"), "tmp", "data", args.dataset)
-    if args.dataset not in ["cora", "citeseer", "pubmed"]:
-        dataset = FlowDataset(root=ROOT,
-                              name=args.dataset,
-                              node_level=True,
-                              binary_labels=True,
-                              force_reprocess=False)
+    if args.seed:
+        random_state = 12345
+        np.random.seed(random_state)
+        torch.manual_seed(random_state)
+
+    if args.dataset != "all":
+        wfs = [args.dataset]
     else:
-        # NOTE: For debug only. Take standard datasets from PyG.
-        dataset = Planetoid(ROOT, args.dataset)
-    data = dataset[0]
-    auc, ap, prec, rec = [], [], [], []
+        wfs = list_workflows()
 
-    num_trials = 10
-    try:
-        for _ in tqdm(range(num_trials), desc=args.model):
-            if args.model == "if" or args.model == "lof":
-                model.fit(data.x)
-                score = model.decision_function(data.x)
-            else:
-                # DEBUG: GPU memory issue with local
-                model.fit(data)
-                score = model.decision_scores_
+    if args.model != "all":
+        models = {args.model: models[args.model]}
+    else:
+        models = models
 
-            y = data.y.bool()
-            k = sum(y)
-            if np.isnan(score).any():
-                warnings.warn('contains NaN, skip one trial.')
-                # continue
+    for wf in wfs:
+        ds = load_workflow(wf)
 
-            auc.append(eval_roc_auc(y, score))
-            ap.append(eval_average_precision(y, score))
-            prec.append(eval_precision_at_k(y, score, k))
-            rec.append(eval_recall_at_k(y, score, k))
+        Xs = ds.x.numpy()
+        ys = ds.y.numpy()
+        train_mask = ds.train_mask.numpy()
+        val_mask = ds.val_mask.numpy()
+        test_mask = ds.test_mask.numpy()
 
-        print(f"{args.dataset}",
-              f"{model.__class__.__name__:<15}",
-              f"AUC: {np.mean(auc):.3f}±{np.std(auc):.3f} ({np.max(auc):.3f})",
-              f"AP: {np.mean(ap):.3f}±{np.std(ap):.3f} ({np.max(ap):.3f})",
-              f"Prec(K) {np.mean(prec):.3f}±{np.std(prec):.3f} ({np.max(prec):.3f})",
-              f"Recall(K): {np.mean(rec):.3f}±{np.std(rec):.3f} ({np.max(rec):.3f})")
-    except Exception as e:
-        print(f"{args.dataset}",
-              f"{model.__class__.__name__:<15}",
-              "ERROR:", e)
+        train_Xs, train_ys = Xs[train_mask], ys[train_mask]
+        val_Xs, val_ys = Xs[val_mask], ys[val_mask]
+        test_Xs, test_ys = Xs[test_mask], ys[test_mask]
+
+        auc, ap, prec, rec = [], [], [], []
+
+        try:
+            for i, (clf_name, clf) in enumerate(models.items()):
+
+                model_params = load_params(clf_name)
+                # quick test
+                if 'epoch' in model_params:
+                    model_params['epoch'] = 1
+                if 'gpu' in model_params:
+                    model_params['gpu'] = args.gpu
+                model = clf(**model_params)
+
+                tic = time()
+                model.fit(ds[0])
+                toc = time()
+                score = model.decision_score_
+
+                k = test_ys.sum()
+                if np.isnan(score).any():
+                    warnings.warn('contains NaN, skip one trial.')
+                    # continue
+
+                test_ys_pred = model.label_.numpy()[test_mask]
+
+                acc = eval_accuracy(test_ys, test_ys_pred)
+                ap = eval_average_precision(test_ys, test_ys_pred)
+                auc = eval_roc_auc(test_ys, test_ys_pred)
+                recall = eval_recall(test_ys, test_ys_pred)
+                prec_k = eval_precision_at_k(test_ys, test_ys_pred, k)
+                recall_k = eval_recall_at_k(test_ys, test_ys_pred, k)
+
+                print(f"{args.dataset}",
+                      f"{args.model}:",
+                      f"train_time {toc - tic:.3f}",
+                      f"Accuracy {acc:.3f}",
+                      f"AP {ap:.3f}",
+                      f"AUC {auc:.3f}",
+                      f"Recall {recall:.3f}",
+                      f"prec_k {prec_k:.3f}",
+                      f"recall_k {recall_k:.3f}")
+        except Exception as e:
+            print(f"{args.dataset}",
+                  f"{model.__class__.__name__:<15}",
+                  "ERROR:", e)

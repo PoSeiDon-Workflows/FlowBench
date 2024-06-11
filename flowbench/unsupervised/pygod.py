@@ -32,21 +32,20 @@ def list_pygod():
     Returns:
         list: List of models.
     """
-    pygod_models = ["ANOMALOUS",
-                    "CONAD",
-                    "DMGD",
-                    "DOMINANT",
-                    "DONE",
-                    "GAAN",
-                    "GADNR",
-                    "GAE",
-                    "GUIDE",
-                    "OCGNN",
-                    "ONE",
-                    "SCAN",
-                    "AdONE",
-                    "AnomalyDAE",
-                    "CoLA",
-                    "Radar"]
+    pygod_models = [
+        "AdONE",
+        "ANOMALOUS",
+        "AnomalyDAE",
+        "CONAD",
+        "DOMINANT",
+        "DONE",
+        "GAAN",
+        "GAE",
+        "GUIDE",
+        "OCGNN",
+        "ONE",
+        "Radar",
+        "SCAN",
+    ]
 
     return pygod_models

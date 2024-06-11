@@ -1,0 +1,10 @@
+networkx
+numba
+pyg>=2.1.0
+pygod
+pygod
+pytorch>=2.0.0
+scikit-learn
+scipy
+sphinx
+sphinx-rtd-theme

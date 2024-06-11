@@ -9,6 +9,7 @@ class FocalLoss(nn.Module):
 
     .. math::
         FL(p_t) = -\alpha_t (1 - p_t)^{\gamma} \log(p_t)
+
     Args:
         gamma (float, optional): Focusing parameter. Default: 0
         alpha (float, optional): Weighting parameter. Default: None

@@ -31,6 +31,8 @@ else
 fi
 # install optional packages
 pip install lightning tensorboard deepspeed deephyper ray pygod pyod class_resolver \
-    umap-learn combo scikit-learn-intelex -U -q
+    umap-learn combo scikit-learn-intelex cleanlab -U -q
 # install current package in develop mode
 pip install -e .
+
+# option: pytorch=2.1.0 + cu121

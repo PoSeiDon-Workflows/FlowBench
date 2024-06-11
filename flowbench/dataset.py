@@ -1,4 +1,8 @@
-r""" FlowBench dataset interface for graph and tabular data. """
+r""" FlowBench dataset interface for graph and tabular data.
+
+Author: PoSeiDon Team
+License: MIT
+"""
 
 import glob
 import os

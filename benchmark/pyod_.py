@@ -1,23 +1,27 @@
-""" Benchmarks of node-level Anomoly detection in PyGOD.
+""" Benchmarks of node-level Anomoly detection in PyOD.
 
+Author: PoSeiDon Team
+License: MIT
 """
 import argparse
 import os.path as osp
 import warnings
+from time import time
 
-import matplotlib.font_manager
-import matplotlib.pyplot as plt
 import numpy as np
-from numpy import percentile
-from torch_geometric.datasets import Planetoid
+import torch
+import torch_geometric.transforms as T
+import yaml
 
+from flowbench import list_workflows
 from flowbench.dataset import FlowDataset
-from flowbench.metrics import (eval_average_precision, eval_precision_at_k,
+from flowbench.metrics import (eval_accuracy, eval_average_precision,
+                               eval_precision_at_k, eval_recall,
                                eval_recall_at_k, eval_roc_auc)
+from flowbench.transforms import MinMaxNormalizeFeatures
 from flowbench.unsupervised.pyod import (ABOD, CBLOF, GMM, HBOS, INNE, KDE,
-                                         KNN, LMDD, LOF, LSCP, MCD, OCSVM, PCA,
+                                         KNN, LMDD, LOF, MCD, OCSVM, PCA,
                                          FeatureBagging, IForest)
-
 
 # TODO: add sklearnex to accelerate sklearn
 # from sklearnex import patch_sklearn
@@ -25,92 +29,127 @@ from flowbench.unsupervised.pyod import (ABOD, CBLOF, GMM, HBOS, INNE, KDE,
 
 warnings.filterwarnings("ignore")
 
-random_state = 12345
-detector_list = [LOF(n_neighbors=5, n_jobs=-1), LOF(n_neighbors=10, n_jobs=-1), LOF(n_neighbors=15, n_jobs=-1),
-                 LOF(n_neighbors=20, n_jobs=-1), LOF(n_neighbors=25, n_jobs=-1), LOF(n_neighbors=30, n_jobs=-1),
-                 LOF(n_neighbors=35, n_jobs=-1), LOF(n_neighbors=40, n_jobs=-1), LOF(n_neighbors=45, n_jobs=-1),
-                 LOF(n_neighbors=50, n_jobs=-1)]
 
-classifiers = {
-    'Angle-based Outlier Detector (ABOD)':
-        ABOD(),
-    'Cluster-based Local Outlier Factor (CBLOF)':
-        CBLOF(check_estimator=False, random_state=random_state, n_jobs=-1),
-    'Feature Bagging':
-        FeatureBagging(LOF(n_neighbors=35), random_state=random_state, n_jobs=-1),
-    'Histogram-base Outlier Detection (HBOS)':
-        HBOS(),
-    'Isolation Forest':
-        IForest(random_state=random_state, n_jobs=-1),
-    'K Nearest Neighbors (KNN)':
-        KNN(n_jobs=-1),
-    'Average KNN (AKNN)':
-        KNN(method='mean', n_jobs=-1),
-    'Local Outlier Factor (LOF)':
-        LOF(n_neighbors=35, n_jobs=-1),
-    'Minimum Covariance Determinant (MCD)':
-        MCD(random_state=random_state),
-    'One-class SVM (OCSVM)':
-        OCSVM(),
-    'Principal Component Analysis (PCA)':
-        PCA(random_state=random_state),
-    'Locally Selective Combination (LSCP)':
-        LSCP(detector_list, random_state=random_state),
-    'Isolation-based anomaly detection using nearest-neighbor ensembles (INNE)':
-        INNE(max_samples=2, random_state=random_state),
-    'Gaussian Mixture Model (GMM)':
-        GMM(random_state=random_state),
-    'Kernel Density Estimation (KDE)':
-        KDE(),
-    'Linear Method for Deviation-based Outlier Detection (LMDD)':
-        LMDD(random_state=random_state),
+def load_workflow(workflow="1000genome", root="/tmp"):
+    r""" Load workflow dataset.
+
+    Args:
+        workflow (str): Name of the workflow dataset. Default: "1000genome".
+
+    Returns:
+        pyg.data.Dataset: The dataset.
+    """
+
+    ROOT = osp.join(root, "data", "flowbench")
+    pre_transform = T.Compose([MinMaxNormalizeFeatures(),
+                               T.ToUndirected(),
+                               T.RandomNodeSplit(split="train_rest",
+                                                 num_val=0.1,
+                                                 num_test=0.2)])
+    ds = FlowDataset(root=ROOT,
+                     name=workflow,
+                     binary_labels=True,
+                     node_level=True,
+                     pre_transform=pre_transform,
+                     force_reprocess=False)
+    return ds
+
+
+def load_params(model_name):
+    r""" Load default hyperparameters for the model from preconfigured yaml file.
+
+    Args:
+        model_name (str): Name of the model.
+
+    Returns:
+        dict: Hyperparameters for the model.
+    """
+    with open("hps/unsupervised/pyod_config.yaml", 'r') as config_file:
+        try:
+            config = yaml.safe_load(config_file)
+        except yaml.YAMLError as exc:
+            print(exc)
+    return config[model_name]['default']
+
+
+models = {
+    "abod": ABOD,
+    "cblof": CBLOF,
+    "feature_bagging": FeatureBagging,
+    "gmm": GMM,
+    "hbos": HBOS,
+    "iforest": IForest,
+    "inne": INNE,
+    "kde": KDE,
+    "knn": KNN,
+    "lmdd": LMDD,
+    "lof": LOF,
+    "mcd": MCD,
+    "ocsvm": OCSVM,
+    "pca": PCA,
 }
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset', type=str, default='1000genome_new_2022')
+    parser.add_argument('--dataset', type=str, default='all')
+    parser.add_argument('--model', type=str, default='gmm')
+    parser.add_argument('--seed', action='store_true')
     args = parser.parse_args()
 
-    # ROOT = osp.join(osp.expanduser("~"), "tmp", "data", args.dataset)
-    ROOT = osp.join("/tmp", "data", "poseidon")
-    if args.dataset not in ["cora", "citeseer", "pubmed"]:
-        dataset = FlowDataset(root=ROOT,
-                              name=args.dataset,
-                              node_level=True,
-                              binary_labels=True,
-                              force_reprocess=False)
+    if args.seed:
+        random_state = 12345
+        torch.manual_seed(random_state)
+        np.random.seed(random_state)
+
+    if args.dataset != "all":
+        wfs = [args.dataset]
     else:
-        # NOTE: For debug only. Take standard datasets from PyG.
-        dataset = Planetoid(ROOT, args.dataset)
-    data = dataset[0]
+        wfs = list_workflows()
 
-    Xs = dataset.data.x.numpy()
-    ys = dataset.data.y.numpy()
-    print('Number of inliers: %i' % (ys == 0).sum())
-    print('Number of outliers: %i' % (ys == 1).sum())
-    print('Ground truth shape is {shape}. Outlier are1  and inliers are 0.\n'.format(shape=len(ys)))
+    if args.model != "all":
+        models = {args.model: models[args.model]}
+    else:
+        models = models
 
-    for i, (clf_name, clf) in enumerate(classifiers.items()):
-        print(i + 1, clf_name, end="\t")
+    for wf in wfs:
+        ds = load_workflow(wf)
 
-        auc, ap, prec, rec = [], [], [], []
-        for _ in range(1):
-            clf.fit(Xs)
-            scores_pred = clf.decision_function(Xs) * -1
-            y_pred = clf.predict(Xs)
-            k = sum(ys)
-            threshold = percentile(scores_pred, 100 * (ys == 1).sum() / len(ys))
-            n_errors = (y_pred != ys).sum()
-            # print(np.bincount(y_pred[y_pred != ys]), "n_error: ", n_errors, "OOD ratio", f"{n_errors / len(ys):.4f}")
+        Xs = ds.data.x.numpy()
+        ys = ds.data.y.numpy()
 
-            auc.append(eval_roc_auc(ys, y_pred))
-            ap.append(eval_average_precision(ys, y_pred))
-            prec.append(eval_precision_at_k(ys, y_pred, k))
-            rec.append(eval_recall_at_k(ys, y_pred, k))
-        print(f"{args.dataset}",
-              f"{clf_name}\n",
-              f"AUC: {np.mean(auc):.3f}±{np.std(auc):.3f} ({np.max(auc):.3f})",
-              f"AP: {np.mean(ap):.3f}±{np.std(ap):.3f} ({np.max(ap):.3f})",
-              f"Prec(K) {np.mean(prec):.3f}±{np.std(prec):.3f} ({np.max(prec):.3f})",
-              f"Recall(K): {np.mean(rec):.3f}±{np.std(rec):.3f} ({np.max(rec):.3f})")
+        train_mask = ds.train_mask.numpy()
+        val_mask = ds.val_mask.numpy()
+        test_mask = ds.test_mask.numpy()
+
+        train_Xs, train_ys = Xs[train_mask], ys[train_mask]
+        val_Xs, val_ys = Xs[val_mask], ys[val_mask]
+        test_Xs, test_ys = Xs[test_mask], ys[test_mask]
+
+        for i, (clf_name, clf) in enumerate(models.items()):
+            model_params = load_params(clf_name)
+
+            model = clf(**model_params)
+
+            tic = time()
+            model.fit(train_Xs)
+            toc = time()
+
+            test_ys_pred = model.predict(test_Xs)
+
+            k = test_ys.sum()
+            ap = eval_average_precision(test_ys, test_ys_pred)
+            auc = eval_roc_auc(test_ys, test_ys_pred)
+            recall = eval_recall(test_ys, test_ys_pred)
+            acc = eval_accuracy(test_ys, test_ys_pred)
+            prec_k = eval_precision_at_k(test_ys, test_ys_pred, k)
+            recall_k = eval_recall_at_k(test_ys, test_ys_pred, k)
+
+            print(f"{args.dataset}",
+                  f"{args.model}:",
+                  f"train_time {toc - tic:.3f}",
+                  f"Accuracy {acc:.3f}",
+                  f"AP {ap:.3f}",
+                  f"AUC {auc:.3f}",
+                  f"Recall {recall:.3f}",
+                  f"prec_k {prec_k:.3f}",
+                  f"recall_k {recall_k:.3f}")

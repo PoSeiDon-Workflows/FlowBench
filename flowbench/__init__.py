@@ -21,6 +21,7 @@ def list_workflows():
         "montage",
         "predict_future_sales",
         "pycbc_inference",
+        "pycbc_search",
         "somospie",
         "variant_calling",
     ]
