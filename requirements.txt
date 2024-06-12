@@ -3,8 +3,12 @@ numba
 torch>=2.0.0
 torch_geometric>=2.1.0
 pygod
-pygod
+pyod
 scikit-learn
 scipy
 sphinx
+pandas
 sphinx-rtd-theme
+transformers
+datasets
+lightning

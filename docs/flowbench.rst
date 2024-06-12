@@ -38,14 +38,6 @@ flowbench.dataset module
    :undoc-members:
    :show-inheritance:
 
-flowbench.dataset\_bak module
------------------------------
-
-.. automodule:: flowbench.dataset_bak
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 flowbench.losses module
 -----------------------
 
