@@ -23,7 +23,7 @@ Detailed description and statistics of the dataset can be found in [./adjacency_
 * load data as graphs in `pytorch_geometric` format:
   
   ```python
-  from py_script.dataset import FlowDataset
+  from flowbench.dataset import FlowDataset
   dataset = FlowDataset(root="./", name="montage")
   data = dataset[0]
   ```
@@ -33,7 +33,7 @@ Detailed description and statistics of the dataset can be found in [./adjacency_
 * load data as tabular data in `pytorch` format:
 
   ```python
-  from py_script.dataset import FlowDataset
+  from flowbench.dataset import FlowDataset
   dataset = FlowDataset(root="./", name="montage")
   data = dataset[0]
   Xs = data.x
@@ -45,7 +45,7 @@ Detailed description and statistics of the dataset can be found in [./adjacency_
 * load data as tabular data in `numpy` format:
 
   ```python
-  from py_script.dataset import FlowDataset
+  from flowbench.dataset import FlowDataset
   dataset = FlowDataset(root="./", name="montage")
   data = dataset[0]
   Xs = data.x.numpy()
@@ -57,7 +57,7 @@ Detailed description and statistics of the dataset can be found in [./adjacency_
 ## Benchmark Methods
 
 * We provide benchmarks for anomaly detection based on [PyGOD](https://docs.pygod.org/en/latest/index.html) and [PyOD](https://pyod.readthedocs.io/en/latest/index.html) from graph data and tabular data, respectively.
-* Checkout the script under `./py_script/benchmark/pygod.py` and `./py_script/benchmark/pyod.py` for more details.
+* Checkout the script under `./flowbench/benchmark/pygod.py` and `./flowbench/benchmark/pyod.py` for more details.
 
 ## Benchmark Performance
 
@@ -100,3 +100,9 @@ The repository is structured as follows:
 ├── requirements.txt
 ├── setup.py
 ```
+
+
+## LICENSE
+
+The dataset is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+The code is licensed under the [MIT License](https://opensource.org/licenses/MIT).
