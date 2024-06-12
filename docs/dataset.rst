@@ -9,6 +9,13 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
 
 .. Detailed description and statistics of the dataset can be found in `./adjacency_list_dags/README.md <./adjacency_list_dags/README.md>`_
 
+.. figure:: _static/workflow_DAGs.png
+   :alt: Workflow DAGs
+   :align: center
+   :scale: 80%
+
+   Figure: DAGs representation of each workflow in the dataset.
+
 .. raw:: html
 
   <style>
@@ -287,3 +294,4 @@ The dataset contains 1211 DAG executions from 2 computational science workflows 
   </tbody>
   </table>
   </dev>
+
