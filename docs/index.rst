@@ -10,7 +10,13 @@ Flow-Bench is a benchmark dataset for anomaly detection techniques in computatio
 Flow-Bench contains workflow execution traces, executed on distributed infrastructure, that include systematically injected anomalies (labeled), and offers both the raw execution logs and a more compact parsed version. 
 In this GitHub repository, apart from the logs and traces, you will find sample code to load and process the parsed data using pytorch, as well as, the code used to parse the raw logs and events.
 
+.. figure:: _static/flowbench.png
+   :alt: FlowBench Outline
+   :align: center
+   :scale: 50%
 
+   Figure: FlowBench - An Anomaly Detection Benchmark Dataset
+   
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -25,6 +31,7 @@ In this GitHub repository, apart from the logs and traces, you will find sample 
    flowbench.nlp
 
    license
+   
 Indices and tables
 ==================
 

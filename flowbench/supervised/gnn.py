@@ -86,92 +86,92 @@ class GNN(L.LightningModule):
         return torch.optim.Adam(self.parameters(), lr=self.lr)
 
 
-class GNN_v2(L.LightningModule):
-    r""" GNN model for node classification
-    NOTE: the version used in WORKS'22 paper
-    """
+# class GNN_v2(L.LightningModule):
+#     r""" GNN model for node classification
+#     NOTE: the version used in WORKS'22 paper
+#     """
 
-    def __init__(self, num_features, num_classes, **kwargs):
-        super(GNN_v2, self).__init__()
-        self.hidden_dim = kwargs.get('hidden_dim', 128)
-        self.num_layers = kwargs.get('num_layers', 3)
-        self.lr = kwargs.get('lr', 1e-4)
-        self.dropout = kwargs.get('dropout', 0.5)
+#     def __init__(self, num_features, num_classes, **kwargs):
+#         super(GNN_v2, self).__init__()
+#         self.hidden_dim = kwargs.get('hidden_dim', 128)
+#         self.num_layers = kwargs.get('num_layers', 3)
+#         self.lr = kwargs.get('lr', 1e-4)
+#         self.dropout = kwargs.get('dropout', 0.5)
 
-        # add the ability to add one or more conv layers
-        conv_blocks = [
-            GCNConv(num_features, self.hidden_dim),
-            ReLU(),
-        ]
+#         # add the ability to add one or more conv layers
+#         conv_blocks = [
+#             GCNConv(num_features, self.hidden_dim),
+#             ReLU(),
+#         ]
 
-        # ability to  add one or more conv blocks
-        for _ in range(self.num_layers - 1):
-            conv_blocks += [
-                GCNConv(self.hidden_dim, self.hidden_dim),
-                ReLU(),
-                GCNConv(self.hidden_dim, self.hidden_dim),
-                ReLU(),
-            ]
+#         # ability to  add one or more conv blocks
+#         for _ in range(self.num_layers - 1):
+#             conv_blocks += [
+#                 GCNConv(self.hidden_dim, self.hidden_dim),
+#                 ReLU(),
+#                 GCNConv(self.hidden_dim, self.hidden_dim),
+#                 ReLU(),
+#             ]
 
-        # group all the conv layers
-        self.conv_layers = ModuleList(conv_blocks)
+#         # group all the conv layers
+#         self.conv_layers = ModuleList(conv_blocks)
 
-        # add the linear layers for flattening the output from MPNN
-        self.flatten = Sequential(
-            Linear(self.hidden_dim, self.hidden_dim),
-            ReLU(),
-            Linear(self.hidden_dim, num_classes))
+#         # add the linear layers for flattening the output from MPNN
+#         self.flatten = Sequential(
+#             Linear(self.hidden_dim, self.hidden_dim),
+#             ReLU(),
+#             Linear(self.hidden_dim, num_classes))
 
-        self.acc = torchmetrics.Accuracy(task='binary')
-        self.auroc = torchmetrics.AUROC(task='binary')
+#         self.acc = torchmetrics.Accuracy(task='binary')
+#         self.auroc = torchmetrics.AUROC(task='binary')
 
-    def forward(self, data):
-        # process the layers
-        x, edge_index = data.x, data.edge_index
-        for idx, layer in enumerate(self.conv_layers):
-            if isinstance(layer, GCNConv):
-                x = layer(x, edge_index)
-            else:
-                x = layer(x)
-        x = F.dropout(x, p=self.dropout, training=self.training)
-        # pass the output to the linear output layer
-        out = self.flatten(x)
+#     def forward(self, data):
+#         # process the layers
+#         x, edge_index = data.x, data.edge_index
+#         for idx, layer in enumerate(self.conv_layers):
+#             if isinstance(layer, GCNConv):
+#                 x = layer(x, edge_index)
+#             else:
+#                 x = layer(x)
+#         x = F.dropout(x, p=self.dropout, training=self.training)
+#         # pass the output to the linear output layer
+#         out = self.flatten(x)
 
-        # return the output
-        return F.log_softmax(out, dim=1)
+#         # return the output
+#         return F.log_softmax(out, dim=1)
 
-    def training_step(self, batch, batch_idx):
-        x = self.forward(batch)
-        loss = torch.nn.functional.cross_entropy(x, batch.y)
-        # self.log('train_loss', loss)
-        # acc = self.acc(x.argmax(dim=1), batch.y)
-        # self.log('train_acc', acc, on_epoch=False, prog_bar=False, on_step=False)
-        # auc = self.auroc(x.argmax(dim=1), batch.y)
-        # self.log('train_auc', auc, on_epoch=False)
-        return loss
+#     def training_step(self, batch, batch_idx):
+#         x = self.forward(batch)
+#         loss = torch.nn.functional.cross_entropy(x, batch.y)
+#         # self.log('train_loss', loss)
+#         # acc = self.acc(x.argmax(dim=1), batch.y)
+#         # self.log('train_acc', acc, on_epoch=False, prog_bar=False, on_step=False)
+#         # auc = self.auroc(x.argmax(dim=1), batch.y)
+#         # self.log('train_auc', auc, on_epoch=False)
+#         return loss
 
-    def validation_step(self, batch, batch_idx):
-        x = self.forward(batch)
-        loss = torch.nn.functional.cross_entropy(x, batch.y)
-        self.log('val_loss', loss)
-        acc = self.acc(x.argmax(dim=1), batch.y)
-        self.log('val_acc', acc, on_epoch=True, prog_bar=True, on_step=False)
-        auc = self.auroc(x.argmax(dim=1), batch.y)
-        self.log('val_auc', auc, on_epoch=True)
-        return loss
+#     def validation_step(self, batch, batch_idx):
+#         x = self.forward(batch)
+#         loss = torch.nn.functional.cross_entropy(x, batch.y)
+#         self.log('val_loss', loss)
+#         acc = self.acc(x.argmax(dim=1), batch.y)
+#         self.log('val_acc', acc, on_epoch=True, prog_bar=True, on_step=False)
+#         auc = self.auroc(x.argmax(dim=1), batch.y)
+#         self.log('val_auc', auc, on_epoch=True)
+#         return loss
 
-    def test_step(self, batch, batch_idx):
-        x = self.forward(batch)
-        loss = torch.nn.functional.cross_entropy(x, batch.y)
-        self.log('test_loss', loss)
-        acc = self.acc(x.argmax(dim=1), batch.y)
-        self.log('test_acc', acc, on_epoch=True)
-        auc = self.auroc(x.argmax(dim=1), batch.y)
-        self.log('test_auc', auc, on_epoch=True)
-        return loss
+#     def test_step(self, batch, batch_idx):
+#         x = self.forward(batch)
+#         loss = torch.nn.functional.cross_entropy(x, batch.y)
+#         self.log('test_loss', loss)
+#         acc = self.acc(x.argmax(dim=1), batch.y)
+#         self.log('test_acc', acc, on_epoch=True)
+#         auc = self.auroc(x.argmax(dim=1), batch.y)
+#         self.log('test_auc', auc, on_epoch=True)
+#         return loss
 
-    def configure_optimizers(self):
-        return torch.optim.Adam(self.parameters(), lr=self.lr)
+#     def configure_optimizers(self):
+#         return torch.optim.Adam(self.parameters(), lr=self.lr)
 
 
 class PyG_GNN(L.LightningModule):
