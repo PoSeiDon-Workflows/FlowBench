@@ -54,6 +54,16 @@ Detailed description and statistics of the dataset can be found in [./adjacency_
 
   This is the same as the previous one, but the data is in `numpy` format, which is typically used in the models from `sklearn` and `xgboost`.
 
+* load text data with ``huggingface`` interface.
+  We have uploaded our parsed text data in the ``huggingface`` dataset. You can load the data with the following code:
+  
+  ```python
+    from datasets import load_dataset
+    dataset = load_dataset("cshjin/poseidon", "1000genome")
+  ```
+
+  The dataset is in the format of ``dict`` with keys ``train``, ``test``, and ``validation``.
+
 ## Benchmark Methods
 
 * __unsupervised__: We provide benchmarks for anomaly detection based on [PyGOD](https://docs.pygod.org/en/latest/index.html) and [PyOD](https://pyod.readthedocs.io/en/latest/index.html) from graph data and tabular data, respectively.
