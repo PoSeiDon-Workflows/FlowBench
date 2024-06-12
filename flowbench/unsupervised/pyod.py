@@ -7,17 +7,17 @@ For detailed information about the models, please refer to the documentation
 of `pyod.models`.
 
 Citation:
-@article{PyOD2019,
-  author = {Zhao, Yue},
-  title = {PyOD: A Python Toolbox for Scalable Outlier Detection},
-  year = {2019},
-  publisher = {Journal of Machine Learning Research},
-  journal = {JMLR},
-  volume = {20},
-  number = {96},
-  pages = {1-7},
-  url = {http://jmlr.org/papers/v20/19-011.html},
-}
+    @article{PyOD2019,
+        author = {Zhao, Yue},
+        title = {PyOD: A Python Toolbox for Scalable Outlier Detection},
+        year = {2019},
+        publisher = {Journal of Machine Learning Research},
+        journal = {JMLR},
+        volume = {20},
+        number = {96},
+        pages = {1-7},
+        url = {http://jmlr.org/papers/v20/19-011.html},
+    }
 
 For more information, please refer to https://pyod.readthedocs.io/.
 

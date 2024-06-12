@@ -8,6 +8,7 @@ from lightning.pytorch.callbacks import EarlyStopping
 
 def early_stopping_callback(minitor='val_loss', patience=5, mode='min'):
     r""" Early stopping callback.
+
     Args:
         minitor (str): The metric to monitor.
         patience (int): Number of epochs with no improvement after which training will be stopped.

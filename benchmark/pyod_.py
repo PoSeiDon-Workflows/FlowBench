@@ -23,10 +23,6 @@ from flowbench.unsupervised.pyod import (ABOD, CBLOF, GMM, HBOS, INNE, KDE,
                                          KNN, LMDD, LOF, MCD, OCSVM, PCA,
                                          FeatureBagging, IForest)
 
-# TODO: add sklearnex to accelerate sklearn
-# from sklearnex import patch_sklearn
-# patch_sklearn()
-
 warnings.filterwarnings("ignore")
 
 
