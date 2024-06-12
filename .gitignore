@@ -164,3 +164,6 @@ cython_debug/
 
 models/
 data/*/
+results/
+backup/
+run_*.sh
