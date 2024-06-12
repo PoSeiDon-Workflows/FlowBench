@@ -22,6 +22,7 @@ In this GitHub repository, apart from the logs and traces, you will find sample 
    :caption: Contents:
 
    .. modules
+   flowbench
    installation
    dataset
    examples

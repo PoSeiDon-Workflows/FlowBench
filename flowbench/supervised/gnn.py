@@ -1,3 +1,8 @@
+""" GNN model for node classification
+
+Author: PoSeiDon Team
+License: MIT
+"""
 import lightning as L
 import torch
 from torch_geometric.nn import GCNConv

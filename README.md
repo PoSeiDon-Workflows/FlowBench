@@ -56,14 +56,18 @@ Detailed description and statistics of the dataset can be found in [./adjacency_
 
 ## Benchmark Methods
 
-* We provide benchmarks for anomaly detection based on [PyGOD](https://docs.pygod.org/en/latest/index.html) and [PyOD](https://pyod.readthedocs.io/en/latest/index.html) from graph data and tabular data, respectively.
-* Checkout the script under `./flowbench/benchmark/pygod.py` and `./flowbench/benchmark/pyod.py` for more details.
+* __unsupervised__: We provide benchmarks for anomaly detection based on [PyGOD](https://docs.pygod.org/en/latest/index.html) and [PyOD](https://pyod.readthedocs.io/en/latest/index.html) from graph data and tabular data, respectively.
+  * Checkout the script under `./example/demo_pygod.py` and `./example/demo_pyod.py` for more details.
+* __supervised__: We provide supervised methods for both tabular and graph data
+  * Checkout the script under `./example/demo_mlp.py` and `./example/demo_gnn.py` for more details.
+* __supervised fine-tuned (SFT) LLMs__: We provide text data based anomaly detection using fine-tuned language models with LoRA for efficient training.
+  * Checkout the script under `./example/demo_sft_lora.py` for more details.
 
-## Benchmark Performance
+
 
 <p align="center">
-<img src="images/model_comparison.png" alt="Comparison of models using the benchmark dataset."/>
-</p>
+<img src="images/flowbench.png" alt="Comparison of models using the benchmark dataset."/>
+</p> 
 
 ## Repository Structure
 
