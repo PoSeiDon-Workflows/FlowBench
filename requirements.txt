@@ -12,3 +12,4 @@ sphinx-rtd-theme
 transformers
 datasets
 lightning
+combo
