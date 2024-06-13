@@ -1,18 +1,5 @@
-FlowBench package
+FlowBench 
 =================
-
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 4
-
-   flowbench.nlp
-   flowbench.supervised
-   flowbench.unsupervised
-
-Submodules
-----------
 
 flowbench.base module
 ---------------------
