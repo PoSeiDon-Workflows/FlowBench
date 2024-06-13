@@ -1,4 +1,4 @@
-flowbench.supervised package
+flowbench.supervised
 ============================
 
 .. Submodules
