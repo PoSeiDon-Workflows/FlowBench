@@ -7,13 +7,13 @@ To install this project, we will create a virtual env in conda following these s
 
 1. Clone the repository:
 
-    ```bash
+    ```
     git clone https://github.com/PoSeiDon-Workflows/FlowBench.git
     ```
 
 2. Navigate into the project directory, install the package
   
-    ```bash
+    ```
     cd FlowBench
     bash setup.sh
     ```
@@ -22,12 +22,12 @@ To install this project, we will create a virtual env in conda following these s
 
 3. Activate the virtual environment
 
-    ```bash
+    ```
     conda activate flowbench
     ```
 
 4. Run the demo with GMM API from PyOD
   
-    ```bash
+    ```
     python example/demo_pyod.py
     ```
