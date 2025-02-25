@@ -1,7 +1,7 @@
-# Flow-Bench: A Dataset for Computational Workflow Anomaly Detection
+# cFlow-Bench: A Dataset for Computational Workflow Anomaly Detection
 
-Flow-Bench is a benchmark dataset for anomaly detection techniques in computational workflows.
-Flow-Bench contains workflow execution traces, executed on distributed infrastructure, that include systematically injected anomalies (labeled), and offers both the raw execution logs and a more compact parsed version. 
+cFlow-Bench is a benchmark dataset for anomaly detection techniques in computational workflows.
+cFlow-Bench contains workflow execution traces, executed on distributed infrastructure, that include systematically injected anomalies (labeled), and offers both the raw execution logs and a more compact parsed version. 
 In this GitHub repository, apart from the logs and traces, you will find sample code to load and process the parsed data using pytorch, as well as, the code used to parse the raw logs and events.
 
 ## Dataset
