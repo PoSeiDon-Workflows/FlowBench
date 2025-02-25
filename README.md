@@ -1,4 +1,4 @@
-# cFlow-Bench: A Dataset for Computational Workflow Anomaly Detection
+# cFlow-Bench: A Dataset and Benchmarks for Computational Workflow Anomaly Detection
 
 cFlow-Bench is a benchmark dataset for anomaly detection techniques in computational workflows.
 cFlow-Bench contains workflow execution traces, executed on distributed infrastructure, that include systematically injected anomalies (labeled), and offers both the raw execution logs and a more compact parsed version. 
