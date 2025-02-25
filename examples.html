@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples &mdash; FlowBench 0.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/_static/custom.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=10f1778b"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="flowbench.supervised" href="flowbench.supervised.html" />
+    <link rel="prev" title="Dataset" href="dataset.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            FlowBench
+              <img src="_static/logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flowbench.html">FlowBench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#load-dataset">Load Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyod-models">PyOD Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pygod-models">PyGOD Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supervised-models">Supervised Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supervised-fine-tuned-llms">Supervised fine-tuned LLMs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flowbench.supervised.html">flowbench.supervised</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flowbench.unsupervised.html">flowbench.unsupervised</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flowbench.nlp.html">flowbench.nlp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">FlowBench</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h1>
+<section id="load-dataset">
+<h2>Load Dataset<a class="headerlink" href="#load-dataset" title="Link to this heading"></a></h2>
+<ul>
+<li><p>load data as graphs in <code class="docutils literal notranslate"><span class="pre">pytorch_geometric</span></code> format:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flowbench.dataset</span> <span class="kn">import</span> <span class="n">FlowDataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">FlowDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s2">&quot;./&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;montage&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">data</span></code> contains the structural information by accessing <code class="docutils literal notranslate"><span class="pre">data.edge_index</span></code>, and node feature information <code class="docutils literal notranslate"><span class="pre">data.x</span></code>.</p>
+</li>
+<li><p>load data as tabular data in <code class="docutils literal notranslate"><span class="pre">pytorch</span></code> format:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flowbench.dataset</span> <span class="kn">import</span> <span class="n">FlowDataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">FlowDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s2">&quot;./&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;montage&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">Xs</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">x</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">y</span>
+</pre></div>
+</div>
+<p>Unlike the graph <code class="docutils literal notranslate"><span class="pre">pyg.data</span></code>, the <code class="docutils literal notranslate"><span class="pre">data</span></code> only contains the node features.</p>
+</li>
+<li><p>load data as tabular data in <code class="docutils literal notranslate"><span class="pre">numpy</span></code> format:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flowbench.dataset</span> <span class="kn">import</span> <span class="n">FlowDataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">FlowDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s2">&quot;./&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;montage&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">Xs</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This is the same as the previous one, but the data is in <code class="docutils literal notranslate"><span class="pre">numpy</span></code> format, which is typically used in the models from <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> and <code class="docutils literal notranslate"><span class="pre">xgboost</span></code>.</p>
+</li>
+<li><p>load text data with <code class="docutils literal notranslate"><span class="pre">huggingface</span></code> interface.
+We have uploaded our parsed text data in the <code class="docutils literal notranslate"><span class="pre">huggingface</span></code> dataset. You can load the data with the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;cshjin/poseidon&quot;</span><span class="p">,</span> <span class="s2">&quot;1000genome&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The dataset is in the format of <code class="docutils literal notranslate"><span class="pre">dict</span></code> with keys <code class="docutils literal notranslate"><span class="pre">train</span></code>, <code class="docutils literal notranslate"><span class="pre">test</span></code>, and <code class="docutils literal notranslate"><span class="pre">validation</span></code>.</p>
+</li>
+</ul>
+</section>
+<section id="pyod-models">
+<h2>PyOD Models<a class="headerlink" href="#pyod-models" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Abbr</p></th>
+<th class="head"><p>Algorithm</p></th>
+<th class="head"><p>Year</p></th>
+<th class="head"><p>Class</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Probabilistic</p></td>
+<td><p>ABOD</p></td>
+<td><p>Angle-Based Outlier Detection</p></td>
+<td><p>2008</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.ABOD</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Probabilistic</p></td>
+<td><p>KDE</p></td>
+<td><p>Outlier Detection with Kernel Density Functions</p></td>
+<td><p>2007</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.KDE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Probabilistic</p></td>
+<td><p>GMM</p></td>
+<td><p>Probabilistic Mixture Modeling for Outlier Analysis</p></td>
+<td></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.GMM</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Linear Model</p></td>
+<td><p>PCA</p></td>
+<td><p>Principal Component Analysis (the sum of weighted projected distances to the eigenvector hyperplanes)</p></td>
+<td><p>2003</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.PCA</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Linear Model</p></td>
+<td><p>OCSVM</p></td>
+<td><p>One-Class Support Vector Machines</p></td>
+<td><p>2001</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.OCSVM</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Linear Model</p></td>
+<td><p>LMDD</p></td>
+<td><p>Deviation-based Outlier Detection (LMDD)</p></td>
+<td><p>1996</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.LMDD</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Proximity-Based</p></td>
+<td><p>LOF</p></td>
+<td><p>Local Outlier Factor</p></td>
+<td><p>2000</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.LOF</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Proximity-Based</p></td>
+<td><p>CBLOF</p></td>
+<td><p>Clustering-Based Local Outlier Factor</p></td>
+<td><p>2003</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.CBLOF</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Proximity-Based</p></td>
+<td><p>kNN</p></td>
+<td><p>k Nearest Neighbors (use the distance to the kth nearest neighbor as the outlier score)</p></td>
+<td><p>2000</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.KNN</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Outlier Ensembles</p></td>
+<td><p>IForest</p></td>
+<td><p>Isolation Forest</p></td>
+<td><p>2008</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.IForest</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Outlier Ensembles</p></td>
+<td><p>INNE</p></td>
+<td><p>Isolation-based Anomaly Detection Using Nearest-Neighbor Ensembles</p></td>
+<td><p>2018</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.INNE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Outlier Ensembles</p></td>
+<td><p>LSCP</p></td>
+<td><p>LSCP: Locally Selective Combination of Parallel Outlier Ensembles</p></td>
+<td><p>2019</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pyod.LSCP</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Example of using <cite>GMM</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flowbench.pyod</span> <span class="kn">import</span> <span class="n">GMM</span>
+<span class="kn">from</span> <span class="nn">flowbench.dataset</span> <span class="kn">import</span> <span class="n">FlowDataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">FlowDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s2">&quot;./&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;1000genome&quot;</span><span class="p">)</span>
+<span class="n">Xs</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">GMM</span><span class="p">()</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xs</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Xs</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Detailed example in <code class="docutils literal notranslate"><span class="pre">example/demo_pyod.py</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="pygod-models">
+<h2>PyGOD Models<a class="headerlink" href="#pygod-models" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Abbr</p></th>
+<th class="head"><p>Year</p></th>
+<th class="head"><p>Class</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Clustering</p></td>
+<td><p>SCAN</p></td>
+<td><p>2007</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.SCAN</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>GNN+AE</p></td>
+<td><p>GAE</p></td>
+<td><p>2016</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.GAE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>MF</p></td>
+<td><p>Radar</p></td>
+<td><p>2017</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.Radar</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>MF</p></td>
+<td><p>ANOMALOUS</p></td>
+<td><p>2018</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.ANOMALOUS</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>MF</p></td>
+<td><p>ONE</p></td>
+<td><p>2019</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.ONE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>GNN+AE</p></td>
+<td><p>DOMINANT</p></td>
+<td><p>2019</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.DOMINANT</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>MLP+AE</p></td>
+<td><p>DONE</p></td>
+<td><p>2020</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.DONE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>MLP+AE</p></td>
+<td><p>AdONE</p></td>
+<td><p>2020</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.AdONE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>GNN+AE</p></td>
+<td><p>AnomalyDAE</p></td>
+<td><p>2020</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.AnomalyDAE</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>GAN</p></td>
+<td><p>GAAN</p></td>
+<td><p>2020</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.GAAN</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>GNN+AE</p></td>
+<td><p>DMGD</p></td>
+<td><p>2020</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.DMGD</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>GNN</p></td>
+<td><p>OCGNN</p></td>
+<td><p>2021</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.OCGNN</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>GNN+AE+SSL</p></td>
+<td><p>CoLA</p></td>
+<td><p>2021</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.CoLA</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>GNN+AE</p></td>
+<td><p>GUIDE</p></td>
+<td><p>2021</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.GUIDE</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>GNN+AE+SSL</p></td>
+<td><p>CONAD</p></td>
+<td><p>2022</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.CONAD</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>GNN+AE</p></td>
+<td><p>GADNR</p></td>
+<td><p>2024</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">flowbench.unsupervised.pygod.GADNR</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Example of using <cite>GMM</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flowbench.unsupervised.pygod</span> <span class="kn">import</span> <span class="n">GAE</span>
+<span class="kn">from</span> <span class="nn">flowbench.dataset</span> <span class="kn">import</span> <span class="n">FlowDataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">FlowDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s2">&quot;./&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;1000genome&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">GAE</span><span class="p">()</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Detailed example in <code class="docutils literal notranslate"><span class="pre">example/demo_pygod.py</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="supervised-models">
+<h2>Supervised Models<a class="headerlink" href="#supervised-models" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Example of using <cite>MLP</cite></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flowbench.supervised.mlp</span> <span class="kn">import</span> <span class="n">MLPClassifier</span>
+<span class="kn">from</span> <span class="nn">flowbench.dataset</span> <span class="kn">import</span> <span class="n">FlowDataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">FlowDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s2">&quot;./&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;1000genome&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">MLPClassifier</span><span class="p">()</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Detailed example in <code class="docutils literal notranslate"><span class="pre">example/demo_supervised.py</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="supervised-fine-tuned-llms">
+<h2>Supervised fine-tuned LLMs<a class="headerlink" href="#supervised-fine-tuned-llms" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Example of using LoRA (Low-rank Adaptation) for supervised fine-tuned LLMs:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">peft</span> <span class="kn">import</span> <span class="n">LoraConfig</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;cshjin/poseidon&quot;</span><span class="p">,</span> <span class="s2">&quot;1000genome&quot;</span><span class="p">)</span>
+<span class="c1"># data processing</span>
+<span class="o">...</span>
+<span class="c1"># LoRA config</span>
+<span class="n">peft_config</span> <span class="o">=</span> <span class="n">LoraConfig</span><span class="p">(</span><span class="n">task_type</span><span class="o">=</span><span class="n">TaskType</span><span class="o">.</span><span class="n">SEQ_CLS</span><span class="p">,</span> <span class="n">inference_mode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">lora_alpha</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">lora_dropout</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">training_args</span> <span class="o">=</span> <span class="n">TrainingArgument</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="c1"># LoRA trainer</span>
+<span class="n">trainer</span> <span class="o">=</span> <span class="n">Trainer</span><span class="p">(</span><span class="n">peft_model</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">trainer</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Detailed example in <code class="docutils literal notranslate"><span class="pre">example/demo_sft_lora.py</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dataset.html" class="btn btn-neutral float-left" title="Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="flowbench.supervised.html" class="btn btn-neutral float-right" title="flowbench.supervised" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, PoSeiDon Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

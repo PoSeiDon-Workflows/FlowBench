@@ -1,0 +1,872 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowBench &mdash; FlowBench 0.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/_static/custom.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=10f1778b"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="FlowBench: A Dataset for Computational Workflow Anomaly Detection" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            FlowBench
+              <img src="_static/logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">FlowBench</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-flowbench.base">flowbench.base module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.base.BaseBench"><code class="docutils literal notranslate"><span class="pre">BaseBench</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.base.BaseBench.bytes_features"><code class="docutils literal notranslate"><span class="pre">BaseBench.bytes_features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.base.BaseBench.delay_features"><code class="docutils literal notranslate"><span class="pre">BaseBench.delay_features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.base.BaseBench.features"><code class="docutils literal notranslate"><span class="pre">BaseBench.features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.base.BaseBench.kickstart_features"><code class="docutils literal notranslate"><span class="pre">BaseBench.kickstart_features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.base.BaseBench.processed_file_names"><code class="docutils literal notranslate"><span class="pre">BaseBench.processed_file_names</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.base.BaseBench.ts_features"><code class="docutils literal notranslate"><span class="pre">BaseBench.ts_features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.base.BaseBench.url"><code class="docutils literal notranslate"><span class="pre">BaseBench.url</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-flowbench.dataset">flowbench.dataset module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.dataset.FlowDataset"><code class="docutils literal notranslate"><span class="pre">FlowDataset</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.bytes_features"><code class="docutils literal notranslate"><span class="pre">FlowDataset.bytes_features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.delay_features"><code class="docutils literal notranslate"><span class="pre">FlowDataset.delay_features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.download"><code class="docutils literal notranslate"><span class="pre">FlowDataset.download()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.features"><code class="docutils literal notranslate"><span class="pre">FlowDataset.features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.kickstart_features"><code class="docutils literal notranslate"><span class="pre">FlowDataset.kickstart_features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.num_edges_per_graph"><code class="docutils literal notranslate"><span class="pre">FlowDataset.num_edges_per_graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.num_node_attributes"><code class="docutils literal notranslate"><span class="pre">FlowDataset.num_node_attributes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.num_node_labels"><code class="docutils literal notranslate"><span class="pre">FlowDataset.num_node_labels</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.num_nodes_per_graph"><code class="docutils literal notranslate"><span class="pre">FlowDataset.num_nodes_per_graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.process"><code class="docutils literal notranslate"><span class="pre">FlowDataset.process()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.processed_dir"><code class="docutils literal notranslate"><span class="pre">FlowDataset.processed_dir</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.processed_file_names"><code class="docutils literal notranslate"><span class="pre">FlowDataset.processed_file_names</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.raw_dir"><code class="docutils literal notranslate"><span class="pre">FlowDataset.raw_dir</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.raw_file_names"><code class="docutils literal notranslate"><span class="pre">FlowDataset.raw_file_names</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.real_dir"><code class="docutils literal notranslate"><span class="pre">FlowDataset.real_dir</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.relative_path"><code class="docutils literal notranslate"><span class="pre">FlowDataset.relative_path</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.to_graph_level"><code class="docutils literal notranslate"><span class="pre">FlowDataset.to_graph_level()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.ts_features"><code class="docutils literal notranslate"><span class="pre">FlowDataset.ts_features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.FlowDataset.url"><code class="docutils literal notranslate"><span class="pre">FlowDataset.url</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.dataset.MergeFlowDataset"><code class="docutils literal notranslate"><span class="pre">MergeFlowDataset</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.MergeFlowDataset.process"><code class="docutils literal notranslate"><span class="pre">MergeFlowDataset.process()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.MergeFlowDataset.processed_dir"><code class="docutils literal notranslate"><span class="pre">MergeFlowDataset.processed_dir</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.dataset.MergeFlowDataset.processed_file_names"><code class="docutils literal notranslate"><span class="pre">MergeFlowDataset.processed_file_names</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.dataset.filter_dataset"><code class="docutils literal notranslate"><span class="pre">filter_dataset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-flowbench.losses">flowbench.losses module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.losses.FocalLoss"><code class="docutils literal notranslate"><span class="pre">FocalLoss</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flowbench.losses.FocalLoss.forward"><code class="docutils literal notranslate"><span class="pre">FocalLoss.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.losses.focal_loss"><code class="docutils literal notranslate"><span class="pre">focal_loss()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-flowbench.metrics">flowbench.metrics module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.metrics.eval_accuracy"><code class="docutils literal notranslate"><span class="pre">eval_accuracy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.metrics.eval_average_precision"><code class="docutils literal notranslate"><span class="pre">eval_average_precision()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.metrics.eval_f1"><code class="docutils literal notranslate"><span class="pre">eval_f1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.metrics.eval_metrics"><code class="docutils literal notranslate"><span class="pre">eval_metrics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.metrics.eval_precision"><code class="docutils literal notranslate"><span class="pre">eval_precision()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.metrics.eval_precision_at_k"><code class="docutils literal notranslate"><span class="pre">eval_precision_at_k()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.metrics.eval_recall"><code class="docutils literal notranslate"><span class="pre">eval_recall()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.metrics.eval_recall_at_k"><code class="docutils literal notranslate"><span class="pre">eval_recall_at_k()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.metrics.eval_roc_auc"><code class="docutils literal notranslate"><span class="pre">eval_roc_auc()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-flowbench.transforms">flowbench.transforms module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.transforms.CustomizeNormalizeFeatures"><code class="docutils literal notranslate"><span class="pre">CustomizeNormalizeFeatures</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.transforms.MinMaxNormalizeFeatures"><code class="docutils literal notranslate"><span class="pre">MinMaxNormalizeFeatures</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.transforms.MyFilter"><code class="docutils literal notranslate"><span class="pre">MyFilter</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-flowbench.utils">flowbench.utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.utils.create_dir"><code class="docutils literal notranslate"><span class="pre">create_dir()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.utils.parse_adj"><code class="docutils literal notranslate"><span class="pre">parse_adj()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-flowbench.version">flowbench.version module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-flowbench">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flowbench.list_workflows"><code class="docutils literal notranslate"><span class="pre">list_workflows()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flowbench.supervised.html">flowbench.supervised</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flowbench.unsupervised.html">flowbench.unsupervised</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flowbench.nlp.html">flowbench.nlp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">FlowBench</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">FlowBench</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/flowbench.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="flowbench">
+<h1>FlowBench<a class="headerlink" href="#flowbench" title="Link to this heading"></a></h1>
+<section id="module-flowbench.base">
+<span id="flowbench-base-module"></span><h2>flowbench.base module<a class="headerlink" href="#module-flowbench.base" title="Link to this heading"></a></h2>
+<p>Base class for the FlowBench dataset.</p>
+<p>Author: PoSeiDon Team
+License: MIT</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="flowbench.base.BaseBench">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">flowbench.base.</span></span><span class="sig-name descname"><span class="pre">BaseBench</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'v1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anomaly_cat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_reprocess</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift_ts_by_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_hops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.base.BaseBench" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">InMemoryDataset</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Base class for the FlowBench dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> (<em>str</em>) – Root for processing the dataset.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of workflow.
+Defaults to “1000genome”.</p></li>
+<li><p><strong>binary_labels</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specify the problem as binary classification if <cite>True</cite>.
+Defaults to True.</p></li>
+<li><p><strong>feature_option</strong> (<em>str</em><em>, </em><em>optional</em>) – Specify the feature options. More detailed options are available in <cite>README.md</cite>.
+Defaults to “v1”.</p></li>
+<li><p><strong>anomaly_cat</strong> (<em>str</em><em>, </em><em>optional</em>) – Specify the anomaly category.
+Defaults to “all”.</p></li>
+<li><p><strong>force_reprocess</strong> (<em>bool</em><em>, </em><em>optional</em>) – Force to reprocess the parsed data if <cite>True</cite>.
+Defaults to False.</p></li>
+<li><p><strong>transform</strong> (<em>callable</em><em>, </em><em>optional</em>) – Module for transform operations.
+Defaults to None.</p></li>
+<li><p><strong>pre_transform</strong> (<em>callable</em><em>, </em><em>optional</em>) – Module for pre_transform operations.
+Defaults to None.</p></li>
+<li><p><strong>pre_filter</strong> (<em>callable</em><em>, </em><em>optional</em>) – Module for pre_filter operations.
+Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.base.BaseBench.bytes_features">
+<span class="sig-name descname"><span class="pre">bytes_features</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['stage_in_bytes',</span> <span class="pre">'stage_out_bytes']</span></em><a class="headerlink" href="#flowbench.base.BaseBench.bytes_features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.base.BaseBench.delay_features">
+<span class="sig-name descname"><span class="pre">delay_features</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['wms_delay',</span> <span class="pre">'queue_delay',</span> <span class="pre">'runtime',</span> <span class="pre">'post_script_delay',</span> <span class="pre">'stage_in_delay',</span> <span class="pre">'stage_out_delay']</span></em><a class="headerlink" href="#flowbench.base.BaseBench.delay_features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.base.BaseBench.features">
+<span class="sig-name descname"><span class="pre">features</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['auxiliary',</span> <span class="pre">'compute',</span> <span class="pre">'transfer',</span> <span class="pre">'is_clustered',</span> <span class="pre">'ready',</span> <span class="pre">'pre_script_start',</span> <span class="pre">'pre_script_end',</span> <span class="pre">'submit',</span> <span class="pre">'execute_start',</span> <span class="pre">'execute_end',</span> <span class="pre">'post_script_start',</span> <span class="pre">'post_script_end',</span> <span class="pre">'wms_delay',</span> <span class="pre">'pre_script_delay',</span> <span class="pre">'queue_delay',</span> <span class="pre">'runtime',</span> <span class="pre">'post_script_delay',</span> <span class="pre">'stage_in_delay',</span> <span class="pre">'stage_in_bytes',</span> <span class="pre">'stage_out_delay',</span> <span class="pre">'stage_out_bytes',</span> <span class="pre">'kickstart_executables_cpu_time',</span> <span class="pre">'kickstart_status',</span> <span class="pre">'kickstart_executables_exitcode']</span></em><a class="headerlink" href="#flowbench.base.BaseBench.features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.base.BaseBench.kickstart_features">
+<span class="sig-name descname"><span class="pre">kickstart_features</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['kickstart_executables_cpu_time',</span> <span class="pre">'kickstart_status',</span> <span class="pre">'kickstart_executables_exitcode',</span> <span class="pre">'kickstart_online_iowait',</span> <span class="pre">'kickstart_online_bytes_read',</span> <span class="pre">'kickstart_online_bytes_written',</span> <span class="pre">'kickstart_online_read_system_calls',</span> <span class="pre">'kickstart_online_write_system_calls',</span> <span class="pre">'kickstart_online_utime',</span> <span class="pre">'kickstart_online_stime',</span> <span class="pre">'kickstart_online_bytes_read_per_second',</span> <span class="pre">'kickstart_online_bytes_written_per_second']</span></em><a class="headerlink" href="#flowbench.base.BaseBench.kickstart_features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="flowbench.base.BaseBench.processed_file_names">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">processed_file_names</span></span><a class="headerlink" href="#flowbench.base.BaseBench.processed_file_names" title="Link to this definition"></a></dt>
+<dd><p>The name of the files in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code> folder that
+must be present in order to skip processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of file names.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.base.BaseBench.ts_features">
+<span class="sig-name descname"><span class="pre">ts_features</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['ready',</span> <span class="pre">'submit',</span> <span class="pre">'execute_start',</span> <span class="pre">'execute_end',</span> <span class="pre">'post_script_start',</span> <span class="pre">'post_script_end']</span></em><a class="headerlink" href="#flowbench.base.BaseBench.ts_features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.base.BaseBench.url">
+<span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'../data'</span></em><a class="headerlink" href="#flowbench.base.BaseBench.url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-flowbench.dataset">
+<span id="flowbench-dataset-module"></span><h2>flowbench.dataset module<a class="headerlink" href="#module-flowbench.dataset" title="Link to this heading"></a></h2>
+<p>FlowBench dataset interface for graph and tabular data.</p>
+<p>Author: PoSeiDon Team
+License: MIT</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">flowbench.dataset.</span></span><span class="sig-name descname"><span class="pre">FlowDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1000genome'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'v1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anomaly_cat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_reprocess</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.dataset.FlowDataset" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">InMemoryDataset</span></code></p>
+<p>FlowBench dataset interface for graph and tabular data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> (<em>str</em>) – Root for processing the dataset.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of workflow.
+Defaults to “1000genome”.</p></li>
+<li><p><strong>binary_labels</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specify the problem as binary classification if <cite>True</cite>.
+Defaults to True.</p></li>
+<li><p><strong>feature_option</strong> (<em>str</em><em>, </em><em>optional</em>) – Specify the feature options. More detailed options are available in <cite>README.md</cite>.
+Defaults to “v1”.</p></li>
+<li><p><strong>anomaly_cat</strong> (<em>str</em><em>, </em><em>optional</em>) – Specify the anomaly category.
+Defaults to “all”.</p></li>
+<li><p><strong>force_reprocess</strong> (<em>bool</em><em>, </em><em>optional</em>) – Force to reprocess the parsed data if <cite>True</cite>.
+Defaults to False.</p></li>
+<li><p><strong>transform</strong> (<em>callable</em><em>, </em><em>optional</em>) – Module for transform operations.
+Defaults to None.</p></li>
+<li><p><strong>pre_transform</strong> (<em>callable</em><em>, </em><em>optional</em>) – Module for pre_transform operations.
+Defaults to None.</p></li>
+<li><p><strong>pre_filter</strong> (<em>callable</em><em>, </em><em>optional</em>) – Module for pre_filter operations.
+Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.bytes_features">
+<span class="sig-name descname"><span class="pre">bytes_features</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['stage_in_bytes',</span> <span class="pre">'stage_out_bytes']</span></em><a class="headerlink" href="#flowbench.dataset.FlowDataset.bytes_features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.delay_features">
+<span class="sig-name descname"><span class="pre">delay_features</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['wms_delay',</span> <span class="pre">'queue_delay',</span> <span class="pre">'runtime',</span> <span class="pre">'post_script_delay',</span> <span class="pre">'stage_in_delay',</span> <span class="pre">'stage_out_delay']</span></em><a class="headerlink" href="#flowbench.dataset.FlowDataset.delay_features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.download">
+<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.dataset.FlowDataset.download" title="Link to this definition"></a></dt>
+<dd><p>Downloads the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder.
+Override <cite>torch_geometric.data.Dataset</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.features">
+<span class="sig-name descname"><span class="pre">features</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['auxiliary',</span> <span class="pre">'compute',</span> <span class="pre">'transfer',</span> <span class="pre">'is_clustered',</span> <span class="pre">'ready',</span> <span class="pre">'pre_script_start',</span> <span class="pre">'pre_script_end',</span> <span class="pre">'submit',</span> <span class="pre">'execute_start',</span> <span class="pre">'execute_end',</span> <span class="pre">'post_script_start',</span> <span class="pre">'post_script_end',</span> <span class="pre">'wms_delay',</span> <span class="pre">'pre_script_delay',</span> <span class="pre">'queue_delay',</span> <span class="pre">'runtime',</span> <span class="pre">'post_script_delay',</span> <span class="pre">'stage_in_delay',</span> <span class="pre">'stage_in_bytes',</span> <span class="pre">'stage_out_delay',</span> <span class="pre">'stage_out_bytes',</span> <span class="pre">'kickstart_executables_cpu_time',</span> <span class="pre">'kickstart_status',</span> <span class="pre">'kickstart_executables_exitcode']</span></em><a class="headerlink" href="#flowbench.dataset.FlowDataset.features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.kickstart_features">
+<span class="sig-name descname"><span class="pre">kickstart_features</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['kickstart_executables_cpu_time',</span> <span class="pre">'kickstart_status',</span> <span class="pre">'kickstart_executables_exitcode',</span> <span class="pre">'kickstart_online_iowait',</span> <span class="pre">'kickstart_online_bytes_read',</span> <span class="pre">'kickstart_online_bytes_written',</span> <span class="pre">'kickstart_online_read_system_calls',</span> <span class="pre">'kickstart_online_write_system_calls',</span> <span class="pre">'kickstart_online_utime',</span> <span class="pre">'kickstart_online_stime',</span> <span class="pre">'kickstart_online_bytes_read_per_second',</span> <span class="pre">'kickstart_online_bytes_written_per_second']</span></em><a class="headerlink" href="#flowbench.dataset.FlowDataset.kickstart_features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.num_edges_per_graph">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_edges_per_graph</span></span><a class="headerlink" href="#flowbench.dataset.FlowDataset.num_edges_per_graph" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.num_node_attributes">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_node_attributes</span></span><a class="headerlink" href="#flowbench.dataset.FlowDataset.num_node_attributes" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.num_node_labels">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_node_labels</span></span><a class="headerlink" href="#flowbench.dataset.FlowDataset.num_node_labels" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.num_nodes_per_graph">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_nodes_per_graph</span></span><a class="headerlink" href="#flowbench.dataset.FlowDataset.num_nodes_per_graph" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.process">
+<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.dataset.FlowDataset.process" title="Link to this definition"></a></dt>
+<dd><p>Processes the raw data to the graphs and saves it in <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.processed_dir">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">processed_dir</span></span><a class="headerlink" href="#flowbench.dataset.FlowDataset.processed_dir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.processed_file_names">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">processed_file_names</span></span><a class="headerlink" href="#flowbench.dataset.FlowDataset.processed_file_names" title="Link to this definition"></a></dt>
+<dd><p>The name of the files in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code> folder that
+must be present in order to skip processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of file names.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.raw_dir">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">raw_dir</span></span><a class="headerlink" href="#flowbench.dataset.FlowDataset.raw_dir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.raw_file_names">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">raw_file_names</span></span><a class="headerlink" href="#flowbench.dataset.FlowDataset.raw_file_names" title="Link to this definition"></a></dt>
+<dd><p>A list of files in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> which needs to be found
+in order to skip the download.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of file names.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.real_dir">
+<span class="sig-name descname"><span class="pre">real_dir</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/runner/work/FlowBench/FlowBench/flowbench'</span></em><a class="headerlink" href="#flowbench.dataset.FlowDataset.real_dir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.relative_path">
+<span class="sig-name descname"><span class="pre">relative_path</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/runner/work/FlowBench/FlowBench/flowbench/../data'</span></em><a class="headerlink" href="#flowbench.dataset.FlowDataset.relative_path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.to_graph_level">
+<span class="sig-name descname"><span class="pre">to_graph_level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.dataset.FlowDataset.to_graph_level" title="Link to this definition"></a></dt>
+<dd><p>Convert the node_level data to graph_level setting.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.ts_features">
+<span class="sig-name descname"><span class="pre">ts_features</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['ready',</span> <span class="pre">'submit',</span> <span class="pre">'execute_start',</span> <span class="pre">'execute_end',</span> <span class="pre">'post_script_start',</span> <span class="pre">'post_script_end']</span></em><a class="headerlink" href="#flowbench.dataset.FlowDataset.ts_features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="flowbench.dataset.FlowDataset.url">
+<span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'file:///home/runner/work/FlowBench/FlowBench/flowbench/../data'</span></em><a class="headerlink" href="#flowbench.dataset.FlowDataset.url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="flowbench.dataset.MergeFlowDataset">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">flowbench.dataset.</span></span><span class="sig-name descname"><span class="pre">MergeFlowDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'v1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anomaly_cat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_reprocess</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.dataset.MergeFlowDataset" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">InMemoryDataset</span></code></p>
+<p>A merged dataset of multiple FlowBench datasets.
+# TODO: verify the MergeFlowBench class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="flowbench.dataset.MergeFlowDataset.process">
+<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.dataset.MergeFlowDataset.process" title="Link to this definition"></a></dt>
+<dd><p>Processes the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="flowbench.dataset.MergeFlowDataset.processed_dir">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">processed_dir</span></span><a class="headerlink" href="#flowbench.dataset.MergeFlowDataset.processed_dir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="flowbench.dataset.MergeFlowDataset.processed_file_names">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">processed_file_names</span></span><a class="headerlink" href="#flowbench.dataset.MergeFlowDataset.processed_file_names" title="Link to this definition"></a></dt>
+<dd><p>The name of the files in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code> folder that
+must be present in order to skip processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of file names.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.dataset.filter_dataset">
+<span class="sig-prename descclassname"><span class="pre">flowbench.dataset.</span></span><span class="sig-name descname"><span class="pre">filter_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anomaly_cat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.dataset.filter_dataset" title="Link to this definition"></a></dt>
+<dd><p>Filter the dataset based on the anomaly category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> (<em>FlowBench</em>) – The dataset to be filtered.</p></li>
+<li><p><strong>anomaly_cat</strong> (<em>str</em>) – The anomaly category to be filtered.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-flowbench.losses">
+<span id="flowbench-losses-module"></span><h2>flowbench.losses module<a class="headerlink" href="#module-flowbench.losses" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="flowbench.losses.FocalLoss">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">flowbench.losses.</span></span><span class="sig-name descname"><span class="pre">FocalLoss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.losses.FocalLoss" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
+<p>Focal loss for classification tasks.</p>
+<div class="math notranslate nohighlight">
+\[FL(p_t) = -\alpha_t (1 - p_t)^{\gamma} \log(p_t)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gamma</strong> (<em>float</em><em>, </em><em>optional</em>) – Focusing parameter. Default: 0</p></li>
+<li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Weighting parameter. Default: None</p></li>
+<li><p><strong>size_average</strong> (<em>bool</em><em>, </em><em>optional</em>) – Average the loss over the batch.
+Default: True</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="flowbench.losses.FocalLoss.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.losses.FocalLoss.forward" title="Link to this definition"></a></dt>
+<dd><p>Define the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.losses.focal_loss">
+<span class="sig-prename descclassname"><span class="pre">flowbench.losses.</span></span><span class="sig-name descname"><span class="pre">focal_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_average</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.losses.focal_loss" title="Link to this definition"></a></dt>
+<dd><p>Compute the focal loss between the input and target tensors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>Tensor</em>) – The input tensor.</p></li>
+<li><p><strong>target</strong> (<em>Tensor</em>) – The target tensor.</p></li>
+<li><p><strong>alpha</strong> (<em>Tensor</em>) – The alpha tensor for class balancing.</p></li>
+<li><p><strong>gamma</strong> (<em>float</em>) – The gamma value for focal loss.</p></li>
+<li><p><strong>size_average</strong> (<em>bool</em>) – Whether to average the loss.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The computed focal loss.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-flowbench.metrics">
+<span id="flowbench-metrics-module"></span><h2>flowbench.metrics module<a class="headerlink" href="#module-flowbench.metrics" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.metrics.eval_accuracy">
+<span class="sig-prename descclassname"><span class="pre">flowbench.metrics.</span></span><span class="sig-name descname"><span class="pre">eval_accuracy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.metrics.eval_accuracy" title="Link to this definition"></a></dt>
+<dd><p>Accuracy score for binary classification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>array-like</em>) – Ground truth (true labels vector).</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – Predicted labels, as returned by a classifier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Accuracy score.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>accuracy_score: <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html</a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.metrics.eval_average_precision">
+<span class="sig-prename descclassname"><span class="pre">flowbench.metrics.</span></span><span class="sig-name descname"><span class="pre">eval_average_precision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.metrics.eval_average_precision" title="Link to this definition"></a></dt>
+<dd><p>Average precision score for binary classification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>array-like</em>) – Ground truth (true labels vector).</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – Predicted labels, as returned by a classifier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Average precision score.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt>average_precision_score:</dt><dd><p><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html</a></p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.metrics.eval_f1">
+<span class="sig-prename descclassname"><span class="pre">flowbench.metrics.</span></span><span class="sig-name descname"><span class="pre">eval_f1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.metrics.eval_f1" title="Link to this definition"></a></dt>
+<dd><p>F1 score for binary classification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>array-like</em>) – Ground truth (true labels vector).</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – Predicted labels, as returned by a classifier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F1 score.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>f1_score: <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html</a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.metrics.eval_metrics">
+<span class="sig-prename descclassname"><span class="pre">flowbench.metrics.</span></span><span class="sig-name descname"><span class="pre">eval_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'weighted'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.metrics.eval_metrics" title="Link to this definition"></a></dt>
+<dd><p>Evaluate the models</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>np.array</em>) – True y labels.</p></li>
+<li><p><strong>y_pred</strong> (<em>np.array</em>) – Predicted y labels.</p></li>
+<li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – Option of [‘acc’, ‘f1’, ‘prec’, ‘roc_auc’, ‘conf_mat’].
+Defaults to None, which eval all metrics</p></li>
+<li><p><strong>average</strong> (<em>str</em><em>, </em><em>optional</em>) – This parameter is required for multiclass/multilabel targets.
+Defaults to “weighted”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>metric results</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.metrics.eval_precision">
+<span class="sig-prename descclassname"><span class="pre">flowbench.metrics.</span></span><span class="sig-name descname"><span class="pre">eval_precision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.metrics.eval_precision" title="Link to this definition"></a></dt>
+<dd><p>Precision score for binary classification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>array-like</em>) – Ground truth (true labels vector).</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – Predicted labels, as returned by a classifier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Precision score.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>precision_score: <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html</a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.metrics.eval_precision_at_k">
+<span class="sig-prename descclassname"><span class="pre">flowbench.metrics.</span></span><span class="sig-name descname"><span class="pre">eval_precision_at_k</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.metrics.eval_precision_at_k" title="Link to this definition"></a></dt>
+<dd><p>Precision score for top k instances with the highest outlier scores.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>array-like</em>) – Ground truth (true labels vector).</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – Predicted labels, as returned by a classifier.</p></li>
+<li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Top K instances to be considered.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Precision at k (between 0 and 1).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.metrics.eval_recall">
+<span class="sig-prename descclassname"><span class="pre">flowbench.metrics.</span></span><span class="sig-name descname"><span class="pre">eval_recall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.metrics.eval_recall" title="Link to this definition"></a></dt>
+<dd><p>Recall score for binary classification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>array-like</em>) – Ground truth (true labels vector).</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – Predicted labels, as returned by a classifier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Recall score.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>recall_score: <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html</a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.metrics.eval_recall_at_k">
+<span class="sig-prename descclassname"><span class="pre">flowbench.metrics.</span></span><span class="sig-name descname"><span class="pre">eval_recall_at_k</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.metrics.eval_recall_at_k" title="Link to this definition"></a></dt>
+<dd><p>Recall score for top k instances with the highest outlier scores.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>array-like</em>) – Ground truth (true labels vector).</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – Predicted labels, as returned by a classifier.</p></li>
+<li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Top K instances to be considered.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Recall score at k (between 0 and 1).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.metrics.eval_roc_auc">
+<span class="sig-prename descclassname"><span class="pre">flowbench.metrics.</span></span><span class="sig-name descname"><span class="pre">eval_roc_auc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.metrics.eval_roc_auc" title="Link to this definition"></a></dt>
+<dd><p>ROC-AUC score for binary classification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>array-like</em>) – Ground truth (true labels vector).</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – Predicted labels, as returned by a classifier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ROC-AUC score.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>roc_auc_score: <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html</a></p>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-flowbench.transforms">
+<span id="flowbench-transforms-module"></span><h2>flowbench.transforms module<a class="headerlink" href="#module-flowbench.transforms" title="Link to this heading"></a></h2>
+<p>Transformations for graphs.</p>
+<ul class="simple">
+<li><p>Column wise standardization of node features.</p></li>
+<li><p>Column wise min-max normalization of node features.</p></li>
+</ul>
+<dl class="py class">
+<dt class="sig sig-object py" id="flowbench.transforms.CustomizeNormalizeFeatures">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">flowbench.transforms.</span></span><span class="sig-name descname"><span class="pre">CustomizeNormalizeFeatures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">['x']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.transforms.CustomizeNormalizeFeatures" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTransform</span></code></p>
+<p>Column-normalizes the attributes given in <code class="xref py py-obj docutils literal notranslate"><span class="pre">attrs</span></code> to sum-up to one
+(functional name: <code class="xref py py-obj docutils literal notranslate"><span class="pre">customize_normalize_features</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attrs</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The names of attributes to normalize.
+(default: <code class="xref py py-obj docutils literal notranslate"><span class="pre">[&quot;x&quot;]</span></code>)</p></li>
+<li><p><strong>dim</strong> (<em>int</em>) – The axis for normalization 0 (column-wise). 1(row-wise).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="flowbench.transforms.MinMaxNormalizeFeatures">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">flowbench.transforms.</span></span><span class="sig-name descname"><span class="pre">MinMaxNormalizeFeatures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">['x']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.transforms.MinMaxNormalizeFeatures" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTransform</span></code></p>
+<p>Min-max normalizes the attributes given in <code class="xref py py-obj docutils literal notranslate"><span class="pre">attrs</span></code> to scale between 0 and 1.
+(functional name: <code class="xref py py-obj docutils literal notranslate"><span class="pre">minmax_normalize_features</span></code>).
+:param attrs: The names of attributes to normalize. Defaults to [“x”].
+:type attrs: List[str], optional</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="flowbench.transforms.MyFilter">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">flowbench.transforms.</span></span><span class="sig-name descname"><span class="pre">MyFilter</span></span><a class="headerlink" href="#flowbench.transforms.MyFilter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Filter class for the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>Data</em>) – The data object.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p><cite>return data.num_nodes &gt; 1</cite> will return a boolean list of whether the graph has more than 1 node.</p>
+</dd></dl>
+
+</section>
+<section id="module-flowbench.utils">
+<span id="flowbench-utils-module"></span><h2>flowbench.utils module<a class="headerlink" href="#module-flowbench.utils" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.utils.create_dir">
+<span class="sig-prename descclassname"><span class="pre">flowbench.utils.</span></span><span class="sig-name descname"><span class="pre">create_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.utils.create_dir" title="Link to this definition"></a></dt>
+<dd><p>Create a dir where the processed data will be stored</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – Path to create the folder.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.utils.parse_adj">
+<span class="sig-prename descclassname"><span class="pre">flowbench.utils.</span></span><span class="sig-name descname"><span class="pre">parse_adj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.utils.parse_adj" title="Link to this definition"></a></dt>
+<dd><p>Processing adjacency file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>workflow</strong> (<em>str</em>) – Workflow name.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>NotImplementedError</strong> – No need to process the workflow <cite>all</cite>.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>(dict, list)</dt><dd><p>dict: Dictionary of nodes.
+list: List of directed edges.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-flowbench.version">
+<span id="flowbench-version-module"></span><h2>flowbench.version module<a class="headerlink" href="#module-flowbench.version" title="Link to this heading"></a></h2>
+</section>
+<section id="module-flowbench">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-flowbench" title="Link to this heading"></a></h2>
+<p>FlowBench: A benchmarking framework for scientific workflows.</p>
+<p>Author: PoSeiDon Team
+License: MIT</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="flowbench.list_workflows">
+<span class="sig-prename descclassname"><span class="pre">flowbench.</span></span><span class="sig-name descname"><span class="pre">list_workflows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flowbench.list_workflows" title="Link to this definition"></a></dt>
+<dd><p>List of available workflows in FlowBench.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of workflow names.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="FlowBench: A Dataset for Computational Workflow Anomaly Detection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, PoSeiDon Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
